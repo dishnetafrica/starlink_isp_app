@@ -1,7 +1,7 @@
 import 'package:grpc/grpc.dart';
 import 'package:fixnum/fixnum.dart'; // Handles Starlink's Int64 data
-import 'generated/device.pbgrpc.dart';
-import 'generated/device.pb.dart';
+import 'generated/spacex_api/device/device.pbgrpc.dart';
+import 'generated/spacex_api/device/device.pb.dart';
 
 class StarlinkService {
   static const String _dishIp = '192.168.100.1';
