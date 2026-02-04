@@ -19,6 +19,7 @@ dependencies:
   http: ^1.2.1
   grpc: ^4.0.0 # Standard for Starlink local dish communication
   protobuf: ^3.1.0
+  fixnum: ^1.1.0
 
   # UI, Charts & Icons
   google_fonts: ^6.2.1

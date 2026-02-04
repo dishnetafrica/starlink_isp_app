@@ -1,24 +1,52 @@
 import 'package:grpc/grpc.dart';
-// Note: You will later generate Dart files from Starlink's .proto files
-// For now, this is the bridge structure.
+import 'package:fixnum/fixnum.dart';
+import 'generated/device.pbgrpc.dart';
+import 'generated/device.pb.dart';
 
 class StarlinkService {
-  static final StarlinkService _instance = StarlinkService._internal();
-  factory StarlinkService() => _instance;
-  StarlinkService._internal();
+  // The standard local IP for Starlink hardware
+  static const String _dishIp = '192.168.100.1';
+  static const int _port = 9201;
 
-  ClientChannel? _channel;
+  late ClientChannel _channel;
+  late DeviceClient _client;
 
-  void initChannel() {
+  StarlinkService() {
     _channel = ClientChannel(
-      '192.168.100.1',
-      port: 9201,
-      options: const ChannelOptions(credentials: ChannelCredentials.insecure()),
+      _dishIp,
+      port: _port,
+      options: const ChannelOptions(
+        credentials: ChannelCredentials.insecure(),
+        connectTimeout: Duration(seconds: 5),
+      ),
     );
+    _client = DeviceClient(_channel);
   }
 
-  Future<void> rebootDish() async {
-    print("Sending Reboot command to 192.168.100.1 via gRPC...");
-    // Logic to call the gRPC stub goes here
+  /// Fetches real-time health and status from the dish
+  Future<Map<String, dynamic>> getDishHealth() async {
+    try {
+      // Initialize the Request object from your generated code
+      final request = Request()..getStatus = GetStatusRequest();
+
+      // Send the request
+      final response = await _client.handle(request);
+      final status = response.dishGetStatus;
+
+      return {
+        'deviceId': status.deviceInfo.id,
+        'hardwareVersion': status.deviceInfo.hardwareVersion,
+        'uptime': status.uptimeSeconds.toInt(),
+        'state': status.state.toString(),
+        'isObstructed': status.obstructionStats.fractionObstructed > 0.05,
+        'snr': status.isSnrBelowThreshold,
+      };
+    } catch (e) {
+      return {'error': 'Could not connect to Dishy. Ensure you are on Starlink WiFi.'};
+    }
+  }
+
+  void dispose() {
+    _channel.shutdown();
   }
 }
