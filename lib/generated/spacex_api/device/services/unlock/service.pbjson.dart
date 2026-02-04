@@ -1,15 +1,13 @@
-// This is a generated file - do not edit.
 //
-// Generated from spacex_api/device/services/unlock/service.proto.
-
-// @dart = 3.3
+//  Generated code. Do not modify.
+//  source: spacex_api/device/services/unlock/service.proto
+//
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names
-// ignore_for_file: curly_braces_in_flow_control_structures
-// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
-// ignore_for_file: unused_import
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -46,8 +44,8 @@ const StartUnlockRequest$json = {
 };
 
 /// Descriptor for `StartUnlockRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List startUnlockRequestDescriptor =
-    $convert.base64Decode('ChJTdGFydFVubG9ja1JlcXVlc3Q=');
+final $typed_data.Uint8List startUnlockRequestDescriptor = $convert.base64Decode(
+    'ChJTdGFydFVubG9ja1JlcXVlc3Q=');
 
 @$core.Deprecated('Use startUnlockResponseDescriptor instead')
 const StartUnlockResponse$json = {
@@ -87,45 +85,6 @@ const FinishUnlockResponse$json = {
 };
 
 /// Descriptor for `FinishUnlockResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List finishUnlockResponseDescriptor =
-    $convert.base64Decode(
-        'ChRGaW5pc2hVbmxvY2tSZXNwb25zZRIWCgZzdGF0dXMYASABKA1SBnN0YXR1cw==');
+final $typed_data.Uint8List finishUnlockResponseDescriptor = $convert.base64Decode(
+    'ChRGaW5pc2hVbmxvY2tSZXNwb25zZRIWCgZzdGF0dXMYASABKA1SBnN0YXR1cw==');
 
-const $core.Map<$core.String, $core.dynamic> UnlockServiceBase$json = {
-  '1': 'UnlockService',
-  '2': [
-    {
-      '1': 'StartUnlock',
-      '2': '.SpaceX.API.Device.Services.Unlock.StartUnlockRequest',
-      '3': '.SpaceX.API.Device.Services.Unlock.StartUnlockResponse',
-      '4': {}
-    },
-    {
-      '1': 'FinishUnlock',
-      '2': '.SpaceX.API.Device.Services.Unlock.FinishUnlockRequest',
-      '3': '.SpaceX.API.Device.Services.Unlock.FinishUnlockResponse',
-      '4': {}
-    },
-  ],
-};
-
-@$core.Deprecated('Use unlockServiceDescriptor instead')
-const $core.Map<$core.String, $core.Map<$core.String, $core.dynamic>>
-    UnlockServiceBase$messageJson = {
-  '.SpaceX.API.Device.Services.Unlock.StartUnlockRequest':
-      StartUnlockRequest$json,
-  '.SpaceX.API.Device.Services.Unlock.StartUnlockResponse':
-      StartUnlockResponse$json,
-  '.SpaceX.API.Device.Services.Unlock.FinishUnlockRequest':
-      FinishUnlockRequest$json,
-  '.SpaceX.API.Device.Services.Unlock.FinishUnlockResponse':
-      FinishUnlockResponse$json,
-};
-
-/// Descriptor for `UnlockService`. Decode as a `google.protobuf.ServiceDescriptorProto`.
-final $typed_data.Uint8List unlockServiceDescriptor = $convert.base64Decode(
-    'Cg1VbmxvY2tTZXJ2aWNlEn4KC1N0YXJ0VW5sb2NrEjUuU3BhY2VYLkFQSS5EZXZpY2UuU2Vydm'
-    'ljZXMuVW5sb2NrLlN0YXJ0VW5sb2NrUmVxdWVzdBo2LlNwYWNlWC5BUEkuRGV2aWNlLlNlcnZp'
-    'Y2VzLlVubG9jay5TdGFydFVubG9ja1Jlc3BvbnNlIgASgQEKDEZpbmlzaFVubG9jaxI2LlNwYW'
-    'NlWC5BUEkuRGV2aWNlLlNlcnZpY2VzLlVubG9jay5GaW5pc2hVbmxvY2tSZXF1ZXN0GjcuU3Bh'
-    'Y2VYLkFQSS5EZXZpY2UuU2VydmljZXMuVW5sb2NrLkZpbmlzaFVubG9ja1Jlc3BvbnNlIgA=');

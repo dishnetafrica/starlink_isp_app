@@ -1,15 +1,13 @@
-// This is a generated file - do not edit.
 //
-// Generated from spacex_api/device/device.proto.
-
-// @dart = 3.3
+//  Generated code. Do not modify.
+//  source: spacex_api/device/device.proto
+//
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names
-// ignore_for_file: curly_braces_in_flow_control_structures
-// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
-// ignore_for_file: unused_import
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:convert' as $convert;
 import 'dart:core' as $core;
@@ -80,24 +78,8 @@ final $typed_data.Uint8List speedtestErrorDescriptor = $convert.base64Decode(
 const ToDevice$json = {
   '1': 'ToDevice',
   '2': [
-    {
-      '1': 'request',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.Request',
-      '9': 0,
-      '10': 'request'
-    },
-    {
-      '1': 'health_check',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.HealthCheck',
-      '9': 0,
-      '10': 'healthCheck'
-    },
+    {'1': 'request', '3': 1, '4': 1, '5': 11, '6': '.SpaceX.API.Device.Request', '9': 0, '10': 'request'},
+    {'1': 'health_check', '3': 2, '4': 1, '5': 11, '6': '.SpaceX.API.Device.HealthCheck', '9': 0, '10': 'healthCheck'},
   ],
   '8': [
     {'1': 'message'},
@@ -114,33 +96,9 @@ final $typed_data.Uint8List toDeviceDescriptor = $convert.base64Decode(
 const FromDevice$json = {
   '1': 'FromDevice',
   '2': [
-    {
-      '1': 'response',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.Response',
-      '9': 0,
-      '10': 'response'
-    },
-    {
-      '1': 'event',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.Event',
-      '9': 0,
-      '10': 'event'
-    },
-    {
-      '1': 'health_check',
-      '3': 3,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.HealthCheck',
-      '9': 0,
-      '10': 'healthCheck'
-    },
+    {'1': 'response', '3': 1, '4': 1, '5': 11, '6': '.SpaceX.API.Device.Response', '9': 0, '10': 'response'},
+    {'1': 'event', '3': 2, '4': 1, '5': 11, '6': '.SpaceX.API.Device.Event', '9': 0, '10': 'event'},
+    {'1': 'health_check', '3': 3, '4': 1, '5': 11, '6': '.SpaceX.API.Device.HealthCheck', '9': 0, '10': 'healthCheck'},
   ],
   '8': [
     {'1': 'message'},
@@ -158,24 +116,9 @@ final $typed_data.Uint8List fromDeviceDescriptor = $convert.base64Decode(
 const SensitiveCommand$json = {
   '1': 'SensitiveCommand',
   '2': [
-    {
-      '1': 'timestamp',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.google.protobuf.Timestamp',
-      '10': 'timestamp'
-    },
+    {'1': 'timestamp', '3': 1, '4': 1, '5': 11, '6': '.google.protobuf.Timestamp', '10': 'timestamp'},
     {'1': 'target_id', '3': 2, '4': 1, '5': 9, '10': 'targetId'},
-    {
-      '1': 'get_location',
-      '3': 3,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.GetLocationRequest',
-      '9': 0,
-      '10': 'getLocation'
-    },
+    {'1': 'get_location', '3': 3, '4': 1, '5': 11, '6': '.SpaceX.API.Device.GetLocationRequest', '9': 0, '10': 'getLocation'},
   ],
   '8': [
     {'1': 'request'},
@@ -195,8 +138,8 @@ const HealthCheck$json = {
 };
 
 /// Descriptor for `HealthCheck`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List healthCheckDescriptor =
-    $convert.base64Decode('CgtIZWFsdGhDaGVjaw==');
+final $typed_data.Uint8List healthCheckDescriptor = $convert.base64Decode(
+    'CgtIZWFsdGhDaGVjaw==');
 
 @$core.Deprecated('Use requestDescriptor instead')
 const Request$json = {
@@ -205,807 +148,95 @@ const Request$json = {
     {'1': 'id', '3': 1, '4': 1, '5': 4, '10': 'id'},
     {'1': 'epoch_id', '3': 14, '4': 1, '5': 4, '10': 'epochId'},
     {'1': 'target_id', '3': 13, '4': 1, '5': 9, '10': 'targetId'},
-    {
-      '1': 'signed_request',
-      '3': 15,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.SignedData',
-      '9': 0,
-      '10': 'signedRequest'
-    },
-    {
-      '1': 'get_next_id',
-      '3': 1006,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.GetNextIdRequest',
-      '9': 0,
-      '10': 'getNextId'
-    },
-    {
-      '1': 'sensitive_request',
-      '3': 1078,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.SignedData',
-      '9': 0,
-      '10': 'sensitiveRequest'
-    },
-    {
-      '1': 'authenticate',
-      '3': 1005,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.AuthenticateRequest',
-      '9': 0,
-      '10': 'authenticate'
-    },
-    {
-      '1': 'enable_debug_telem',
-      '3': 1034,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.EnableDebugTelemRequest',
-      '9': 0,
-      '10': 'enableDebugTelem'
-    },
-    {
-      '1': 'factory_reset',
-      '3': 1011,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.FactoryResetRequest',
-      '9': 0,
-      '10': 'factoryReset'
-    },
-    {
-      '1': 'get_device_info',
-      '3': 1008,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.GetDeviceInfoRequest',
-      '9': 0,
-      '10': 'getDeviceInfo'
-    },
-    {
-      '1': 'get_history',
-      '3': 1007,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.GetHistoryRequest',
-      '9': 0,
-      '10': 'getHistory'
-    },
-    {
-      '1': 'get_log',
-      '3': 1012,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.GetLogRequest',
-      '9': 0,
-      '10': 'getLog'
-    },
-    {
-      '1': 'get_network_interfaces',
-      '3': 1015,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.GetNetworkInterfacesRequest',
-      '9': 0,
-      '10': 'getNetworkInterfaces'
-    },
-    {
-      '1': 'get_ping',
-      '3': 1009,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.GetPingRequest',
-      '9': 0,
-      '10': 'getPing'
-    },
-    {
-      '1': 'ping_host',
-      '3': 1016,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.PingHostRequest',
-      '9': 0,
-      '10': 'pingHost'
-    },
-    {
-      '1': 'get_status',
-      '3': 1004,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.GetStatusRequest',
-      '9': 0,
-      '10': 'getStatus'
-    },
-    {
-      '1': 'reboot',
-      '3': 1001,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.RebootRequest',
-      '9': 0,
-      '10': 'reboot'
-    },
-    {
-      '1': 'set_sku',
-      '3': 1013,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.SetSkuRequest',
-      '9': 0,
-      '10': 'setSku'
-    },
-    {
-      '1': 'set_trusted_keys',
-      '3': 1010,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.SetTrustedKeysRequest',
-      '9': 0,
-      '10': 'setTrustedKeys'
-    },
-    {
-      '1': 'speed_test',
-      '3': 1003,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.SpeedTestRequest',
-      '9': 0,
-      '10': 'speedTest'
-    },
-    {
-      '1': 'update',
-      '3': 1014,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.UpdateRequest',
-      '9': 0,
-      '10': 'update'
-    },
-    {
-      '1': 'get_location',
-      '3': 1017,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.GetLocationRequest',
-      '9': 0,
-      '10': 'getLocation'
-    },
-    {
-      '1': 'get_heap_dump',
-      '3': 1019,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.GetHeapDumpRequest',
-      '9': 0,
-      '10': 'getHeapDump'
-    },
-    {
-      '1': 'restart_control',
-      '3': 1020,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.RestartControlRequest',
-      '9': 0,
-      '10': 'restartControl'
-    },
-    {
-      '1': 'fuse',
-      '3': 1021,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.FuseRequest',
-      '9': 0,
-      '10': 'fuse'
-    },
-    {
-      '1': 'get_persistent_stats',
-      '3': 1022,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.GetPersistentStatsRequest',
-      '9': 0,
-      '10': 'getPersistentStats'
-    },
-    {
-      '1': 'get_connections',
-      '3': 1023,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.GetConnectionsRequest',
-      '9': 0,
-      '10': 'getConnections'
-    },
-    {
-      '1': 'start_speedtest',
-      '3': 1027,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.StartSpeedtestRequest',
-      '9': 0,
-      '10': 'startSpeedtest'
-    },
-    {
-      '1': 'get_speedtest_status',
-      '3': 1028,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.GetSpeedtestStatusRequest',
-      '9': 0,
-      '10': 'getSpeedtestStatus'
-    },
-    {
-      '1': 'report_client_speedtest',
-      '3': 1029,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.ReportClientSpeedtestRequest',
-      '9': 0,
-      '10': 'reportClientSpeedtest'
-    },
-    {
-      '1': 'initiate_remote_ssh',
-      '3': 1030,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.InitiateRemoteSshRequest',
-      '9': 0,
-      '10': 'initiateRemoteSsh'
-    },
-    {
-      '1': 'self_test',
-      '3': 1031,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.SelfTestRequest',
-      '9': 0,
-      '10': 'selfTest'
-    },
-    {
-      '1': 'set_test_mode',
-      '3': 1032,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.SetTestModeRequest',
-      '9': 0,
-      '10': 'setTestMode'
-    },
-    {
-      '1': 'software_update',
-      '3': 1033,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.SoftwareUpdateRequest',
-      '9': 0,
-      '10': 'softwareUpdate'
-    },
-    {
-      '1': 'iq_capture',
-      '3': 1035,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.IQCaptureRequest',
-      '9': 0,
-      '10': 'iqCapture'
-    },
-    {
-      '1': 'get_radio_stats',
-      '3': 1036,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.GetRadioStatsRequest',
-      '9': 0,
-      '10': 'getRadioStats'
-    },
-    {
-      '1': 'time',
-      '3': 1037,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.GetTimeRequest',
-      '9': 0,
-      '10': 'time'
-    },
-    {
-      '1': 'run_iperf_server',
-      '3': 1038,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.RunIperfServerRequest',
-      '9': 0,
-      '10': 'runIperfServer'
-    },
-    {
-      '1': 'tcp_connectivity_test',
-      '3': 1039,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.TcpConnectivityTestRequest',
-      '9': 0,
-      '10': 'tcpConnectivityTest'
-    },
-    {
-      '1': 'udp_connectivity_test',
-      '3': 1040,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.UdpConnectivityTestRequest',
-      '9': 0,
-      '10': 'udpConnectivityTest'
-    },
-    {
-      '1': 'get_goroutine_stack_traces',
-      '3': 1041,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.GetGoroutineStackTracesRequest',
-      '9': 0,
-      '10': 'getGoroutineStackTraces'
-    },
-    {
-      '1': 'dish_stow',
-      '3': 2002,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishStowRequest',
-      '9': 0,
-      '10': 'dishStow'
-    },
-    {
-      '1': 'dish_get_context',
-      '3': 2003,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishGetContextRequest',
-      '9': 0,
-      '10': 'dishGetContext'
-    },
-    {
-      '1': 'dish_get_obstruction_map',
-      '3': 2008,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishGetObstructionMapRequest',
-      '9': 0,
-      '10': 'dishGetObstructionMap'
-    },
-    {
-      '1': 'dish_set_emc',
-      '3': 2007,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishSetEmcRequest',
-      '9': 0,
-      '10': 'dishSetEmc'
-    },
-    {
-      '1': 'dish_get_emc',
-      '3': 2009,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishGetEmcRequest',
-      '9': 0,
-      '10': 'dishGetEmc'
-    },
-    {
-      '1': 'dish_set_config',
-      '3': 2010,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishSetConfigRequest',
-      '9': 0,
-      '10': 'dishSetConfig'
-    },
-    {
-      '1': 'dish_get_config',
-      '3': 2011,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishGetConfigRequest',
-      '9': 0,
-      '10': 'dishGetConfig'
-    },
-    {
-      '1': 'dish_power_save',
-      '3': 2013,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishPowerSaveRequest',
-      '9': 0,
-      '10': 'dishPowerSave'
-    },
-    {
-      '1': 'dish_inhibit_gps',
-      '3': 2014,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishInhibitGpsRequest',
-      '9': 0,
-      '10': 'dishInhibitGps'
-    },
-    {
-      '1': 'dish_get_data',
-      '3': 2015,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishGetDataRequest',
-      '9': 0,
-      '10': 'dishGetData'
-    },
-    {
-      '1': 'dish_clear_obstruction_map',
-      '3': 2017,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishClearObstructionMapRequest',
-      '9': 0,
-      '10': 'dishClearObstructionMap'
-    },
-    {
-      '1': 'dish_set_max_power_test_mode',
-      '3': 2018,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishSetMaxPowerTestModeRequest',
-      '9': 0,
-      '10': 'dishSetMaxPowerTestMode'
-    },
-    {
-      '1': 'dish_activate_rssi_scan',
-      '3': 2019,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishActivateRssiScanRequest',
-      '9': 0,
-      '10': 'dishActivateRssiScan'
-    },
-    {
-      '1': 'dish_get_rssi_scan_result',
-      '3': 2020,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishGetRssiScanResultRequest',
-      '9': 0,
-      '10': 'dishGetRssiScanResult'
-    },
-    {
-      '1': 'dish_factory_reset',
-      '3': 2021,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishFactoryResetRequest',
-      '9': 0,
-      '10': 'dishFactoryReset'
-    },
-    {
-      '1': 'reset_button',
-      '3': 2022,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.ResetButtonRequest',
-      '9': 0,
-      '10': 'resetButton'
-    },
-    {
-      '1': 'set_per_vehicle_config',
-      '3': 2023,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.SoftwareUpdateRequest',
-      '9': 0,
-      '10': 'setPerVehicleConfig'
-    },
-    {
-      '1': 'dish_aviation_test',
-      '3': 2024,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishAviationTestRequest',
-      '9': 0,
-      '10': 'dishAviationTest'
-    },
-    {
-      '1': 'dish_inhibit_rf',
-      '3': 2026,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishInhibitRfRequest',
-      '9': 0,
-      '10': 'dishInhibitRf'
-    },
-    {
-      '1': 'wifi_get_clients',
-      '3': 3002,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiGetClientsRequest',
-      '9': 0,
-      '10': 'wifiGetClients'
-    },
-    {
-      '1': 'wifi_get_ping_metrics',
-      '3': 3007,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiGetPingMetricsRequest',
-      '9': 0,
-      '10': 'wifiGetPingMetrics'
-    },
-    {
-      '1': 'wifi_set_config',
-      '3': 3001,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiSetConfigRequest',
-      '9': 0,
-      '10': 'wifiSetConfig'
-    },
-    {
-      '1': 'wifi_get_config',
-      '3': 3009,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiGetConfigRequest',
-      '9': 0,
-      '10': 'wifiGetConfig'
-    },
-    {
-      '1': 'wifi_setup',
-      '3': 3003,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiSetupRequest',
-      '9': 0,
-      '10': 'wifiSetup'
-    },
-    {
-      '1': 'wifi_set_mesh_device_trust',
-      '3': 3012,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiSetMeshDeviceTrustRequest',
-      '9': 0,
-      '10': 'wifiSetMeshDeviceTrust'
-    },
-    {
-      '1': 'wifi_set_mesh_config',
-      '3': 3013,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiSetMeshConfigRequest',
-      '9': 0,
-      '10': 'wifiSetMeshConfig'
-    },
-    {
-      '1': 'wifi_get_client_history',
-      '3': 3015,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiGetClientHistoryRequest',
-      '9': 0,
-      '10': 'wifiGetClientHistory'
-    },
-    {
-      '1': 'wifi_set_client_given_name',
-      '3': 3017,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiSetClientGivenNameRequest',
-      '9': 0,
-      '10': 'wifiSetClientGivenName'
-    },
-    {
-      '1': 'wifi_set_aviation_conformed',
-      '3': 3016,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiSetAviationConformedRequest',
-      '9': 0,
-      '10': 'wifiSetAviationConformed'
-    },
-    {
-      '1': 'wifi_self_test',
-      '3': 3018,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiSelfTestRequest',
-      '9': 0,
-      '10': 'wifiSelfTest'
-    },
-    {
-      '1': 'wifi_run_self_test',
-      '3': 3028,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiRunSelfTestRequest',
-      '9': 0,
-      '10': 'wifiRunSelfTest'
-    },
-    {
-      '1': 'wifi_calibration_mode',
-      '3': 3019,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiCalibrationModeRequest',
-      '9': 0,
-      '10': 'wifiCalibrationMode'
-    },
-    {
-      '1': 'wifi_guest_info',
-      '3': 3020,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiGuestInfoRequest',
-      '9': 0,
-      '10': 'wifiGuestInfo'
-    },
-    {
-      '1': 'wifi_rf_test',
-      '3': 3021,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiRfTestRequest',
-      '9': 0,
-      '10': 'wifiRfTest'
-    },
-    {
-      '1': 'wifi_get_firewall',
-      '3': 3024,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiGetFirewallRequest',
-      '9': 0,
-      '10': 'wifiGetFirewall'
-    },
-    {
-      '1': 'wifi_toggle_poe_negotiation',
-      '3': 3025,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiTogglePoeNegotiationRequest',
-      '9': 0,
-      '10': 'wifiTogglePoeNegotiation'
-    },
-    {
-      '1': 'wifi_factory_test_command',
-      '3': 3026,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiFactoryTestCommandRequest',
-      '9': 0,
-      '10': 'wifiFactoryTestCommand'
-    },
-    {
-      '1': 'wifi_start_local_telem_proxy',
-      '3': 3027,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiStartLocalTelemProxyRequest',
-      '9': 0,
-      '10': 'wifiStartLocalTelemProxy'
-    },
-    {
-      '1': 'wifi_backhaul_stats',
-      '3': 3029,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiBackhaulStatsRequest',
-      '9': 0,
-      '10': 'wifiBackhaulStats'
-    },
-    {
-      '1': 'wifi_toggle_umbilical_mode',
-      '3': 3030,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiToggleUmbilicalModeRequest',
-      '9': 0,
-      '10': 'wifiToggleUmbilicalMode'
-    },
-    {
-      '1': 'wifi_client_sandbox',
-      '3': 3031,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiClientSandboxRequest',
-      '9': 0,
-      '10': 'wifiClientSandbox'
-    },
-    {
-      '1': 'wifi_run_debug_netsys',
-      '3': 3032,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiRunDebugNetsysRequest',
-      '9': 0,
-      '10': 'wifiRunDebugNetsys'
-    },
-    {
-      '1': 'wifi_reset_eth_phy',
-      '3': 3033,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiResetEthPhyRequest',
-      '9': 0,
-      '10': 'wifiResetEthPhy'
-    },
-    {
-      '1': 'wifi_flush_hardware_nat',
-      '3': 3034,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiFlushHardwareNatRequest',
-      '9': 0,
-      '10': 'wifiFlushHardwareNat'
-    },
-    {
-      '1': 'wifi_write_calibration',
-      '3': 3035,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiWriteCalibrationRequest',
-      '9': 0,
-      '10': 'wifiWriteCalibration'
-    },
-    {
-      '1': 'transceiver_if_loopback_test',
-      '3': 4001,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.TransceiverIFLoopbackTestRequest',
-      '9': 0,
-      '10': 'transceiverIfLoopbackTest'
-    },
-    {
-      '1': 'transceiver_get_status',
-      '3': 4003,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.TransceiverGetStatusRequest',
-      '9': 0,
-      '10': 'transceiverGetStatus'
-    },
-    {
-      '1': 'transceiver_get_telemetry',
-      '3': 4004,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.TransceiverGetTelemetryRequest',
-      '9': 0,
-      '10': 'transceiverGetTelemetry'
-    },
-    {
-      '1': 'start_unlock',
-      '3': 5000,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.Services.Unlock.StartUnlockRequest',
-      '9': 0,
-      '10': 'startUnlock'
-    },
-    {
-      '1': 'finish_unlock',
-      '3': 5001,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.Services.Unlock.FinishUnlockRequest',
-      '9': 0,
-      '10': 'finishUnlock'
-    },
-    {
-      '1': 'get_diagnostics',
-      '3': 6000,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.GetDiagnosticsRequest',
-      '9': 0,
-      '10': 'getDiagnostics'
-    },
+    {'1': 'signed_request', '3': 15, '4': 1, '5': 11, '6': '.SpaceX.API.Device.SignedData', '9': 0, '10': 'signedRequest'},
+    {'1': 'get_next_id', '3': 1006, '4': 1, '5': 11, '6': '.SpaceX.API.Device.GetNextIdRequest', '9': 0, '10': 'getNextId'},
+    {'1': 'sensitive_request', '3': 1078, '4': 1, '5': 11, '6': '.SpaceX.API.Device.SignedData', '9': 0, '10': 'sensitiveRequest'},
+    {'1': 'authenticate', '3': 1005, '4': 1, '5': 11, '6': '.SpaceX.API.Device.AuthenticateRequest', '9': 0, '10': 'authenticate'},
+    {'1': 'enable_debug_telem', '3': 1034, '4': 1, '5': 11, '6': '.SpaceX.API.Device.EnableDebugTelemRequest', '9': 0, '10': 'enableDebugTelem'},
+    {'1': 'factory_reset', '3': 1011, '4': 1, '5': 11, '6': '.SpaceX.API.Device.FactoryResetRequest', '9': 0, '10': 'factoryReset'},
+    {'1': 'get_device_info', '3': 1008, '4': 1, '5': 11, '6': '.SpaceX.API.Device.GetDeviceInfoRequest', '9': 0, '10': 'getDeviceInfo'},
+    {'1': 'get_history', '3': 1007, '4': 1, '5': 11, '6': '.SpaceX.API.Device.GetHistoryRequest', '9': 0, '10': 'getHistory'},
+    {'1': 'get_log', '3': 1012, '4': 1, '5': 11, '6': '.SpaceX.API.Device.GetLogRequest', '9': 0, '10': 'getLog'},
+    {'1': 'get_network_interfaces', '3': 1015, '4': 1, '5': 11, '6': '.SpaceX.API.Device.GetNetworkInterfacesRequest', '9': 0, '10': 'getNetworkInterfaces'},
+    {'1': 'get_ping', '3': 1009, '4': 1, '5': 11, '6': '.SpaceX.API.Device.GetPingRequest', '9': 0, '10': 'getPing'},
+    {'1': 'ping_host', '3': 1016, '4': 1, '5': 11, '6': '.SpaceX.API.Device.PingHostRequest', '9': 0, '10': 'pingHost'},
+    {'1': 'get_status', '3': 1004, '4': 1, '5': 11, '6': '.SpaceX.API.Device.GetStatusRequest', '9': 0, '10': 'getStatus'},
+    {'1': 'reboot', '3': 1001, '4': 1, '5': 11, '6': '.SpaceX.API.Device.RebootRequest', '9': 0, '10': 'reboot'},
+    {'1': 'set_sku', '3': 1013, '4': 1, '5': 11, '6': '.SpaceX.API.Device.SetSkuRequest', '9': 0, '10': 'setSku'},
+    {'1': 'set_trusted_keys', '3': 1010, '4': 1, '5': 11, '6': '.SpaceX.API.Device.SetTrustedKeysRequest', '9': 0, '10': 'setTrustedKeys'},
+    {'1': 'speed_test', '3': 1003, '4': 1, '5': 11, '6': '.SpaceX.API.Device.SpeedTestRequest', '9': 0, '10': 'speedTest'},
+    {'1': 'update', '3': 1014, '4': 1, '5': 11, '6': '.SpaceX.API.Device.UpdateRequest', '9': 0, '10': 'update'},
+    {'1': 'get_location', '3': 1017, '4': 1, '5': 11, '6': '.SpaceX.API.Device.GetLocationRequest', '9': 0, '10': 'getLocation'},
+    {'1': 'get_heap_dump', '3': 1019, '4': 1, '5': 11, '6': '.SpaceX.API.Device.GetHeapDumpRequest', '9': 0, '10': 'getHeapDump'},
+    {'1': 'restart_control', '3': 1020, '4': 1, '5': 11, '6': '.SpaceX.API.Device.RestartControlRequest', '9': 0, '10': 'restartControl'},
+    {'1': 'fuse', '3': 1021, '4': 1, '5': 11, '6': '.SpaceX.API.Device.FuseRequest', '9': 0, '10': 'fuse'},
+    {'1': 'get_persistent_stats', '3': 1022, '4': 1, '5': 11, '6': '.SpaceX.API.Device.GetPersistentStatsRequest', '9': 0, '10': 'getPersistentStats'},
+    {'1': 'get_connections', '3': 1023, '4': 1, '5': 11, '6': '.SpaceX.API.Device.GetConnectionsRequest', '9': 0, '10': 'getConnections'},
+    {'1': 'start_speedtest', '3': 1027, '4': 1, '5': 11, '6': '.SpaceX.API.Device.StartSpeedtestRequest', '9': 0, '10': 'startSpeedtest'},
+    {'1': 'get_speedtest_status', '3': 1028, '4': 1, '5': 11, '6': '.SpaceX.API.Device.GetSpeedtestStatusRequest', '9': 0, '10': 'getSpeedtestStatus'},
+    {'1': 'report_client_speedtest', '3': 1029, '4': 1, '5': 11, '6': '.SpaceX.API.Device.ReportClientSpeedtestRequest', '9': 0, '10': 'reportClientSpeedtest'},
+    {'1': 'initiate_remote_ssh', '3': 1030, '4': 1, '5': 11, '6': '.SpaceX.API.Device.InitiateRemoteSshRequest', '9': 0, '10': 'initiateRemoteSsh'},
+    {'1': 'self_test', '3': 1031, '4': 1, '5': 11, '6': '.SpaceX.API.Device.SelfTestRequest', '9': 0, '10': 'selfTest'},
+    {'1': 'set_test_mode', '3': 1032, '4': 1, '5': 11, '6': '.SpaceX.API.Device.SetTestModeRequest', '9': 0, '10': 'setTestMode'},
+    {'1': 'software_update', '3': 1033, '4': 1, '5': 11, '6': '.SpaceX.API.Device.SoftwareUpdateRequest', '9': 0, '10': 'softwareUpdate'},
+    {'1': 'iq_capture', '3': 1035, '4': 1, '5': 11, '6': '.SpaceX.API.Device.IQCaptureRequest', '9': 0, '10': 'iqCapture'},
+    {'1': 'get_radio_stats', '3': 1036, '4': 1, '5': 11, '6': '.SpaceX.API.Device.GetRadioStatsRequest', '9': 0, '10': 'getRadioStats'},
+    {'1': 'time', '3': 1037, '4': 1, '5': 11, '6': '.SpaceX.API.Device.GetTimeRequest', '9': 0, '10': 'time'},
+    {'1': 'run_iperf_server', '3': 1038, '4': 1, '5': 11, '6': '.SpaceX.API.Device.RunIperfServerRequest', '9': 0, '10': 'runIperfServer'},
+    {'1': 'tcp_connectivity_test', '3': 1039, '4': 1, '5': 11, '6': '.SpaceX.API.Device.TcpConnectivityTestRequest', '9': 0, '10': 'tcpConnectivityTest'},
+    {'1': 'udp_connectivity_test', '3': 1040, '4': 1, '5': 11, '6': '.SpaceX.API.Device.UdpConnectivityTestRequest', '9': 0, '10': 'udpConnectivityTest'},
+    {'1': 'get_goroutine_stack_traces', '3': 1041, '4': 1, '5': 11, '6': '.SpaceX.API.Device.GetGoroutineStackTracesRequest', '9': 0, '10': 'getGoroutineStackTraces'},
+    {'1': 'dish_stow', '3': 2002, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishStowRequest', '9': 0, '10': 'dishStow'},
+    {'1': 'dish_get_context', '3': 2003, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishGetContextRequest', '9': 0, '10': 'dishGetContext'},
+    {'1': 'dish_get_obstruction_map', '3': 2008, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishGetObstructionMapRequest', '9': 0, '10': 'dishGetObstructionMap'},
+    {'1': 'dish_set_emc', '3': 2007, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishSetEmcRequest', '9': 0, '10': 'dishSetEmc'},
+    {'1': 'dish_get_emc', '3': 2009, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishGetEmcRequest', '9': 0, '10': 'dishGetEmc'},
+    {'1': 'dish_set_config', '3': 2010, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishSetConfigRequest', '9': 0, '10': 'dishSetConfig'},
+    {'1': 'dish_get_config', '3': 2011, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishGetConfigRequest', '9': 0, '10': 'dishGetConfig'},
+    {'1': 'dish_power_save', '3': 2013, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishPowerSaveRequest', '9': 0, '10': 'dishPowerSave'},
+    {'1': 'dish_inhibit_gps', '3': 2014, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishInhibitGpsRequest', '9': 0, '10': 'dishInhibitGps'},
+    {'1': 'dish_get_data', '3': 2015, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishGetDataRequest', '9': 0, '10': 'dishGetData'},
+    {'1': 'dish_clear_obstruction_map', '3': 2017, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishClearObstructionMapRequest', '9': 0, '10': 'dishClearObstructionMap'},
+    {'1': 'dish_set_max_power_test_mode', '3': 2018, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishSetMaxPowerTestModeRequest', '9': 0, '10': 'dishSetMaxPowerTestMode'},
+    {'1': 'dish_activate_rssi_scan', '3': 2019, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishActivateRssiScanRequest', '9': 0, '10': 'dishActivateRssiScan'},
+    {'1': 'dish_get_rssi_scan_result', '3': 2020, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishGetRssiScanResultRequest', '9': 0, '10': 'dishGetRssiScanResult'},
+    {'1': 'dish_factory_reset', '3': 2021, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishFactoryResetRequest', '9': 0, '10': 'dishFactoryReset'},
+    {'1': 'reset_button', '3': 2022, '4': 1, '5': 11, '6': '.SpaceX.API.Device.ResetButtonRequest', '9': 0, '10': 'resetButton'},
+    {'1': 'set_per_vehicle_config', '3': 2023, '4': 1, '5': 11, '6': '.SpaceX.API.Device.SoftwareUpdateRequest', '9': 0, '10': 'setPerVehicleConfig'},
+    {'1': 'dish_aviation_test', '3': 2024, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishAviationTestRequest', '9': 0, '10': 'dishAviationTest'},
+    {'1': 'dish_inhibit_rf', '3': 2026, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishInhibitRfRequest', '9': 0, '10': 'dishInhibitRf'},
+    {'1': 'wifi_get_clients', '3': 3002, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiGetClientsRequest', '9': 0, '10': 'wifiGetClients'},
+    {'1': 'wifi_get_ping_metrics', '3': 3007, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiGetPingMetricsRequest', '9': 0, '10': 'wifiGetPingMetrics'},
+    {'1': 'wifi_set_config', '3': 3001, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiSetConfigRequest', '9': 0, '10': 'wifiSetConfig'},
+    {'1': 'wifi_get_config', '3': 3009, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiGetConfigRequest', '9': 0, '10': 'wifiGetConfig'},
+    {'1': 'wifi_setup', '3': 3003, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiSetupRequest', '9': 0, '10': 'wifiSetup'},
+    {'1': 'wifi_set_mesh_device_trust', '3': 3012, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiSetMeshDeviceTrustRequest', '9': 0, '10': 'wifiSetMeshDeviceTrust'},
+    {'1': 'wifi_set_mesh_config', '3': 3013, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiSetMeshConfigRequest', '9': 0, '10': 'wifiSetMeshConfig'},
+    {'1': 'wifi_get_client_history', '3': 3015, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiGetClientHistoryRequest', '9': 0, '10': 'wifiGetClientHistory'},
+    {'1': 'wifi_set_client_given_name', '3': 3017, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiSetClientGivenNameRequest', '9': 0, '10': 'wifiSetClientGivenName'},
+    {'1': 'wifi_set_aviation_conformed', '3': 3016, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiSetAviationConformedRequest', '9': 0, '10': 'wifiSetAviationConformed'},
+    {'1': 'wifi_self_test', '3': 3018, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiSelfTestRequest', '9': 0, '10': 'wifiSelfTest'},
+    {'1': 'wifi_run_self_test', '3': 3028, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiRunSelfTestRequest', '9': 0, '10': 'wifiRunSelfTest'},
+    {'1': 'wifi_calibration_mode', '3': 3019, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiCalibrationModeRequest', '9': 0, '10': 'wifiCalibrationMode'},
+    {'1': 'wifi_guest_info', '3': 3020, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiGuestInfoRequest', '9': 0, '10': 'wifiGuestInfo'},
+    {'1': 'wifi_rf_test', '3': 3021, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiRfTestRequest', '9': 0, '10': 'wifiRfTest'},
+    {'1': 'wifi_get_firewall', '3': 3024, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiGetFirewallRequest', '9': 0, '10': 'wifiGetFirewall'},
+    {'1': 'wifi_toggle_poe_negotiation', '3': 3025, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiTogglePoeNegotiationRequest', '9': 0, '10': 'wifiTogglePoeNegotiation'},
+    {'1': 'wifi_factory_test_command', '3': 3026, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiFactoryTestCommandRequest', '9': 0, '10': 'wifiFactoryTestCommand'},
+    {'1': 'wifi_start_local_telem_proxy', '3': 3027, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiStartLocalTelemProxyRequest', '9': 0, '10': 'wifiStartLocalTelemProxy'},
+    {'1': 'wifi_backhaul_stats', '3': 3029, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiBackhaulStatsRequest', '9': 0, '10': 'wifiBackhaulStats'},
+    {'1': 'wifi_toggle_umbilical_mode', '3': 3030, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiToggleUmbilicalModeRequest', '9': 0, '10': 'wifiToggleUmbilicalMode'},
+    {'1': 'wifi_client_sandbox', '3': 3031, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiClientSandboxRequest', '9': 0, '10': 'wifiClientSandbox'},
+    {'1': 'wifi_run_debug_netsys', '3': 3032, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiRunDebugNetsysRequest', '9': 0, '10': 'wifiRunDebugNetsys'},
+    {'1': 'wifi_reset_eth_phy', '3': 3033, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiResetEthPhyRequest', '9': 0, '10': 'wifiResetEthPhy'},
+    {'1': 'wifi_flush_hardware_nat', '3': 3034, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiFlushHardwareNatRequest', '9': 0, '10': 'wifiFlushHardwareNat'},
+    {'1': 'wifi_write_calibration', '3': 3035, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiWriteCalibrationRequest', '9': 0, '10': 'wifiWriteCalibration'},
+    {'1': 'transceiver_if_loopback_test', '3': 4001, '4': 1, '5': 11, '6': '.SpaceX.API.Device.TransceiverIFLoopbackTestRequest', '9': 0, '10': 'transceiverIfLoopbackTest'},
+    {'1': 'transceiver_get_status', '3': 4003, '4': 1, '5': 11, '6': '.SpaceX.API.Device.TransceiverGetStatusRequest', '9': 0, '10': 'transceiverGetStatus'},
+    {'1': 'transceiver_get_telemetry', '3': 4004, '4': 1, '5': 11, '6': '.SpaceX.API.Device.TransceiverGetTelemetryRequest', '9': 0, '10': 'transceiverGetTelemetry'},
+    {'1': 'start_unlock', '3': 5000, '4': 1, '5': 11, '6': '.SpaceX.API.Device.Services.Unlock.StartUnlockRequest', '9': 0, '10': 'startUnlock'},
+    {'1': 'finish_unlock', '3': 5001, '4': 1, '5': 11, '6': '.SpaceX.API.Device.Services.Unlock.FinishUnlockRequest', '9': 0, '10': 'finishUnlock'},
+    {'1': 'get_diagnostics', '3': 6000, '4': 1, '5': 11, '6': '.SpaceX.API.Device.GetDiagnosticsRequest', '9': 0, '10': 'getDiagnostics'},
   ],
   '8': [
     {'1': 'request'},
@@ -1178,726 +409,87 @@ const Response$json = {
   '1': 'Response',
   '2': [
     {'1': 'id', '3': 1, '4': 1, '5': 4, '10': 'id'},
-    {
-      '1': 'status',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Status.Status',
-      '10': 'status'
-    },
+    {'1': 'status', '3': 2, '4': 1, '5': 11, '6': '.SpaceX.API.Status.Status', '10': 'status'},
     {'1': 'api_version', '3': 3, '4': 1, '5': 4, '10': 'apiVersion'},
-    {
-      '1': 'get_next_id',
-      '3': 1006,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.GetNextIdResponse',
-      '9': 0,
-      '10': 'getNextId'
-    },
-    {
-      '1': 'enable_debug_telem',
-      '3': 1034,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.EnableDebugTelemResponse',
-      '9': 0,
-      '10': 'enableDebugTelem'
-    },
-    {
-      '1': 'factory_reset',
-      '3': 1011,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.FactoryResetResponse',
-      '9': 0,
-      '10': 'factoryReset'
-    },
-    {
-      '1': 'get_device_info',
-      '3': 1004,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.GetDeviceInfoResponse',
-      '9': 0,
-      '10': 'getDeviceInfo'
-    },
-    {
-      '1': 'get_log',
-      '3': 1012,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.GetLogResponse',
-      '9': 0,
-      '10': 'getLog'
-    },
-    {
-      '1': 'get_network_interfaces',
-      '3': 1015,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.GetNetworkInterfacesResponse',
-      '9': 0,
-      '10': 'getNetworkInterfaces'
-    },
-    {
-      '1': 'get_ping',
-      '3': 1009,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.GetPingResponse',
-      '9': 0,
-      '10': 'getPing'
-    },
-    {
-      '1': 'ping_host',
-      '3': 1016,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.PingHostResponse',
-      '9': 0,
-      '10': 'pingHost'
-    },
-    {
-      '1': 'reboot',
-      '3': 1001,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.RebootResponse',
-      '9': 0,
-      '10': 'reboot'
-    },
-    {
-      '1': 'speed_test',
-      '3': 1003,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.SpeedTestResponse',
-      '9': 0,
-      '10': 'speedTest'
-    },
-    {
-      '1': 'set_sku',
-      '3': 1013,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.SetSkuResponse',
-      '9': 0,
-      '10': 'setSku'
-    },
-    {
-      '1': 'set_trusted_keys',
-      '3': 1010,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.SetTrustedKeysResponse',
-      '9': 0,
-      '10': 'setTrustedKeys'
-    },
-    {
-      '1': 'update',
-      '3': 1014,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.UpdateResponse',
-      '9': 0,
-      '10': 'update'
-    },
-    {
-      '1': 'get_location',
-      '3': 1017,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.GetLocationResponse',
-      '9': 0,
-      '10': 'getLocation'
-    },
-    {
-      '1': 'get_heap_dump',
-      '3': 1019,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.GetHeapDumpResponse',
-      '9': 0,
-      '10': 'getHeapDump'
-    },
-    {
-      '1': 'restart_control',
-      '3': 1020,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.RestartControlResponse',
-      '9': 0,
-      '10': 'restartControl'
-    },
-    {
-      '1': 'fuse',
-      '3': 1021,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.FuseResponse',
-      '9': 0,
-      '10': 'fuse'
-    },
-    {
-      '1': 'get_connections',
-      '3': 1023,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.GetConnectionsResponse',
-      '9': 0,
-      '10': 'getConnections'
-    },
-    {
-      '1': 'start_speedtest',
-      '3': 1027,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.StartSpeedtestResponse',
-      '9': 0,
-      '10': 'startSpeedtest'
-    },
-    {
-      '1': 'get_speedtest_status',
-      '3': 1028,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.GetSpeedtestStatusResponse',
-      '9': 0,
-      '10': 'getSpeedtestStatus'
-    },
-    {
-      '1': 'report_client_speedtest',
-      '3': 1029,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.ReportClientSpeedtestResponse',
-      '9': 0,
-      '10': 'reportClientSpeedtest'
-    },
-    {
-      '1': 'initiate_remote_ssh',
-      '3': 1030,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.InitiateRemoteSshResponse',
-      '9': 0,
-      '10': 'initiateRemoteSsh'
-    },
-    {
-      '1': 'self_test',
-      '3': 1031,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.SelfTestResponse',
-      '9': 0,
-      '10': 'selfTest'
-    },
-    {
-      '1': 'set_test_mode',
-      '3': 1032,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.SetTestModeResponse',
-      '9': 0,
-      '10': 'setTestMode'
-    },
-    {
-      '1': 'software_update',
-      '3': 1033,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.SoftwareUpdateResponse',
-      '9': 0,
-      '10': 'softwareUpdate'
-    },
-    {
-      '1': 'get_radio_stats',
-      '3': 1035,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.GetRadioStatsResponse',
-      '9': 0,
-      '10': 'getRadioStats'
-    },
-    {
-      '1': 'time',
-      '3': 1037,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.GetTimeResponse',
-      '9': 0,
-      '10': 'time'
-    },
-    {
-      '1': 'run_iperf_server',
-      '3': 1038,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.RunIperfServerResponse',
-      '9': 0,
-      '10': 'runIperfServer'
-    },
-    {
-      '1': 'get_goroutine_stack_traces',
-      '3': 1041,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.GetGoroutineStackTracesResponse',
-      '9': 0,
-      '10': 'getGoroutineStackTraces'
-    },
-    {
-      '1': 'dish_authenticate',
-      '3': 2005,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishAuthenticateResponse',
-      '9': 0,
-      '10': 'dishAuthenticate'
-    },
-    {
-      '1': 'dish_get_context',
-      '3': 2003,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishGetContextResponse',
-      '9': 0,
-      '10': 'dishGetContext'
-    },
-    {
-      '1': 'dish_get_history',
-      '3': 2006,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishGetHistoryResponse',
-      '9': 0,
-      '10': 'dishGetHistory'
-    },
-    {
-      '1': 'dish_get_status',
-      '3': 2004,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishGetStatusResponse',
-      '9': 0,
-      '10': 'dishGetStatus'
-    },
-    {
-      '1': 'dish_get_obstruction_map',
-      '3': 2008,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishGetObstructionMapResponse',
-      '9': 0,
-      '10': 'dishGetObstructionMap'
-    },
-    {
-      '1': 'dish_stow',
-      '3': 2002,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishStowResponse',
-      '9': 0,
-      '10': 'dishStow'
-    },
-    {
-      '1': 'dish_set_emc',
-      '3': 2007,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishSetEmcResponse',
-      '9': 0,
-      '10': 'dishSetEmc'
-    },
-    {
-      '1': 'dish_get_emc',
-      '3': 2009,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishGetEmcResponse',
-      '9': 0,
-      '10': 'dishGetEmc'
-    },
-    {
-      '1': 'dish_set_config',
-      '3': 2010,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishSetConfigResponse',
-      '9': 0,
-      '10': 'dishSetConfig'
-    },
-    {
-      '1': 'dish_get_config',
-      '3': 2011,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishGetConfigResponse',
-      '9': 0,
-      '10': 'dishGetConfig'
-    },
-    {
-      '1': 'dish_inhibit_gps',
-      '3': 2013,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishInhibitGpsResponse',
-      '9': 0,
-      '10': 'dishInhibitGps'
-    },
-    {
-      '1': 'dish_clear_obstruction_map',
-      '3': 2015,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishClearObstructionMapResponse',
-      '9': 0,
-      '10': 'dishClearObstructionMap'
-    },
-    {
-      '1': 'dish_set_max_power_test_mode',
-      '3': 2018,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishSetMaxPowerTestModeResponse',
-      '9': 0,
-      '10': 'dishSetMaxPowerTestMode'
-    },
-    {
-      '1': 'dish_activate_rssi_scan',
-      '3': 2019,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishActivateRssiScanResponse',
-      '9': 0,
-      '10': 'dishActivateRssiScan'
-    },
-    {
-      '1': 'dish_get_rssi_scan_result',
-      '3': 2020,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishGetRssiScanResultResponse',
-      '9': 0,
-      '10': 'dishGetRssiScanResult'
-    },
-    {
-      '1': 'dish_factory_reset',
-      '3': 2021,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishFactoryResetResponse',
-      '9': 0,
-      '10': 'dishFactoryReset'
-    },
-    {
-      '1': 'reset_button',
-      '3': 2022,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.ResetButtonResponse',
-      '9': 0,
-      '10': 'resetButton'
-    },
-    {
-      '1': 'set_per_vehicle_config',
-      '3': 2023,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.SetPerVehicleConfigResponse',
-      '9': 0,
-      '10': 'setPerVehicleConfig'
-    },
-    {
-      '1': 'dish_aviation_test',
-      '3': 2024,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishAviationTestResponse',
-      '9': 0,
-      '10': 'dishAviationTest'
-    },
-    {
-      '1': 'dish_inhibit_rf',
-      '3': 2026,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishInhibitRfResponse',
-      '9': 0,
-      '10': 'dishInhibitRf'
-    },
-    {
-      '1': 'wifi_authenticate',
-      '3': 3005,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiAuthenticateResponse',
-      '9': 0,
-      '10': 'wifiAuthenticate'
-    },
-    {
-      '1': 'wifi_get_clients',
-      '3': 3002,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiGetClientsResponse',
-      '9': 0,
-      '10': 'wifiGetClients'
-    },
-    {
-      '1': 'wifi_get_history',
-      '3': 3006,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiGetHistoryResponse',
-      '9': 0,
-      '10': 'wifiGetHistory'
-    },
-    {
-      '1': 'wifi_get_ping_metrics',
-      '3': 3007,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiGetPingMetricsResponse',
-      '9': 0,
-      '10': 'wifiGetPingMetrics'
-    },
-    {
-      '1': 'wifi_get_status',
-      '3': 3004,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiGetStatusResponse',
-      '9': 0,
-      '10': 'wifiGetStatus'
-    },
-    {
-      '1': 'wifi_set_config',
-      '3': 3001,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiSetConfigResponse',
-      '9': 0,
-      '10': 'wifiSetConfig'
-    },
-    {
-      '1': 'wifi_get_config',
-      '3': 3009,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiGetConfigResponse',
-      '9': 0,
-      '10': 'wifiGetConfig'
-    },
-    {
-      '1': 'wifi_setup',
-      '3': 3003,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiSetupResponse',
-      '9': 0,
-      '10': 'wifiSetup'
-    },
-    {
-      '1': 'wifi_get_persistent_stats',
-      '3': 3022,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiGetPersistentStatsResponse',
-      '9': 0,
-      '10': 'wifiGetPersistentStats'
-    },
-    {
-      '1': 'wifi_set_mesh_device_trust',
-      '3': 3012,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiSetMeshDeviceTrustResponse',
-      '9': 0,
-      '10': 'wifiSetMeshDeviceTrust'
-    },
-    {
-      '1': 'wifi_set_mesh_config',
-      '3': 3013,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiSetMeshConfigResponse',
-      '9': 0,
-      '10': 'wifiSetMeshConfig'
-    },
-    {
-      '1': 'wifi_get_client_history',
-      '3': 3015,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiGetClientHistoryResponse',
-      '9': 0,
-      '10': 'wifiGetClientHistory'
-    },
-    {
-      '1': 'wifi_self_test',
-      '3': 3016,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiSelfTestResponse',
-      '9': 0,
-      '10': 'wifiSelfTest'
-    },
-    {
-      '1': 'wifi_guest_info',
-      '3': 3020,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiGuestInfoResponse',
-      '9': 0,
-      '10': 'wifiGuestInfo'
-    },
-    {
-      '1': 'wifi_rf_test',
-      '3': 3021,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiRfTestResponse',
-      '9': 0,
-      '10': 'wifiRfTest'
-    },
-    {
-      '1': 'wifi_get_firewall',
-      '3': 3024,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiGetFirewallResponse',
-      '9': 0,
-      '10': 'wifiGetFirewall'
-    },
-    {
-      '1': 'wifi_factory_test_command',
-      '3': 3025,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiFactoryTestCommandResponse',
-      '9': 0,
-      '10': 'wifiFactoryTestCommand'
-    },
-    {
-      '1': 'wifi_backhaul_stats',
-      '3': 3026,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiBackhaulStatsResponse',
-      '9': 0,
-      '10': 'wifiBackhaulStats'
-    },
-    {
-      '1': 'wifi_client_sandbox',
-      '3': 3027,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiClientSandboxResponse',
-      '9': 0,
-      '10': 'wifiClientSandbox'
-    },
-    {
-      '1': 'wifi_update',
-      '3': 3028,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiUpdateResponse',
-      '9': 0,
-      '10': 'wifiUpdate'
-    },
-    {
-      '1': 'wifi_run_debug_netsys',
-      '3': 3029,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiRunDebugNetsysResponse',
-      '9': 0,
-      '10': 'wifiRunDebugNetsys'
-    },
-    {
-      '1': 'wifi_reset_eth_phy',
-      '3': 3030,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiResetEthPhyResponse',
-      '9': 0,
-      '10': 'wifiResetEthPhy'
-    },
-    {
-      '1': 'wifi_flush_hardware_nat',
-      '3': 3031,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiFlushHardwareNatResponse',
-      '9': 0,
-      '10': 'wifiFlushHardwareNat'
-    },
-    {
-      '1': 'transceiver_if_loopback_test',
-      '3': 4001,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.TransceiverIFLoopbackTestResponse',
-      '9': 0,
-      '10': 'transceiverIfLoopbackTest'
-    },
-    {
-      '1': 'transceiver_get_status',
-      '3': 4003,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.TransceiverGetStatusResponse',
-      '9': 0,
-      '10': 'transceiverGetStatus'
-    },
-    {
-      '1': 'transceiver_get_telemetry',
-      '3': 4004,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.TransceiverGetTelemetryResponse',
-      '9': 0,
-      '10': 'transceiverGetTelemetry'
-    },
-    {
-      '1': 'start_unlock',
-      '3': 5000,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.Services.Unlock.StartUnlockResponse',
-      '9': 0,
-      '10': 'startUnlock'
-    },
-    {
-      '1': 'finish_unlock',
-      '3': 5001,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.Services.Unlock.FinishUnlockResponse',
-      '9': 0,
-      '10': 'finishUnlock'
-    },
-    {
-      '1': 'wifi_get_diagnostics',
-      '3': 6000,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiGetDiagnosticsResponse',
-      '9': 0,
-      '10': 'wifiGetDiagnostics'
-    },
-    {
-      '1': 'dish_get_diagnostics',
-      '3': 6001,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishGetDiagnosticsResponse',
-      '9': 0,
-      '10': 'dishGetDiagnostics'
-    },
+    {'1': 'get_next_id', '3': 1006, '4': 1, '5': 11, '6': '.SpaceX.API.Device.GetNextIdResponse', '9': 0, '10': 'getNextId'},
+    {'1': 'enable_debug_telem', '3': 1034, '4': 1, '5': 11, '6': '.SpaceX.API.Device.EnableDebugTelemResponse', '9': 0, '10': 'enableDebugTelem'},
+    {'1': 'factory_reset', '3': 1011, '4': 1, '5': 11, '6': '.SpaceX.API.Device.FactoryResetResponse', '9': 0, '10': 'factoryReset'},
+    {'1': 'get_device_info', '3': 1004, '4': 1, '5': 11, '6': '.SpaceX.API.Device.GetDeviceInfoResponse', '9': 0, '10': 'getDeviceInfo'},
+    {'1': 'get_log', '3': 1012, '4': 1, '5': 11, '6': '.SpaceX.API.Device.GetLogResponse', '9': 0, '10': 'getLog'},
+    {'1': 'get_network_interfaces', '3': 1015, '4': 1, '5': 11, '6': '.SpaceX.API.Device.GetNetworkInterfacesResponse', '9': 0, '10': 'getNetworkInterfaces'},
+    {'1': 'get_ping', '3': 1009, '4': 1, '5': 11, '6': '.SpaceX.API.Device.GetPingResponse', '9': 0, '10': 'getPing'},
+    {'1': 'ping_host', '3': 1016, '4': 1, '5': 11, '6': '.SpaceX.API.Device.PingHostResponse', '9': 0, '10': 'pingHost'},
+    {'1': 'reboot', '3': 1001, '4': 1, '5': 11, '6': '.SpaceX.API.Device.RebootResponse', '9': 0, '10': 'reboot'},
+    {'1': 'speed_test', '3': 1003, '4': 1, '5': 11, '6': '.SpaceX.API.Device.SpeedTestResponse', '9': 0, '10': 'speedTest'},
+    {'1': 'set_sku', '3': 1013, '4': 1, '5': 11, '6': '.SpaceX.API.Device.SetSkuResponse', '9': 0, '10': 'setSku'},
+    {'1': 'set_trusted_keys', '3': 1010, '4': 1, '5': 11, '6': '.SpaceX.API.Device.SetTrustedKeysResponse', '9': 0, '10': 'setTrustedKeys'},
+    {'1': 'update', '3': 1014, '4': 1, '5': 11, '6': '.SpaceX.API.Device.UpdateResponse', '9': 0, '10': 'update'},
+    {'1': 'get_location', '3': 1017, '4': 1, '5': 11, '6': '.SpaceX.API.Device.GetLocationResponse', '9': 0, '10': 'getLocation'},
+    {'1': 'get_heap_dump', '3': 1019, '4': 1, '5': 11, '6': '.SpaceX.API.Device.GetHeapDumpResponse', '9': 0, '10': 'getHeapDump'},
+    {'1': 'restart_control', '3': 1020, '4': 1, '5': 11, '6': '.SpaceX.API.Device.RestartControlResponse', '9': 0, '10': 'restartControl'},
+    {'1': 'fuse', '3': 1021, '4': 1, '5': 11, '6': '.SpaceX.API.Device.FuseResponse', '9': 0, '10': 'fuse'},
+    {'1': 'get_connections', '3': 1023, '4': 1, '5': 11, '6': '.SpaceX.API.Device.GetConnectionsResponse', '9': 0, '10': 'getConnections'},
+    {'1': 'start_speedtest', '3': 1027, '4': 1, '5': 11, '6': '.SpaceX.API.Device.StartSpeedtestResponse', '9': 0, '10': 'startSpeedtest'},
+    {'1': 'get_speedtest_status', '3': 1028, '4': 1, '5': 11, '6': '.SpaceX.API.Device.GetSpeedtestStatusResponse', '9': 0, '10': 'getSpeedtestStatus'},
+    {'1': 'report_client_speedtest', '3': 1029, '4': 1, '5': 11, '6': '.SpaceX.API.Device.ReportClientSpeedtestResponse', '9': 0, '10': 'reportClientSpeedtest'},
+    {'1': 'initiate_remote_ssh', '3': 1030, '4': 1, '5': 11, '6': '.SpaceX.API.Device.InitiateRemoteSshResponse', '9': 0, '10': 'initiateRemoteSsh'},
+    {'1': 'self_test', '3': 1031, '4': 1, '5': 11, '6': '.SpaceX.API.Device.SelfTestResponse', '9': 0, '10': 'selfTest'},
+    {'1': 'set_test_mode', '3': 1032, '4': 1, '5': 11, '6': '.SpaceX.API.Device.SetTestModeResponse', '9': 0, '10': 'setTestMode'},
+    {'1': 'software_update', '3': 1033, '4': 1, '5': 11, '6': '.SpaceX.API.Device.SoftwareUpdateResponse', '9': 0, '10': 'softwareUpdate'},
+    {'1': 'get_radio_stats', '3': 1035, '4': 1, '5': 11, '6': '.SpaceX.API.Device.GetRadioStatsResponse', '9': 0, '10': 'getRadioStats'},
+    {'1': 'time', '3': 1037, '4': 1, '5': 11, '6': '.SpaceX.API.Device.GetTimeResponse', '9': 0, '10': 'time'},
+    {'1': 'run_iperf_server', '3': 1038, '4': 1, '5': 11, '6': '.SpaceX.API.Device.RunIperfServerResponse', '9': 0, '10': 'runIperfServer'},
+    {'1': 'get_goroutine_stack_traces', '3': 1041, '4': 1, '5': 11, '6': '.SpaceX.API.Device.GetGoroutineStackTracesResponse', '9': 0, '10': 'getGoroutineStackTraces'},
+    {'1': 'dish_authenticate', '3': 2005, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishAuthenticateResponse', '9': 0, '10': 'dishAuthenticate'},
+    {'1': 'dish_get_context', '3': 2003, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishGetContextResponse', '9': 0, '10': 'dishGetContext'},
+    {'1': 'dish_get_history', '3': 2006, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishGetHistoryResponse', '9': 0, '10': 'dishGetHistory'},
+    {'1': 'dish_get_status', '3': 2004, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishGetStatusResponse', '9': 0, '10': 'dishGetStatus'},
+    {'1': 'dish_get_obstruction_map', '3': 2008, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishGetObstructionMapResponse', '9': 0, '10': 'dishGetObstructionMap'},
+    {'1': 'dish_stow', '3': 2002, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishStowResponse', '9': 0, '10': 'dishStow'},
+    {'1': 'dish_set_emc', '3': 2007, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishSetEmcResponse', '9': 0, '10': 'dishSetEmc'},
+    {'1': 'dish_get_emc', '3': 2009, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishGetEmcResponse', '9': 0, '10': 'dishGetEmc'},
+    {'1': 'dish_set_config', '3': 2010, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishSetConfigResponse', '9': 0, '10': 'dishSetConfig'},
+    {'1': 'dish_get_config', '3': 2011, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishGetConfigResponse', '9': 0, '10': 'dishGetConfig'},
+    {'1': 'dish_inhibit_gps', '3': 2013, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishInhibitGpsResponse', '9': 0, '10': 'dishInhibitGps'},
+    {'1': 'dish_clear_obstruction_map', '3': 2015, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishClearObstructionMapResponse', '9': 0, '10': 'dishClearObstructionMap'},
+    {'1': 'dish_set_max_power_test_mode', '3': 2018, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishSetMaxPowerTestModeResponse', '9': 0, '10': 'dishSetMaxPowerTestMode'},
+    {'1': 'dish_activate_rssi_scan', '3': 2019, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishActivateRssiScanResponse', '9': 0, '10': 'dishActivateRssiScan'},
+    {'1': 'dish_get_rssi_scan_result', '3': 2020, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishGetRssiScanResultResponse', '9': 0, '10': 'dishGetRssiScanResult'},
+    {'1': 'dish_factory_reset', '3': 2021, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishFactoryResetResponse', '9': 0, '10': 'dishFactoryReset'},
+    {'1': 'reset_button', '3': 2022, '4': 1, '5': 11, '6': '.SpaceX.API.Device.ResetButtonResponse', '9': 0, '10': 'resetButton'},
+    {'1': 'set_per_vehicle_config', '3': 2023, '4': 1, '5': 11, '6': '.SpaceX.API.Device.SetPerVehicleConfigResponse', '9': 0, '10': 'setPerVehicleConfig'},
+    {'1': 'dish_aviation_test', '3': 2024, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishAviationTestResponse', '9': 0, '10': 'dishAviationTest'},
+    {'1': 'dish_inhibit_rf', '3': 2026, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishInhibitRfResponse', '9': 0, '10': 'dishInhibitRf'},
+    {'1': 'wifi_authenticate', '3': 3005, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiAuthenticateResponse', '9': 0, '10': 'wifiAuthenticate'},
+    {'1': 'wifi_get_clients', '3': 3002, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiGetClientsResponse', '9': 0, '10': 'wifiGetClients'},
+    {'1': 'wifi_get_history', '3': 3006, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiGetHistoryResponse', '9': 0, '10': 'wifiGetHistory'},
+    {'1': 'wifi_get_ping_metrics', '3': 3007, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiGetPingMetricsResponse', '9': 0, '10': 'wifiGetPingMetrics'},
+    {'1': 'wifi_get_status', '3': 3004, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiGetStatusResponse', '9': 0, '10': 'wifiGetStatus'},
+    {'1': 'wifi_set_config', '3': 3001, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiSetConfigResponse', '9': 0, '10': 'wifiSetConfig'},
+    {'1': 'wifi_get_config', '3': 3009, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiGetConfigResponse', '9': 0, '10': 'wifiGetConfig'},
+    {'1': 'wifi_setup', '3': 3003, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiSetupResponse', '9': 0, '10': 'wifiSetup'},
+    {'1': 'wifi_get_persistent_stats', '3': 3022, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiGetPersistentStatsResponse', '9': 0, '10': 'wifiGetPersistentStats'},
+    {'1': 'wifi_set_mesh_device_trust', '3': 3012, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiSetMeshDeviceTrustResponse', '9': 0, '10': 'wifiSetMeshDeviceTrust'},
+    {'1': 'wifi_set_mesh_config', '3': 3013, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiSetMeshConfigResponse', '9': 0, '10': 'wifiSetMeshConfig'},
+    {'1': 'wifi_get_client_history', '3': 3015, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiGetClientHistoryResponse', '9': 0, '10': 'wifiGetClientHistory'},
+    {'1': 'wifi_self_test', '3': 3016, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiSelfTestResponse', '9': 0, '10': 'wifiSelfTest'},
+    {'1': 'wifi_guest_info', '3': 3020, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiGuestInfoResponse', '9': 0, '10': 'wifiGuestInfo'},
+    {'1': 'wifi_rf_test', '3': 3021, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiRfTestResponse', '9': 0, '10': 'wifiRfTest'},
+    {'1': 'wifi_get_firewall', '3': 3024, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiGetFirewallResponse', '9': 0, '10': 'wifiGetFirewall'},
+    {'1': 'wifi_factory_test_command', '3': 3025, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiFactoryTestCommandResponse', '9': 0, '10': 'wifiFactoryTestCommand'},
+    {'1': 'wifi_backhaul_stats', '3': 3026, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiBackhaulStatsResponse', '9': 0, '10': 'wifiBackhaulStats'},
+    {'1': 'wifi_client_sandbox', '3': 3027, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiClientSandboxResponse', '9': 0, '10': 'wifiClientSandbox'},
+    {'1': 'wifi_update', '3': 3028, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiUpdateResponse', '9': 0, '10': 'wifiUpdate'},
+    {'1': 'wifi_run_debug_netsys', '3': 3029, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiRunDebugNetsysResponse', '9': 0, '10': 'wifiRunDebugNetsys'},
+    {'1': 'wifi_reset_eth_phy', '3': 3030, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiResetEthPhyResponse', '9': 0, '10': 'wifiResetEthPhy'},
+    {'1': 'wifi_flush_hardware_nat', '3': 3031, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiFlushHardwareNatResponse', '9': 0, '10': 'wifiFlushHardwareNat'},
+    {'1': 'transceiver_if_loopback_test', '3': 4001, '4': 1, '5': 11, '6': '.SpaceX.API.Device.TransceiverIFLoopbackTestResponse', '9': 0, '10': 'transceiverIfLoopbackTest'},
+    {'1': 'transceiver_get_status', '3': 4003, '4': 1, '5': 11, '6': '.SpaceX.API.Device.TransceiverGetStatusResponse', '9': 0, '10': 'transceiverGetStatus'},
+    {'1': 'transceiver_get_telemetry', '3': 4004, '4': 1, '5': 11, '6': '.SpaceX.API.Device.TransceiverGetTelemetryResponse', '9': 0, '10': 'transceiverGetTelemetry'},
+    {'1': 'start_unlock', '3': 5000, '4': 1, '5': 11, '6': '.SpaceX.API.Device.Services.Unlock.StartUnlockResponse', '9': 0, '10': 'startUnlock'},
+    {'1': 'finish_unlock', '3': 5001, '4': 1, '5': 11, '6': '.SpaceX.API.Device.Services.Unlock.FinishUnlockResponse', '9': 0, '10': 'finishUnlock'},
+    {'1': 'wifi_get_diagnostics', '3': 6000, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiGetDiagnosticsResponse', '9': 0, '10': 'wifiGetDiagnostics'},
+    {'1': 'dish_get_diagnostics', '3': 6001, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishGetDiagnosticsResponse', '9': 0, '10': 'dishGetDiagnostics'},
   ],
   '8': [
     {'1': 'response'},
@@ -2055,51 +647,11 @@ final $typed_data.Uint8List responseDescriptor = $convert.base64Decode(
 const Event$json = {
   '1': 'Event',
   '2': [
-    {
-      '1': 'wifi_new_client_connected',
-      '3': 3001,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiNewClientConnectedEvent',
-      '9': 0,
-      '10': 'wifiNewClientConnected'
-    },
-    {
-      '1': 'wifi_account_bonding',
-      '3': 3002,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiAccountBondingEvent',
-      '9': 0,
-      '10': 'wifiAccountBonding'
-    },
-    {
-      '1': 'wifi_new_peer',
-      '3': 3003,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiNewPeerEvent',
-      '9': 0,
-      '10': 'wifiNewPeer'
-    },
-    {
-      '1': 'wifi_cloud_status',
-      '3': 3004,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiCloudStatusEvent',
-      '9': 0,
-      '10': 'wifiCloudStatus'
-    },
-    {
-      '1': 'wifi_client_sandbox',
-      '3': 3005,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiClientSandboxRequest',
-      '9': 0,
-      '10': 'wifiClientSandbox'
-    },
+    {'1': 'wifi_new_client_connected', '3': 3001, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiNewClientConnectedEvent', '9': 0, '10': 'wifiNewClientConnected'},
+    {'1': 'wifi_account_bonding', '3': 3002, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiAccountBondingEvent', '9': 0, '10': 'wifiAccountBonding'},
+    {'1': 'wifi_new_peer', '3': 3003, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiNewPeerEvent', '9': 0, '10': 'wifiNewPeer'},
+    {'1': 'wifi_cloud_status', '3': 3004, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiCloudStatusEvent', '9': 0, '10': 'wifiCloudStatus'},
+    {'1': 'wifi_client_sandbox', '3': 3005, '4': 1, '5': 11, '6': '.SpaceX.API.Device.WifiClientSandboxRequest', '9': 0, '10': 'wifiClientSandbox'},
   ],
   '8': [
     {'1': 'event'},
@@ -2123,13 +675,7 @@ const WifiCloudStatusEvent$json = {
   '1': 'WifiCloudStatusEvent',
   '2': [
     {'1': 'api_version', '3': 4, '4': 1, '5': 13, '10': 'apiVersion'},
-    {
-      '1': 'direct_link_to_dish',
-      '3': 1,
-      '4': 1,
-      '5': 8,
-      '10': 'directLinkToDish'
-    },
+    {'1': 'direct_link_to_dish', '3': 1, '4': 1, '5': 8, '10': 'directLinkToDish'},
     {'1': 'hardware_version', '3': 2, '4': 1, '5': 9, '10': 'hardwareVersion'},
     {'1': 'is_bypassed', '3': 3, '4': 1, '5': 8, '10': 'isBypassed'},
   ],
@@ -2146,22 +692,8 @@ final $typed_data.Uint8List wifiCloudStatusEventDescriptor = $convert.base64Deco
 const WifiClientSandboxRequest$json = {
   '1': 'WifiClientSandboxRequest',
   '2': [
-    {
-      '1': 'client_sandbox_status',
-      '3': 1,
-      '4': 3,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiClientSandboxStatus',
-      '10': 'clientSandboxStatus'
-    },
-    {
-      '1': 'alerts',
-      '3': 2,
-      '4': 3,
-      '5': 14,
-      '6': '.SpaceX.API.Device.WifiClientSandboxAlert',
-      '10': 'alerts'
-    },
+    {'1': 'client_sandbox_status', '3': 1, '4': 3, '5': 11, '6': '.SpaceX.API.Device.WifiClientSandboxStatus', '10': 'clientSandboxStatus'},
+    {'1': 'alerts', '3': 2, '4': 3, '5': 14, '6': '.SpaceX.API.Device.WifiClientSandboxAlert', '10': 'alerts'},
     {'1': 'unix_timestamp_ns', '3': 3, '4': 1, '5': 4, '10': 'unixTimestampNs'},
   ],
 };
@@ -2180,28 +712,21 @@ const WifiClientSandboxResponse$json = {
 };
 
 /// Descriptor for `WifiClientSandboxResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List wifiClientSandboxResponseDescriptor =
-    $convert.base64Decode('ChlXaWZpQ2xpZW50U2FuZGJveFJlc3BvbnNl');
+final $typed_data.Uint8List wifiClientSandboxResponseDescriptor = $convert.base64Decode(
+    'ChlXaWZpQ2xpZW50U2FuZGJveFJlc3BvbnNl');
 
 @$core.Deprecated('Use wifiWriteCalibrationRequestDescriptor instead')
 const WifiWriteCalibrationRequest$json = {
   '1': 'WifiWriteCalibrationRequest',
   '2': [
-    {
-      '1': 'calibration_image',
-      '3': 1,
-      '4': 1,
-      '5': 12,
-      '10': 'calibrationImage'
-    },
+    {'1': 'calibration_image', '3': 1, '4': 1, '5': 12, '10': 'calibrationImage'},
   ],
 };
 
 /// Descriptor for `WifiWriteCalibrationRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List wifiWriteCalibrationRequestDescriptor =
-    $convert.base64Decode(
-        'ChtXaWZpV3JpdGVDYWxpYnJhdGlvblJlcXVlc3QSKwoRY2FsaWJyYXRpb25faW1hZ2UYASABKA'
-        'xSEGNhbGlicmF0aW9uSW1hZ2U=');
+final $typed_data.Uint8List wifiWriteCalibrationRequestDescriptor = $convert.base64Decode(
+    'ChtXaWZpV3JpdGVDYWxpYnJhdGlvblJlcXVlc3QSKwoRY2FsaWJyYXRpb25faW1hZ2UYASABKA'
+    'xSEGNhbGlicmF0aW9uSW1hZ2U=');
 
 @$core.Deprecated('Use wifiClientSandboxStatusDescriptor instead')
 const WifiClientSandboxStatus$json = {
@@ -2214,10 +739,9 @@ const WifiClientSandboxStatus$json = {
 };
 
 /// Descriptor for `WifiClientSandboxStatus`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List wifiClientSandboxStatusDescriptor =
-    $convert.base64Decode(
-        'ChdXaWZpQ2xpZW50U2FuZGJveFN0YXR1cxIWCgZjbGllbnQYASABKAlSBmNsaWVudBIYCgdzYW'
-        '5kYm94GAIgASgNUgdzYW5kYm94EhwKCXNhbmRib3hlZBgDIAEoCFIJc2FuZGJveGVk');
+final $typed_data.Uint8List wifiClientSandboxStatusDescriptor = $convert.base64Decode(
+    'ChdXaWZpQ2xpZW50U2FuZGJveFN0YXR1cxIWCgZjbGllbnQYASABKAlSBmNsaWVudBIYCgdzYW'
+    '5kYm94GAIgASgNUgdzYW5kYm94EhwKCXNhbmRib3hlZBgDIAEoCFIJc2FuZGJveGVk');
 
 @$core.Deprecated('Use enableDebugTelemRequestDescriptor instead')
 const EnableDebugTelemRequest$json = {
@@ -2228,10 +752,9 @@ const EnableDebugTelemRequest$json = {
 };
 
 /// Descriptor for `EnableDebugTelemRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List enableDebugTelemRequestDescriptor =
-    $convert.base64Decode(
-        'ChdFbmFibGVEZWJ1Z1RlbGVtUmVxdWVzdBIdCgpkdXJhdGlvbl9tGAEgASgNUglkdXJhdGlvbk'
-        '0=');
+final $typed_data.Uint8List enableDebugTelemRequestDescriptor = $convert.base64Decode(
+    'ChdFbmFibGVEZWJ1Z1RlbGVtUmVxdWVzdBIdCgpkdXJhdGlvbl9tGAEgASgNUglkdXJhdGlvbk'
+    '0=');
 
 @$core.Deprecated('Use enableDebugTelemResponseDescriptor instead')
 const EnableDebugTelemResponse$json = {
@@ -2239,8 +762,8 @@ const EnableDebugTelemResponse$json = {
 };
 
 /// Descriptor for `EnableDebugTelemResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List enableDebugTelemResponseDescriptor =
-    $convert.base64Decode('ChhFbmFibGVEZWJ1Z1RlbGVtUmVzcG9uc2U=');
+final $typed_data.Uint8List enableDebugTelemResponseDescriptor = $convert.base64Decode(
+    'ChhFbmFibGVEZWJ1Z1RlbGVtUmVzcG9uc2U=');
 
 @$core.Deprecated('Use factoryResetRequestDescriptor instead')
 const FactoryResetRequest$json = {
@@ -2248,8 +771,8 @@ const FactoryResetRequest$json = {
 };
 
 /// Descriptor for `FactoryResetRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List factoryResetRequestDescriptor =
-    $convert.base64Decode('ChNGYWN0b3J5UmVzZXRSZXF1ZXN0');
+final $typed_data.Uint8List factoryResetRequestDescriptor = $convert.base64Decode(
+    'ChNGYWN0b3J5UmVzZXRSZXF1ZXN0');
 
 @$core.Deprecated('Use factoryResetResponseDescriptor instead')
 const FactoryResetResponse$json = {
@@ -2257,8 +780,8 @@ const FactoryResetResponse$json = {
 };
 
 /// Descriptor for `FactoryResetResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List factoryResetResponseDescriptor =
-    $convert.base64Decode('ChRGYWN0b3J5UmVzZXRSZXNwb25zZQ==');
+final $typed_data.Uint8List factoryResetResponseDescriptor = $convert.base64Decode(
+    'ChRGYWN0b3J5UmVzZXRSZXNwb25zZQ==');
 
 @$core.Deprecated('Use getTimeRequestDescriptor instead')
 const GetTimeRequest$json = {
@@ -2266,8 +789,8 @@ const GetTimeRequest$json = {
 };
 
 /// Descriptor for `GetTimeRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getTimeRequestDescriptor =
-    $convert.base64Decode('Cg5HZXRUaW1lUmVxdWVzdA==');
+final $typed_data.Uint8List getTimeRequestDescriptor = $convert.base64Decode(
+    'Cg5HZXRUaW1lUmVxdWVzdA==');
 
 @$core.Deprecated('Use getTimeResponseDescriptor instead')
 const GetTimeResponse$json = {
@@ -2299,8 +822,8 @@ const FuseResponse$json = {
 };
 
 /// Descriptor for `FuseResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List fuseResponseDescriptor =
-    $convert.base64Decode('CgxGdXNlUmVzcG9uc2U=');
+final $typed_data.Uint8List fuseResponseDescriptor = $convert.base64Decode(
+    'CgxGdXNlUmVzcG9uc2U=');
 
 @$core.Deprecated('Use getHistoryRequestDescriptor instead')
 const GetHistoryRequest$json = {
@@ -2308,8 +831,8 @@ const GetHistoryRequest$json = {
 };
 
 /// Descriptor for `GetHistoryRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getHistoryRequestDescriptor =
-    $convert.base64Decode('ChFHZXRIaXN0b3J5UmVxdWVzdA==');
+final $typed_data.Uint8List getHistoryRequestDescriptor = $convert.base64Decode(
+    'ChFHZXRIaXN0b3J5UmVxdWVzdA==');
 
 @$core.Deprecated('Use getLogRequestDescriptor instead')
 const GetLogRequest$json = {
@@ -2317,29 +840,15 @@ const GetLogRequest$json = {
 };
 
 /// Descriptor for `GetLogRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getLogRequestDescriptor =
-    $convert.base64Decode('Cg1HZXRMb2dSZXF1ZXN0');
+final $typed_data.Uint8List getLogRequestDescriptor = $convert.base64Decode(
+    'Cg1HZXRMb2dSZXF1ZXN0');
 
 @$core.Deprecated('Use getLogResponseDescriptor instead')
 const GetLogResponse$json = {
   '1': 'GetLogResponse',
   '2': [
-    {
-      '1': 'current',
-      '3': 4,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.GetLogResponse.Logs',
-      '10': 'current'
-    },
-    {
-      '1': 'saved',
-      '3': 5,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.GetLogResponse.Logs',
-      '10': 'saved'
-    },
+    {'1': 'current', '3': 4, '4': 1, '5': 11, '6': '.SpaceX.API.Device.GetLogResponse.Logs', '10': 'current'},
+    {'1': 'saved', '3': 5, '4': 1, '5': 11, '6': '.SpaceX.API.Device.GetLogResponse.Logs', '10': 'saved'},
     {'1': 'syslog', '3': 1, '4': 1, '5': 9, '10': 'syslog'},
     {'1': 'offline_log', '3': 2, '4': 1, '5': 9, '10': 'offlineLog'},
     {'1': 'persistent_log', '3': 3, '4': 1, '5': 9, '10': 'persistentLog'},
@@ -2378,21 +887,14 @@ const GetPingRequest$json = {
 };
 
 /// Descriptor for `GetPingRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getPingRequestDescriptor =
-    $convert.base64Decode('Cg5HZXRQaW5nUmVxdWVzdA==');
+final $typed_data.Uint8List getPingRequestDescriptor = $convert.base64Decode(
+    'Cg5HZXRQaW5nUmVxdWVzdA==');
 
 @$core.Deprecated('Use getPingResponseDescriptor instead')
 const GetPingResponse$json = {
   '1': 'GetPingResponse',
   '2': [
-    {
-      '1': 'results',
-      '3': 1,
-      '4': 3,
-      '5': 11,
-      '6': '.SpaceX.API.Device.GetPingResponse.ResultsEntry',
-      '10': 'results'
-    },
+    {'1': 'results', '3': 1, '4': 3, '5': 11, '6': '.SpaceX.API.Device.GetPingResponse.ResultsEntry', '10': 'results'},
   ],
   '3': [GetPingResponse_ResultsEntry$json],
 };
@@ -2402,14 +904,7 @@ const GetPingResponse_ResultsEntry$json = {
   '1': 'ResultsEntry',
   '2': [
     {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    {
-      '1': 'value',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.PingResult',
-      '10': 'value'
-    },
+    {'1': 'value', '3': 2, '4': 1, '5': 11, '6': '.SpaceX.API.Device.PingResult', '10': 'value'},
   ],
 };
 
@@ -2438,14 +933,7 @@ final $typed_data.Uint8List pingHostRequestDescriptor = $convert.base64Decode(
 const PingHostResponse$json = {
   '1': 'PingHostResponse',
   '2': [
-    {
-      '1': 'result',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.PingResult',
-      '10': 'result'
-    },
+    {'1': 'result', '3': 1, '4': 1, '5': 11, '6': '.SpaceX.API.Device.PingResult', '10': 'result'},
   ],
 };
 
@@ -2458,14 +946,7 @@ final $typed_data.Uint8List pingHostResponseDescriptor = $convert.base64Decode(
 const GetStatusRequest$json = {
   '1': 'GetStatusRequest',
   '2': [
-    {
-      '1': 'router_role',
-      '3': 1,
-      '4': 1,
-      '5': 14,
-      '6': '.SpaceX.API.Device.RouterRole',
-      '10': 'routerRole'
-    },
+    {'1': 'router_role', '3': 1, '4': 1, '5': 14, '6': '.SpaceX.API.Device.RouterRole', '10': 'routerRole'},
   ],
 };
 
@@ -2480,8 +961,8 @@ const RebootRequest$json = {
 };
 
 /// Descriptor for `RebootRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List rebootRequestDescriptor =
-    $convert.base64Decode('Cg1SZWJvb3RSZXF1ZXN0');
+final $typed_data.Uint8List rebootRequestDescriptor = $convert.base64Decode(
+    'Cg1SZWJvb3RSZXF1ZXN0');
 
 @$core.Deprecated('Use rebootResponseDescriptor instead')
 const RebootResponse$json = {
@@ -2489,8 +970,8 @@ const RebootResponse$json = {
 };
 
 /// Descriptor for `RebootResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List rebootResponseDescriptor =
-    $convert.base64Decode('Cg5SZWJvb3RSZXNwb25zZQ==');
+final $typed_data.Uint8List rebootResponseDescriptor = $convert.base64Decode(
+    'Cg5SZWJvb3RSZXNwb25zZQ==');
 
 @$core.Deprecated('Use speedTestStatsDescriptor instead')
 const SpeedTestStats$json = {
@@ -2499,23 +980,10 @@ const SpeedTestStats$json = {
     {'1': 'latency_ms', '3': 3, '4': 1, '5': 2, '10': 'latencyMs'},
     {'1': 'start_time', '3': 4, '4': 1, '5': 4, '10': 'startTime'},
     {'1': 'upload_start_time', '3': 5, '4': 1, '5': 3, '10': 'uploadStartTime'},
-    {
-      '1': 'download_start_time',
-      '3': 6,
-      '4': 1,
-      '5': 3,
-      '10': 'downloadStartTime'
-    },
+    {'1': 'download_start_time', '3': 6, '4': 1, '5': 3, '10': 'downloadStartTime'},
     {'1': 'upload_mbps', '3': 1, '4': 1, '5': 2, '10': 'uploadMbps'},
     {'1': 'download_mbps', '3': 2, '4': 1, '5': 2, '10': 'downloadMbps'},
-    {
-      '1': 'target',
-      '3': 7,
-      '4': 1,
-      '5': 14,
-      '6': '.SpaceX.API.Device.SpeedTestStats.Target',
-      '10': 'target'
-    },
+    {'1': 'target', '3': 7, '4': 1, '5': 14, '6': '.SpaceX.API.Device.SpeedTestStats.Target', '10': 'target'},
     {'1': 'tcp_streams', '3': 8, '4': 1, '5': 13, '10': 'tcpStreams'},
   ],
   '4': [SpeedTestStats_Target$json],
@@ -2546,14 +1014,7 @@ final $typed_data.Uint8List speedTestStatsDescriptor = $convert.base64Decode(
 const ClientPlatform$json = {
   '1': 'ClientPlatform',
   '2': [
-    {
-      '1': 'platform',
-      '3': 1,
-      '4': 1,
-      '5': 14,
-      '6': '.SpaceX.API.Device.ClientPlatform.Platform',
-      '10': 'platform'
-    },
+    {'1': 'platform', '3': 1, '4': 1, '5': 14, '6': '.SpaceX.API.Device.ClientPlatform.Platform', '10': 'platform'},
     {'1': 'major_version', '3': 2, '4': 1, '5': 2, '10': 'majorVersion'},
     {'1': 'minor_version', '3': 3, '4': 1, '5': 2, '10': 'minorVersion'},
   ],
@@ -2583,23 +1044,9 @@ const SpeedTestRequest$json = {
   '1': 'SpeedTestRequest',
   '2': [
     {'1': 'id', '3': 4, '4': 1, '5': 13, '10': 'id'},
-    {
-      '1': 'client_speedtest',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.SpeedTestStats',
-      '10': 'clientSpeedtest'
-    },
+    {'1': 'client_speedtest', '3': 1, '4': 1, '5': 11, '6': '.SpaceX.API.Device.SpeedTestStats', '10': 'clientSpeedtest'},
     {'1': 'client_rssi', '3': 2, '4': 1, '5': 2, '10': 'clientRssi'},
-    {
-      '1': 'client_platform',
-      '3': 3,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.ClientPlatform',
-      '10': 'clientPlatform'
-    },
+    {'1': 'client_platform', '3': 3, '4': 1, '5': 11, '6': '.SpaceX.API.Device.ClientPlatform', '10': 'clientPlatform'},
   ],
 };
 
@@ -2620,70 +1067,15 @@ const SpeedTestResponse$json = {
     {'1': 'download_mbps', '3': 4, '4': 1, '5': 2, '10': 'downloadMbps'},
     {'1': 'upload_mbps', '3': 5, '4': 1, '5': 2, '10': 'uploadMbps'},
     {'1': 'latency_ms', '3': 6, '4': 1, '5': 2, '10': 'latencyMs'},
-    {
-      '1': 'router_speedtest',
-      '3': 15,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.SpeedTestStats',
-      '10': 'routerSpeedtest'
-    },
-    {
-      '1': 'download_mbps_1_tcp_conn',
-      '3': 7,
-      '4': 1,
-      '5': 2,
-      '10': 'downloadMbps1TcpConn'
-    },
-    {
-      '1': 'upload_mbps_1_tcp_conn',
-      '3': 8,
-      '4': 1,
-      '5': 2,
-      '10': 'uploadMbps1TcpConn'
-    },
-    {
-      '1': 'download_mbps_4_tcp_conn',
-      '3': 9,
-      '4': 1,
-      '5': 2,
-      '10': 'downloadMbps4TcpConn'
-    },
-    {
-      '1': 'upload_mbps_4_tcp_conn',
-      '3': 10,
-      '4': 1,
-      '5': 2,
-      '10': 'uploadMbps4TcpConn'
-    },
-    {
-      '1': 'download_mbps_16_tcp_conn',
-      '3': 11,
-      '4': 1,
-      '5': 2,
-      '10': 'downloadMbps16TcpConn'
-    },
-    {
-      '1': 'upload_mbps_16_tcp_conn',
-      '3': 12,
-      '4': 1,
-      '5': 2,
-      '10': 'uploadMbps16TcpConn'
-    },
-    {
-      '1': 'download_mbps_64_tcp_conn',
-      '3': 13,
-      '4': 1,
-      '5': 2,
-      '10': 'downloadMbps64TcpConn'
-    },
-    {
-      '1': 'upload_mbps_64_tcp_conn',
-      '3': 14,
-      '4': 1,
-      '5': 2,
-      '10': 'uploadMbps64TcpConn'
-    },
+    {'1': 'router_speedtest', '3': 15, '4': 1, '5': 11, '6': '.SpaceX.API.Device.SpeedTestStats', '10': 'routerSpeedtest'},
+    {'1': 'download_mbps_1_tcp_conn', '3': 7, '4': 1, '5': 2, '10': 'downloadMbps1TcpConn'},
+    {'1': 'upload_mbps_1_tcp_conn', '3': 8, '4': 1, '5': 2, '10': 'uploadMbps1TcpConn'},
+    {'1': 'download_mbps_4_tcp_conn', '3': 9, '4': 1, '5': 2, '10': 'downloadMbps4TcpConn'},
+    {'1': 'upload_mbps_4_tcp_conn', '3': 10, '4': 1, '5': 2, '10': 'uploadMbps4TcpConn'},
+    {'1': 'download_mbps_16_tcp_conn', '3': 11, '4': 1, '5': 2, '10': 'downloadMbps16TcpConn'},
+    {'1': 'upload_mbps_16_tcp_conn', '3': 12, '4': 1, '5': 2, '10': 'uploadMbps16TcpConn'},
+    {'1': 'download_mbps_64_tcp_conn', '3': 13, '4': 1, '5': 2, '10': 'downloadMbps64TcpConn'},
+    {'1': 'upload_mbps_64_tcp_conn', '3': 14, '4': 1, '5': 2, '10': 'uploadMbps64TcpConn'},
   ],
 };
 
@@ -2725,9 +1117,8 @@ const RunIperfServerResponse$json = {
 };
 
 /// Descriptor for `RunIperfServerResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List runIperfServerResponseDescriptor =
-    $convert.base64Decode(
-        'ChZSdW5JcGVyZlNlcnZlclJlc3BvbnNlEhIKBHBvcnQYASABKA1SBHBvcnQ=');
+final $typed_data.Uint8List runIperfServerResponseDescriptor = $convert.base64Decode(
+    'ChZSdW5JcGVyZlNlcnZlclJlc3BvbnNlEhIKBHBvcnQYASABKA1SBHBvcnQ=');
 
 @$core.Deprecated('Use getConnectionsRequestDescriptor instead')
 const GetConnectionsRequest$json = {
@@ -2735,26 +1126,16 @@ const GetConnectionsRequest$json = {
 };
 
 /// Descriptor for `GetConnectionsRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getConnectionsRequestDescriptor =
-    $convert.base64Decode('ChVHZXRDb25uZWN0aW9uc1JlcXVlc3Q=');
+final $typed_data.Uint8List getConnectionsRequestDescriptor = $convert.base64Decode(
+    'ChVHZXRDb25uZWN0aW9uc1JlcXVlc3Q=');
 
 @$core.Deprecated('Use getConnectionsResponseDescriptor instead')
 const GetConnectionsResponse$json = {
   '1': 'GetConnectionsResponse',
   '2': [
-    {
-      '1': 'services',
-      '3': 1,
-      '4': 3,
-      '5': 11,
-      '6': '.SpaceX.API.Device.GetConnectionsResponse.ServicesEntry',
-      '10': 'services'
-    },
+    {'1': 'services', '3': 1, '4': 3, '5': 11, '6': '.SpaceX.API.Device.GetConnectionsResponse.ServicesEntry', '10': 'services'},
   ],
-  '3': [
-    GetConnectionsResponse_ServiceConnection$json,
-    GetConnectionsResponse_ServicesEntry$json
-  ],
+  '3': [GetConnectionsResponse_ServiceConnection$json, GetConnectionsResponse_ServicesEntry$json],
 };
 
 @$core.Deprecated('Use getConnectionsResponseDescriptor instead')
@@ -2762,13 +1143,7 @@ const GetConnectionsResponse_ServiceConnection$json = {
   '1': 'ServiceConnection',
   '2': [
     {'1': 'address', '3': 1, '4': 1, '5': 9, '10': 'address'},
-    {
-      '1': 'seconds_since_success',
-      '3': 2,
-      '4': 1,
-      '5': 5,
-      '10': 'secondsSinceSuccess'
-    },
+    {'1': 'seconds_since_success', '3': 2, '4': 1, '5': 5, '10': 'secondsSinceSuccess'},
   ],
 };
 
@@ -2777,14 +1152,7 @@ const GetConnectionsResponse_ServicesEntry$json = {
   '1': 'ServicesEntry',
   '2': [
     {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
-    {
-      '1': 'value',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.GetConnectionsResponse.ServiceConnection',
-      '10': 'value'
-    },
+    {'1': 'value', '3': 2, '4': 1, '5': 11, '6': '.SpaceX.API.Device.GetConnectionsResponse.ServiceConnection', '10': 'value'},
   ],
 };
 
@@ -2803,21 +1171,14 @@ const GetDeviceInfoRequest$json = {
 };
 
 /// Descriptor for `GetDeviceInfoRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getDeviceInfoRequestDescriptor =
-    $convert.base64Decode('ChRHZXREZXZpY2VJbmZvUmVxdWVzdA==');
+final $typed_data.Uint8List getDeviceInfoRequestDescriptor = $convert.base64Decode(
+    'ChRHZXREZXZpY2VJbmZvUmVxdWVzdA==');
 
 @$core.Deprecated('Use getDeviceInfoResponseDescriptor instead')
 const GetDeviceInfoResponse$json = {
   '1': 'GetDeviceInfoResponse',
   '2': [
-    {
-      '1': 'device_info',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DeviceInfo',
-      '10': 'deviceInfo'
-    },
+    {'1': 'device_info', '3': 1, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DeviceInfo', '10': 'deviceInfo'},
   ],
 };
 
@@ -2830,14 +1191,7 @@ final $typed_data.Uint8List getDeviceInfoResponseDescriptor = $convert.base64Dec
 const SetTrustedKeysRequest$json = {
   '1': 'SetTrustedKeysRequest',
   '2': [
-    {
-      '1': 'keys',
-      '3': 1,
-      '4': 3,
-      '5': 11,
-      '6': '.SpaceX.API.Device.PublicKey',
-      '10': 'keys'
-    },
+    {'1': 'keys', '3': 1, '4': 3, '5': 11, '6': '.SpaceX.API.Device.PublicKey', '10': 'keys'},
   ],
 };
 
@@ -2852,8 +1206,8 @@ const SetTrustedKeysResponse$json = {
 };
 
 /// Descriptor for `SetTrustedKeysResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List setTrustedKeysResponseDescriptor =
-    $convert.base64Decode('ChZTZXRUcnVzdGVkS2V5c1Jlc3BvbnNl');
+final $typed_data.Uint8List setTrustedKeysResponseDescriptor = $convert.base64Decode(
+    'ChZTZXRUcnVzdGVkS2V5c1Jlc3BvbnNl');
 
 @$core.Deprecated('Use setSkuRequestDescriptor instead')
 const SetSkuRequest$json = {
@@ -2861,21 +1215,9 @@ const SetSkuRequest$json = {
   '2': [
     {'1': 'sku', '3': 1, '4': 1, '5': 9, '10': 'sku'},
     {'1': 'country_code', '3': 2, '4': 1, '5': 9, '10': 'countryCode'},
-    {
-      '1': 'apply_country_code',
-      '3': 4,
-      '4': 1,
-      '5': 8,
-      '10': 'applyCountryCode'
-    },
+    {'1': 'apply_country_code', '3': 4, '4': 1, '5': 8, '10': 'applyCountryCode'},
     {'1': 'pin_country_code', '3': 5, '4': 1, '5': 8, '10': 'pinCountryCode'},
-    {
-      '1': 'custom_power_table',
-      '3': 6,
-      '4': 1,
-      '5': 8,
-      '10': 'customPowerTable'
-    },
+    {'1': 'custom_power_table', '3': 6, '4': 1, '5': 8, '10': 'customPowerTable'},
   ],
 };
 
@@ -2892,22 +1234,14 @@ const SetSkuResponse$json = {
 };
 
 /// Descriptor for `SetSkuResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List setSkuResponseDescriptor =
-    $convert.base64Decode('Cg5TZXRTa3VSZXNwb25zZQ==');
+final $typed_data.Uint8List setSkuResponseDescriptor = $convert.base64Decode(
+    'Cg5TZXRTa3VSZXNwb25zZQ==');
 
 @$core.Deprecated('Use updateRequestDescriptor instead')
 const UpdateRequest$json = {
   '1': 'UpdateRequest',
   '2': [
-    {
-      '1': 'schedule_reboot',
-      '3': 1,
-      '4': 1,
-      '5': 8,
-      '9': 0,
-      '10': 'scheduleReboot',
-      '17': true
-    },
+    {'1': 'schedule_reboot', '3': 1, '4': 1, '5': 8, '9': 0, '10': 'scheduleReboot', '17': true},
   ],
   '8': [
     {'1': '_schedule_reboot'},
@@ -2925,8 +1259,8 @@ const UpdateResponse$json = {
 };
 
 /// Descriptor for `UpdateResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List updateResponseDescriptor =
-    $convert.base64Decode('Cg5VcGRhdGVSZXNwb25zZQ==');
+final $typed_data.Uint8List updateResponseDescriptor = $convert.base64Decode(
+    'Cg5VcGRhdGVSZXNwb25zZQ==');
 
 @$core.Deprecated('Use restartControlRequestDescriptor instead')
 const RestartControlRequest$json = {
@@ -2934,8 +1268,8 @@ const RestartControlRequest$json = {
 };
 
 /// Descriptor for `RestartControlRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List restartControlRequestDescriptor =
-    $convert.base64Decode('ChVSZXN0YXJ0Q29udHJvbFJlcXVlc3Q=');
+final $typed_data.Uint8List restartControlRequestDescriptor = $convert.base64Decode(
+    'ChVSZXN0YXJ0Q29udHJvbFJlcXVlc3Q=');
 
 @$core.Deprecated('Use restartControlResponseDescriptor instead')
 const RestartControlResponse$json = {
@@ -2943,8 +1277,8 @@ const RestartControlResponse$json = {
 };
 
 /// Descriptor for `RestartControlResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List restartControlResponseDescriptor =
-    $convert.base64Decode('ChZSZXN0YXJ0Q29udHJvbFJlc3BvbnNl');
+final $typed_data.Uint8List restartControlResponseDescriptor = $convert.base64Decode(
+    'ChZSZXN0YXJ0Q29udHJvbFJlc3BvbnNl');
 
 @$core.Deprecated('Use getNetworkInterfacesRequestDescriptor instead')
 const GetNetworkInterfacesRequest$json = {
@@ -2952,30 +1286,22 @@ const GetNetworkInterfacesRequest$json = {
 };
 
 /// Descriptor for `GetNetworkInterfacesRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getNetworkInterfacesRequestDescriptor =
-    $convert.base64Decode('ChtHZXROZXR3b3JrSW50ZXJmYWNlc1JlcXVlc3Q=');
+final $typed_data.Uint8List getNetworkInterfacesRequestDescriptor = $convert.base64Decode(
+    'ChtHZXROZXR3b3JrSW50ZXJmYWNlc1JlcXVlc3Q=');
 
 @$core.Deprecated('Use getNetworkInterfacesResponseDescriptor instead')
 const GetNetworkInterfacesResponse$json = {
   '1': 'GetNetworkInterfacesResponse',
   '2': [
-    {
-      '1': 'network_interfaces',
-      '3': 1006,
-      '4': 3,
-      '5': 11,
-      '6': '.SpaceX.API.Device.NetworkInterface',
-      '10': 'networkInterfaces'
-    },
+    {'1': 'network_interfaces', '3': 1006, '4': 3, '5': 11, '6': '.SpaceX.API.Device.NetworkInterface', '10': 'networkInterfaces'},
   ],
 };
 
 /// Descriptor for `GetNetworkInterfacesResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getNetworkInterfacesResponseDescriptor =
-    $convert.base64Decode(
-        'ChxHZXROZXR3b3JrSW50ZXJmYWNlc1Jlc3BvbnNlElMKEm5ldHdvcmtfaW50ZXJmYWNlcxjuBy'
-        'ADKAsyIy5TcGFjZVguQVBJLkRldmljZS5OZXR3b3JrSW50ZXJmYWNlUhFuZXR3b3JrSW50ZXJm'
-        'YWNlcw==');
+final $typed_data.Uint8List getNetworkInterfacesResponseDescriptor = $convert.base64Decode(
+    'ChxHZXROZXR3b3JrSW50ZXJmYWNlc1Jlc3BvbnNlElMKEm5ldHdvcmtfaW50ZXJmYWNlcxjuBy'
+    'ADKAsyIy5TcGFjZVguQVBJLkRldmljZS5OZXR3b3JrSW50ZXJmYWNlUhFuZXR3b3JrSW50ZXJm'
+    'YWNlcw==');
 
 @$core.Deprecated('Use getRadioStatsRequestDescriptor instead')
 const GetRadioStatsRequest$json = {
@@ -2983,21 +1309,14 @@ const GetRadioStatsRequest$json = {
 };
 
 /// Descriptor for `GetRadioStatsRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getRadioStatsRequestDescriptor =
-    $convert.base64Decode('ChRHZXRSYWRpb1N0YXRzUmVxdWVzdA==');
+final $typed_data.Uint8List getRadioStatsRequestDescriptor = $convert.base64Decode(
+    'ChRHZXRSYWRpb1N0YXRzUmVxdWVzdA==');
 
 @$core.Deprecated('Use getRadioStatsResponseDescriptor instead')
 const GetRadioStatsResponse$json = {
   '1': 'GetRadioStatsResponse',
   '2': [
-    {
-      '1': 'radio_stats',
-      '3': 1,
-      '4': 3,
-      '5': 11,
-      '6': '.SpaceX.API.Device.RadioStats',
-      '10': 'radioStats'
-    },
+    {'1': 'radio_stats', '3': 1, '4': 3, '5': 11, '6': '.SpaceX.API.Device.RadioStats', '10': 'radioStats'},
   ],
 };
 
@@ -3012,8 +1331,8 @@ const GetHeapDumpRequest$json = {
 };
 
 /// Descriptor for `GetHeapDumpRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getHeapDumpRequestDescriptor =
-    $convert.base64Decode('ChJHZXRIZWFwRHVtcFJlcXVlc3Q=');
+final $typed_data.Uint8List getHeapDumpRequestDescriptor = $convert.base64Decode(
+    'ChJHZXRIZWFwRHVtcFJlcXVlc3Q=');
 
 @$core.Deprecated('Use getHeapDumpResponseDescriptor instead')
 const GetHeapDumpResponse$json = {
@@ -3024,22 +1343,14 @@ const GetHeapDumpResponse$json = {
 };
 
 /// Descriptor for `GetHeapDumpResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getHeapDumpResponseDescriptor =
-    $convert.base64Decode(
-        'ChNHZXRIZWFwRHVtcFJlc3BvbnNlEhsKCWhlYXBfZHVtcBgBIAEoCVIIaGVhcER1bXA=');
+final $typed_data.Uint8List getHeapDumpResponseDescriptor = $convert.base64Decode(
+    'ChNHZXRIZWFwRHVtcFJlc3BvbnNlEhsKCWhlYXBfZHVtcBgBIAEoCVIIaGVhcER1bXA=');
 
 @$core.Deprecated('Use getLocationRequestDescriptor instead')
 const GetLocationRequest$json = {
   '1': 'GetLocationRequest',
   '2': [
-    {
-      '1': 'source',
-      '3': 1,
-      '4': 1,
-      '5': 14,
-      '6': '.SpaceX.API.Device.PositionSource',
-      '10': 'source'
-    },
+    {'1': 'source', '3': 1, '4': 1, '5': 14, '6': '.SpaceX.API.Device.PositionSource', '10': 'source'},
   ],
 };
 
@@ -3052,37 +1363,11 @@ final $typed_data.Uint8List getLocationRequestDescriptor = $convert.base64Decode
 const GetLocationResponse$json = {
   '1': 'GetLocationResponse',
   '2': [
-    {
-      '1': 'lla',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.LLAPosition',
-      '10': 'lla'
-    },
+    {'1': 'lla', '3': 1, '4': 1, '5': 11, '6': '.SpaceX.API.Device.LLAPosition', '10': 'lla'},
     {'1': 'sigma_m', '3': 4, '4': 1, '5': 1, '10': 'sigmaM'},
-    {
-      '1': 'source',
-      '3': 3,
-      '4': 1,
-      '5': 14,
-      '6': '.SpaceX.API.Device.PositionSource',
-      '10': 'source'
-    },
-    {
-      '1': 'horizontal_speed_mps',
-      '3': 5,
-      '4': 1,
-      '5': 1,
-      '10': 'horizontalSpeedMps'
-    },
-    {
-      '1': 'vertical_speed_mps',
-      '3': 6,
-      '4': 1,
-      '5': 1,
-      '10': 'verticalSpeedMps'
-    },
+    {'1': 'source', '3': 3, '4': 1, '5': 14, '6': '.SpaceX.API.Device.PositionSource', '10': 'source'},
+    {'1': 'horizontal_speed_mps', '3': 5, '4': 1, '5': 1, '10': 'horizontalSpeedMps'},
+    {'1': 'vertical_speed_mps', '3': 6, '4': 1, '5': 1, '10': 'verticalSpeedMps'},
   ],
   '9': [
     {'1': 2, '2': 3},
@@ -3107,13 +1392,7 @@ const DishSetEmcRequest$json = {
     {'1': 'rx_chan', '3': 3, '4': 1, '5': 13, '10': 'rxChan'},
     {'1': 'tx_chan', '3': 4, '4': 1, '5': 13, '10': 'txChan'},
     {'1': 'modulation', '3': 5, '4': 1, '5': 13, '10': 'modulation'},
-    {
-      '1': 'desired_tilt_angle',
-      '3': 7,
-      '4': 1,
-      '5': 1,
-      '10': 'desiredTiltAngle'
-    },
+    {'1': 'desired_tilt_angle', '3': 7, '4': 1, '5': 1, '10': 'desiredTiltAngle'},
     {'1': 'chan_override', '3': 8, '4': 1, '5': 8, '10': 'chanOverride'},
     {'1': 'theta_enabled', '3': 9, '4': 1, '5': 8, '10': 'thetaEnabled'},
     {'1': 'phi_enabled', '3': 10, '4': 1, '5': 8, '10': 'phiEnabled'},
@@ -3121,72 +1400,18 @@ const DishSetEmcRequest$json = {
     {'1': 'fast_switching', '3': 12, '4': 1, '5': 8, '10': 'fastSwitching'},
     {'1': 'sky_search', '3': 13, '4': 1, '5': 8, '10': 'skySearch'},
     {'1': 'force_pll_unlock', '3': 14, '4': 1, '5': 8, '10': 'forcePllUnlock'},
-    {
-      '1': 'force_eirp_failure',
-      '3': 15,
-      '4': 1,
-      '5': 8,
-      '10': 'forceEirpFailure'
-    },
-    {
-      '1': 'snow_active_override',
-      '3': 16,
-      '4': 1,
-      '5': 8,
-      '10': 'snowActiveOverride'
-    },
+    {'1': 'force_eirp_failure', '3': 15, '4': 1, '5': 8, '10': 'forceEirpFailure'},
+    {'1': 'snow_active_override', '3': 16, '4': 1, '5': 8, '10': 'snowActiveOverride'},
     {'1': 'manual_tilting', '3': 18, '4': 1, '5': 8, '10': 'manualTilting'},
     {'1': 'tilt_to_stowed', '3': 19, '4': 1, '5': 8, '10': 'tiltToStowed'},
     {'1': 'reboot', '3': 20, '4': 1, '5': 8, '10': 'reboot'},
-    {
-      '1': 'continuous_motor_test',
-      '3': 21,
-      '4': 1,
-      '5': 8,
-      '10': 'continuousMotorTest'
-    },
-    {
-      '1': 'distance_override_meters',
-      '3': 22,
-      '4': 1,
-      '5': 1,
-      '10': 'distanceOverrideMeters'
-    },
-    {
-      '1': 'country_code_override',
-      '3': 24,
-      '4': 1,
-      '5': 13,
-      '10': 'countryCodeOverride'
-    },
-    {
-      '1': 'tx_duty_cycle_override',
-      '3': 25,
-      '4': 1,
-      '5': 5,
-      '10': 'txDutyCycleOverride'
-    },
-    {
-      '1': 'rx_duty_cycle_override',
-      '3': 26,
-      '4': 1,
-      '5': 5,
-      '10': 'rxDutyCycleOverride'
-    },
-    {
-      '1': 'eirp_legal_limit_dbw_override',
-      '3': 27,
-      '4': 1,
-      '5': 1,
-      '10': 'eirpLegalLimitDbwOverride'
-    },
-    {
-      '1': 'eirp_adjustment_db',
-      '3': 28,
-      '4': 1,
-      '5': 1,
-      '10': 'eirpAdjustmentDb'
-    },
+    {'1': 'continuous_motor_test', '3': 21, '4': 1, '5': 8, '10': 'continuousMotorTest'},
+    {'1': 'distance_override_meters', '3': 22, '4': 1, '5': 1, '10': 'distanceOverrideMeters'},
+    {'1': 'country_code_override', '3': 24, '4': 1, '5': 13, '10': 'countryCodeOverride'},
+    {'1': 'tx_duty_cycle_override', '3': 25, '4': 1, '5': 5, '10': 'txDutyCycleOverride'},
+    {'1': 'rx_duty_cycle_override', '3': 26, '4': 1, '5': 5, '10': 'rxDutyCycleOverride'},
+    {'1': 'eirp_legal_limit_dbw_override', '3': 27, '4': 1, '5': 1, '10': 'eirpLegalLimitDbwOverride'},
+    {'1': 'eirp_adjustment_db', '3': 28, '4': 1, '5': 1, '10': 'eirpAdjustmentDb'},
   ],
   '9': [
     {'1': 23, '2': 24},
@@ -3222,8 +1447,8 @@ const DishSetEmcResponse$json = {
 };
 
 /// Descriptor for `DishSetEmcResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List dishSetEmcResponseDescriptor =
-    $convert.base64Decode('ChJEaXNoU2V0RW1jUmVzcG9uc2U=');
+final $typed_data.Uint8List dishSetEmcResponseDescriptor = $convert.base64Decode(
+    'ChJEaXNoU2V0RW1jUmVzcG9uc2U=');
 
 @$core.Deprecated('Use dishSetMaxPowerTestModeRequestDescriptor instead')
 const DishSetMaxPowerTestModeRequest$json = {
@@ -3234,10 +1459,9 @@ const DishSetMaxPowerTestModeRequest$json = {
 };
 
 /// Descriptor for `DishSetMaxPowerTestModeRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List dishSetMaxPowerTestModeRequestDescriptor =
-    $convert.base64Decode(
-        'Ch5EaXNoU2V0TWF4UG93ZXJUZXN0TW9kZVJlcXVlc3QSGAoHZW5hYmxlZBgBIAEoCFIHZW5hYm'
-        'xlZA==');
+final $typed_data.Uint8List dishSetMaxPowerTestModeRequestDescriptor = $convert.base64Decode(
+    'Ch5EaXNoU2V0TWF4UG93ZXJUZXN0TW9kZVJlcXVlc3QSGAoHZW5hYmxlZBgBIAEoCFIHZW5hYm'
+    'xlZA==');
 
 @$core.Deprecated('Use dishSetMaxPowerTestModeResponseDescriptor instead')
 const DishSetMaxPowerTestModeResponse$json = {
@@ -3248,10 +1472,9 @@ const DishSetMaxPowerTestModeResponse$json = {
 };
 
 /// Descriptor for `DishSetMaxPowerTestModeResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List dishSetMaxPowerTestModeResponseDescriptor =
-    $convert.base64Decode(
-        'Ch9EaXNoU2V0TWF4UG93ZXJUZXN0TW9kZVJlc3BvbnNlEhgKB2VuYWJsZWQYASABKAhSB2VuYW'
-        'JsZWQ=');
+final $typed_data.Uint8List dishSetMaxPowerTestModeResponseDescriptor = $convert.base64Decode(
+    'Ch9EaXNoU2V0TWF4UG93ZXJUZXN0TW9kZVJlc3BvbnNlEhgKB2VuYWJsZWQYASABKAhSB2VuYW'
+    'JsZWQ=');
 
 @$core.Deprecated('Use dishGetEmcRequestDescriptor instead')
 const DishGetEmcRequest$json = {
@@ -3259,8 +1482,8 @@ const DishGetEmcRequest$json = {
 };
 
 /// Descriptor for `DishGetEmcRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List dishGetEmcRequestDescriptor =
-    $convert.base64Decode('ChFEaXNoR2V0RW1jUmVxdWVzdA==');
+final $typed_data.Uint8List dishGetEmcRequestDescriptor = $convert.base64Decode(
+    'ChFEaXNoR2V0RW1jUmVxdWVzdA==');
 
 @$core.Deprecated('Use dishGetEmcResponseDescriptor instead')
 const DishGetEmcResponse$json = {
@@ -3279,206 +1502,44 @@ const DishGetEmcResponse$json = {
     {'1': 'tx_channel', '3': 23, '4': 1, '5': 13, '10': 'txChannel'},
     {'1': 't_dbf_max', '3': 24, '4': 1, '5': 2, '10': 'tDbfMax'},
     {'1': 't_center', '3': 25, '4': 1, '5': 1, '10': 'tCenter'},
-    {
-      '1': 'auto_power_snow_melt_enabled',
-      '3': 30,
-      '4': 1,
-      '5': 8,
-      '10': 'autoPowerSnowMeltEnabled'
-    },
+    {'1': 'auto_power_snow_melt_enabled', '3': 30, '4': 1, '5': 8, '10': 'autoPowerSnowMeltEnabled'},
     {'1': 'voltage', '3': 32, '4': 1, '5': 1, '10': 'voltage'},
     {'1': 'rx_beam_state', '3': 33, '4': 1, '5': 13, '10': 'rxBeamState'},
     {'1': 'tx_beam_state', '3': 34, '4': 1, '5': 13, '10': 'txBeamState'},
-    {
-      '1': 'half_duplex_state',
-      '3': 35,
-      '4': 1,
-      '5': 13,
-      '10': 'halfDuplexState'
-    },
-    {
-      '1': 'manual_tilt_enabled',
-      '3': 36,
-      '4': 1,
-      '5': 8,
-      '10': 'manualTiltEnabled'
-    },
+    {'1': 'half_duplex_state', '3': 35, '4': 1, '5': 13, '10': 'halfDuplexState'},
+    {'1': 'manual_tilt_enabled', '3': 36, '4': 1, '5': 8, '10': 'manualTiltEnabled'},
     {'1': 'tilt_angle', '3': 37, '4': 1, '5': 1, '10': 'tiltAngle'},
-    {
-      '1': 'pll_tx_lock_detected',
-      '3': 38,
-      '4': 1,
-      '5': 13,
-      '10': 'pllTxLockDetected'
-    },
-    {
-      '1': 'eirp_exceeded_threshold',
-      '3': 39,
-      '4': 1,
-      '5': 8,
-      '10': 'eirpExceededThreshold'
-    },
-    {
-      '1': 'idle_override_enabled',
-      '3': 41,
-      '4': 1,
-      '5': 8,
-      '10': 'idleOverrideEnabled'
-    },
-    {
-      '1': 'theta_override_enabled',
-      '3': 42,
-      '4': 1,
-      '5': 8,
-      '10': 'thetaOverrideEnabled'
-    },
-    {
-      '1': 'theta_override_value',
-      '3': 43,
-      '4': 1,
-      '5': 1,
-      '10': 'thetaOverrideValue'
-    },
-    {
-      '1': 'phi_override_enabled',
-      '3': 44,
-      '4': 1,
-      '5': 8,
-      '10': 'phiOverrideEnabled'
-    },
-    {
-      '1': 'phi_override_value',
-      '3': 45,
-      '4': 1,
-      '5': 1,
-      '10': 'phiOverrideValue'
-    },
-    {
-      '1': 'rx_chan_override_value',
-      '3': 46,
-      '4': 1,
-      '5': 13,
-      '10': 'rxChanOverrideValue'
-    },
-    {
-      '1': 'tx_chan_override_value',
-      '3': 47,
-      '4': 1,
-      '5': 13,
-      '10': 'txChanOverrideValue'
-    },
-    {
-      '1': 'sky_search_override_enabled',
-      '3': 48,
-      '4': 1,
-      '5': 8,
-      '10': 'skySearchOverrideEnabled'
-    },
-    {
-      '1': 'fast_switching_enabled',
-      '3': 49,
-      '4': 1,
-      '5': 8,
-      '10': 'fastSwitchingEnabled'
-    },
-    {
-      '1': 'modulation_override_value',
-      '3': 50,
-      '4': 1,
-      '5': 13,
-      '10': 'modulationOverrideValue'
-    },
-    {
-      '1': 'force_eirp_failure',
-      '3': 51,
-      '4': 1,
-      '5': 8,
-      '10': 'forceEirpFailure'
-    },
+    {'1': 'pll_tx_lock_detected', '3': 38, '4': 1, '5': 13, '10': 'pllTxLockDetected'},
+    {'1': 'eirp_exceeded_threshold', '3': 39, '4': 1, '5': 8, '10': 'eirpExceededThreshold'},
+    {'1': 'idle_override_enabled', '3': 41, '4': 1, '5': 8, '10': 'idleOverrideEnabled'},
+    {'1': 'theta_override_enabled', '3': 42, '4': 1, '5': 8, '10': 'thetaOverrideEnabled'},
+    {'1': 'theta_override_value', '3': 43, '4': 1, '5': 1, '10': 'thetaOverrideValue'},
+    {'1': 'phi_override_enabled', '3': 44, '4': 1, '5': 8, '10': 'phiOverrideEnabled'},
+    {'1': 'phi_override_value', '3': 45, '4': 1, '5': 1, '10': 'phiOverrideValue'},
+    {'1': 'rx_chan_override_value', '3': 46, '4': 1, '5': 13, '10': 'rxChanOverrideValue'},
+    {'1': 'tx_chan_override_value', '3': 47, '4': 1, '5': 13, '10': 'txChanOverrideValue'},
+    {'1': 'sky_search_override_enabled', '3': 48, '4': 1, '5': 8, '10': 'skySearchOverrideEnabled'},
+    {'1': 'fast_switching_enabled', '3': 49, '4': 1, '5': 8, '10': 'fastSwitchingEnabled'},
+    {'1': 'modulation_override_value', '3': 50, '4': 1, '5': 13, '10': 'modulationOverrideValue'},
+    {'1': 'force_eirp_failure', '3': 51, '4': 1, '5': 8, '10': 'forceEirpFailure'},
     {'1': 'force_pll_unlock', '3': 52, '4': 1, '5': 8, '10': 'forcePllUnlock'},
     {'1': 'ut_ine_success', '3': 53, '4': 1, '5': 13, '10': 'utIneSuccess'},
     {'1': 'rf_ready', '3': 54, '4': 1, '5': 8, '10': 'rfReady'},
     {'1': 'tilt_to_stowed', '3': 55, '4': 1, '5': 8, '10': 'tiltToStowed'},
     {'1': 'reboot', '3': 56, '4': 1, '5': 8, '10': 'reboot'},
-    {
-      '1': 'continuous_motor_test',
-      '3': 57,
-      '4': 1,
-      '5': 8,
-      '10': 'continuousMotorTest'
-    },
-    {
-      '1': 'distance_override_meters',
-      '3': 58,
-      '4': 1,
-      '5': 1,
-      '10': 'distanceOverrideMeters'
-    },
-    {
-      '1': 'country_code_override',
-      '3': 62,
-      '4': 1,
-      '5': 13,
-      '10': 'countryCodeOverride'
-    },
-    {
-      '1': 'max_pointing_distance',
-      '3': 63,
-      '4': 1,
-      '5': 1,
-      '10': 'maxPointingDistance'
-    },
-    {
-      '1': 'distance_scaling_factor',
-      '3': 64,
-      '4': 1,
-      '5': 1,
-      '10': 'distanceScalingFactor'
-    },
-    {
-      '1': 'tx_duty_cycle_override',
-      '3': 65,
-      '4': 1,
-      '5': 5,
-      '10': 'txDutyCycleOverride'
-    },
-    {
-      '1': 'rx_duty_cycle_override',
-      '3': 66,
-      '4': 1,
-      '5': 5,
-      '10': 'rxDutyCycleOverride'
-    },
+    {'1': 'continuous_motor_test', '3': 57, '4': 1, '5': 8, '10': 'continuousMotorTest'},
+    {'1': 'distance_override_meters', '3': 58, '4': 1, '5': 1, '10': 'distanceOverrideMeters'},
+    {'1': 'country_code_override', '3': 62, '4': 1, '5': 13, '10': 'countryCodeOverride'},
+    {'1': 'max_pointing_distance', '3': 63, '4': 1, '5': 1, '10': 'maxPointingDistance'},
+    {'1': 'distance_scaling_factor', '3': 64, '4': 1, '5': 1, '10': 'distanceScalingFactor'},
+    {'1': 'tx_duty_cycle_override', '3': 65, '4': 1, '5': 5, '10': 'txDutyCycleOverride'},
+    {'1': 'rx_duty_cycle_override', '3': 66, '4': 1, '5': 5, '10': 'rxDutyCycleOverride'},
     {'1': 'tx_time_ms', '3': 67, '4': 1, '5': 2, '10': 'txTimeMs'},
     {'1': 'rx_time_ms', '3': 68, '4': 1, '5': 2, '10': 'rxTimeMs'},
-    {
-      '1': 'eirp_legal_limit_dbw',
-      '3': 69,
-      '4': 1,
-      '5': 1,
-      '10': 'eirpLegalLimitDbw'
-    },
-    {
-      '1': 'eirp_legal_limit_dbw_override',
-      '3': 70,
-      '4': 1,
-      '5': 1,
-      '10': 'eirpLegalLimitDbwOverride'
-    },
-    {
-      '1': 'eirp_adjustment_db',
-      '3': 71,
-      '4': 1,
-      '5': 1,
-      '10': 'eirpAdjustmentDb'
-    },
-    {
-      '1': 'eirp_predicted_dbw',
-      '3': 72,
-      '4': 1,
-      '5': 1,
-      '10': 'eirpPredictedDbw'
-    },
+    {'1': 'eirp_legal_limit_dbw', '3': 69, '4': 1, '5': 1, '10': 'eirpLegalLimitDbw'},
+    {'1': 'eirp_legal_limit_dbw_override', '3': 70, '4': 1, '5': 1, '10': 'eirpLegalLimitDbwOverride'},
+    {'1': 'eirp_adjustment_db', '3': 71, '4': 1, '5': 1, '10': 'eirpAdjustmentDb'},
+    {'1': 'eirp_predicted_dbw', '3': 72, '4': 1, '5': 1, '10': 'eirpPredictedDbw'},
   ],
   '9': [
     {'1': 26, '2': 30},
@@ -3487,16 +1548,7 @@ const DishGetEmcResponse$json = {
     {'1': 60, '2': 61},
     {'1': 61, '2': 62},
   ],
-  '10': [
-    'baseline_heating',
-    'additional_heating',
-    'total_heating',
-    'target_total_heating',
-    'eirp_scale_override',
-    'amplitude_taper_override',
-    'amplitude_taper_enabled',
-    'amplitude_taper_scale'
-  ],
+  '10': ['baseline_heating', 'additional_heating', 'total_heating', 'target_total_heating', 'eirp_scale_override', 'amplitude_taper_override', 'amplitude_taper_enabled', 'amplitude_taper_scale'],
 };
 
 /// Descriptor for `DishGetEmcResponse`. Decode as a `google.protobuf.DescriptorProto`.
@@ -3551,8 +1603,8 @@ const GetPersistentStatsRequest$json = {
 };
 
 /// Descriptor for `GetPersistentStatsRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getPersistentStatsRequestDescriptor =
-    $convert.base64Decode('ChlHZXRQZXJzaXN0ZW50U3RhdHNSZXF1ZXN0');
+final $typed_data.Uint8List getPersistentStatsRequestDescriptor = $convert.base64Decode(
+    'ChlHZXRQZXJzaXN0ZW50U3RhdHNSZXF1ZXN0');
 
 @$core.Deprecated('Use startSpeedtestRequestDescriptor instead')
 const StartSpeedtestRequest$json = {
@@ -3560,8 +1612,8 @@ const StartSpeedtestRequest$json = {
 };
 
 /// Descriptor for `StartSpeedtestRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List startSpeedtestRequestDescriptor =
-    $convert.base64Decode('ChVTdGFydFNwZWVkdGVzdFJlcXVlc3Q=');
+final $typed_data.Uint8List startSpeedtestRequestDescriptor = $convert.base64Decode(
+    'ChVTdGFydFNwZWVkdGVzdFJlcXVlc3Q=');
 
 @$core.Deprecated('Use startSpeedtestResponseDescriptor instead')
 const StartSpeedtestResponse$json = {
@@ -3569,8 +1621,8 @@ const StartSpeedtestResponse$json = {
 };
 
 /// Descriptor for `StartSpeedtestResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List startSpeedtestResponseDescriptor =
-    $convert.base64Decode('ChZTdGFydFNwZWVkdGVzdFJlc3BvbnNl');
+final $typed_data.Uint8List startSpeedtestResponseDescriptor = $convert.base64Decode(
+    'ChZTdGFydFNwZWVkdGVzdFJlc3BvbnNl');
 
 @$core.Deprecated('Use speedtestStatusDescriptor instead')
 const SpeedtestStatus$json = {
@@ -3578,22 +1630,8 @@ const SpeedtestStatus$json = {
   '2': [
     {'1': 'running', '3': 1, '4': 1, '5': 8, '10': 'running'},
     {'1': 'id', '3': 2, '4': 1, '5': 13, '10': 'id'},
-    {
-      '1': 'up',
-      '3': 1000,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.SpeedtestStatus.Direction',
-      '10': 'up'
-    },
-    {
-      '1': 'down',
-      '3': 1001,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.SpeedtestStatus.Direction',
-      '10': 'down'
-    },
+    {'1': 'up', '3': 1000, '4': 1, '5': 11, '6': '.SpaceX.API.Device.SpeedtestStatus.Direction', '10': 'up'},
+    {'1': 'down', '3': 1001, '4': 1, '5': 11, '6': '.SpaceX.API.Device.SpeedtestStatus.Direction', '10': 'down'},
   ],
   '3': [SpeedtestStatus_Direction$json],
 };
@@ -3603,14 +1641,7 @@ const SpeedtestStatus_Direction$json = {
   '1': 'Direction',
   '2': [
     {'1': 'throughputs_mbps', '3': 1, '4': 3, '5': 2, '10': 'throughputsMbps'},
-    {
-      '1': 'err',
-      '3': 2,
-      '4': 1,
-      '5': 14,
-      '6': '.SpaceX.API.Device.SpeedtestError',
-      '10': 'err'
-    },
+    {'1': 'err', '3': 2, '4': 1, '5': 14, '6': '.SpaceX.API.Device.SpeedtestError', '10': 'err'},
   ],
 };
 
@@ -3629,60 +1660,31 @@ const GetSpeedtestStatusRequest$json = {
 };
 
 /// Descriptor for `GetSpeedtestStatusRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getSpeedtestStatusRequestDescriptor =
-    $convert.base64Decode('ChlHZXRTcGVlZHRlc3RTdGF0dXNSZXF1ZXN0');
+final $typed_data.Uint8List getSpeedtestStatusRequestDescriptor = $convert.base64Decode(
+    'ChlHZXRTcGVlZHRlc3RTdGF0dXNSZXF1ZXN0');
 
 @$core.Deprecated('Use getSpeedtestStatusResponseDescriptor instead')
 const GetSpeedtestStatusResponse$json = {
   '1': 'GetSpeedtestStatusResponse',
   '2': [
-    {
-      '1': 'status',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.SpeedtestStatus',
-      '10': 'status'
-    },
+    {'1': 'status', '3': 1, '4': 1, '5': 11, '6': '.SpaceX.API.Device.SpeedtestStatus', '10': 'status'},
   ],
 };
 
 /// Descriptor for `GetSpeedtestStatusResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getSpeedtestStatusResponseDescriptor =
-    $convert.base64Decode(
-        'ChpHZXRTcGVlZHRlc3RTdGF0dXNSZXNwb25zZRI6CgZzdGF0dXMYASABKAsyIi5TcGFjZVguQV'
-        'BJLkRldmljZS5TcGVlZHRlc3RTdGF0dXNSBnN0YXR1cw==');
+final $typed_data.Uint8List getSpeedtestStatusResponseDescriptor = $convert.base64Decode(
+    'ChpHZXRTcGVlZHRlc3RTdGF0dXNSZXNwb25zZRI6CgZzdGF0dXMYASABKAsyIi5TcGFjZVguQV'
+    'BJLkRldmljZS5TcGVlZHRlc3RTdGF0dXNSBnN0YXR1cw==');
 
 @$core.Deprecated('Use reportClientSpeedtestRequestDescriptor instead')
 const ReportClientSpeedtestRequest$json = {
   '1': 'ReportClientSpeedtestRequest',
   '2': [
     {'1': 'id', '3': 1, '4': 1, '5': 13, '10': 'id'},
-    {
-      '1': 'client_speedtest',
-      '3': 2,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.SpeedTestStats',
-      '10': 'clientSpeedtest'
-    },
-    {
-      '1': 'wifi_speedtest',
-      '3': 5,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.SpeedTestStats',
-      '10': 'wifiSpeedtest'
-    },
+    {'1': 'client_speedtest', '3': 2, '4': 1, '5': 11, '6': '.SpaceX.API.Device.SpeedTestStats', '10': 'clientSpeedtest'},
+    {'1': 'wifi_speedtest', '3': 5, '4': 1, '5': 11, '6': '.SpaceX.API.Device.SpeedTestStats', '10': 'wifiSpeedtest'},
     {'1': 'client_rssi', '3': 3, '4': 1, '5': 2, '10': 'clientRssi'},
-    {
-      '1': 'client_platform',
-      '3': 4,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.ClientPlatform',
-      '10': 'clientPlatform'
-    },
+    {'1': 'client_platform', '3': 4, '4': 1, '5': 11, '6': '.SpaceX.API.Device.ClientPlatform', '10': 'clientPlatform'},
     {'1': 'app_version', '3': 6, '4': 1, '5': 9, '10': 'appVersion'},
     {'1': 'app_build', '3': 7, '4': 1, '5': 13, '10': 'appBuild'},
   ],
@@ -3704,8 +1706,8 @@ const ReportClientSpeedtestResponse$json = {
 };
 
 /// Descriptor for `ReportClientSpeedtestResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List reportClientSpeedtestResponseDescriptor =
-    $convert.base64Decode('Ch1SZXBvcnRDbGllbnRTcGVlZHRlc3RSZXNwb25zZQ==');
+final $typed_data.Uint8List reportClientSpeedtestResponseDescriptor = $convert.base64Decode(
+    'Ch1SZXBvcnRDbGllbnRTcGVlZHRlc3RSZXNwb25zZQ==');
 
 @$core.Deprecated('Use setPerVehicleConfigResponseDescriptor instead')
 const SetPerVehicleConfigResponse$json = {
@@ -3713,27 +1715,15 @@ const SetPerVehicleConfigResponse$json = {
 };
 
 /// Descriptor for `SetPerVehicleConfigResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List setPerVehicleConfigResponseDescriptor =
-    $convert.base64Decode('ChtTZXRQZXJWZWhpY2xlQ29uZmlnUmVzcG9uc2U=');
+final $typed_data.Uint8List setPerVehicleConfigResponseDescriptor = $convert.base64Decode(
+    'ChtTZXRQZXJWZWhpY2xlQ29uZmlnUmVzcG9uc2U=');
 
 @$core.Deprecated('Use dishPowerSaveRequestDescriptor instead')
 const DishPowerSaveRequest$json = {
   '1': 'DishPowerSaveRequest',
   '2': [
-    {
-      '1': 'power_save_start_minutes',
-      '3': 1,
-      '4': 1,
-      '5': 13,
-      '10': 'powerSaveStartMinutes'
-    },
-    {
-      '1': 'power_save_duration_minutes',
-      '3': 2,
-      '4': 1,
-      '5': 13,
-      '10': 'powerSaveDurationMinutes'
-    },
+    {'1': 'power_save_start_minutes', '3': 1, '4': 1, '5': 13, '10': 'powerSaveStartMinutes'},
+    {'1': 'power_save_duration_minutes', '3': 2, '4': 1, '5': 13, '10': 'powerSaveDurationMinutes'},
     {'1': 'enable_power_save', '3': 3, '4': 1, '5': 8, '10': 'enablePowerSave'},
   ],
 };
@@ -3751,8 +1741,8 @@ const IQCaptureRequest$json = {
 };
 
 /// Descriptor for `IQCaptureRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List iQCaptureRequestDescriptor =
-    $convert.base64Decode('ChBJUUNhcHR1cmVSZXF1ZXN0');
+final $typed_data.Uint8List iQCaptureRequestDescriptor = $convert.base64Decode(
+    'ChBJUUNhcHR1cmVSZXF1ZXN0');
 
 @$core.Deprecated('Use getDiagnosticsRequestDescriptor instead')
 const GetDiagnosticsRequest$json = {
@@ -3760,8 +1750,8 @@ const GetDiagnosticsRequest$json = {
 };
 
 /// Descriptor for `GetDiagnosticsRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getDiagnosticsRequestDescriptor =
-    $convert.base64Decode('ChVHZXREaWFnbm9zdGljc1JlcXVlc3Q=');
+final $typed_data.Uint8List getDiagnosticsRequestDescriptor = $convert.base64Decode(
+    'ChVHZXREaWFnbm9zdGljc1JlcXVlc3Q=');
 
 @$core.Deprecated('Use wifiGetDiagnosticsResponseDescriptor instead')
 const WifiGetDiagnosticsResponse$json = {
@@ -3770,14 +1760,7 @@ const WifiGetDiagnosticsResponse$json = {
     {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
     {'1': 'hardware_version', '3': 2, '4': 1, '5': 9, '10': 'hardwareVersion'},
     {'1': 'software_version', '3': 3, '4': 1, '5': 9, '10': 'softwareVersion'},
-    {
-      '1': 'networks',
-      '3': 4,
-      '4': 3,
-      '5': 11,
-      '6': '.SpaceX.API.Device.WifiGetDiagnosticsResponse.Network',
-      '10': 'networks'
-    },
+    {'1': 'networks', '3': 4, '4': 3, '5': 11, '6': '.SpaceX.API.Device.WifiGetDiagnosticsResponse.Network', '10': 'networks'},
   ],
   '3': [WifiGetDiagnosticsResponse_Network$json],
 };
@@ -3789,13 +1772,7 @@ const WifiGetDiagnosticsResponse_Network$json = {
     {'1': 'domain', '3': 1, '4': 1, '5': 9, '10': 'domain'},
     {'1': 'ipv4', '3': 2, '4': 1, '5': 9, '10': 'ipv4'},
     {'1': 'ipv6', '3': 3, '4': 3, '5': 9, '10': 'ipv6'},
-    {
-      '1': 'clients_ethernet',
-      '3': 10,
-      '4': 1,
-      '5': 13,
-      '10': 'clientsEthernet'
-    },
+    {'1': 'clients_ethernet', '3': 10, '4': 1, '5': 13, '10': 'clientsEthernet'},
     {'1': 'clients_2ghz', '3': 11, '4': 1, '5': 13, '10': 'clients2ghz'},
     {'1': 'clients_5ghz', '3': 12, '4': 1, '5': 13, '10': 'clients5ghz'},
   ],
@@ -3820,73 +1797,17 @@ const DishGetDiagnosticsResponse$json = {
     {'1': 'hardware_version', '3': 2, '4': 1, '5': 9, '10': 'hardwareVersion'},
     {'1': 'software_version', '3': 3, '4': 1, '5': 9, '10': 'softwareVersion'},
     {'1': 'utc_offset_s', '3': 4, '4': 1, '5': 5, '10': 'utcOffsetS'},
-    {
-      '1': 'hardware_self_test',
-      '3': 7,
-      '4': 1,
-      '5': 14,
-      '6': '.SpaceX.API.Device.DishGetDiagnosticsResponse.TestResult',
-      '10': 'hardwareSelfTest'
-    },
-    {
-      '1': 'hardware_self_test_codes',
-      '3': 11,
-      '4': 3,
-      '5': 14,
-      '6': '.SpaceX.API.Device.DishGetDiagnosticsResponse.TestResultCode',
-      '10': 'hardwareSelfTestCodes'
-    },
-    {
-      '1': 'alerts',
-      '3': 5,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishGetDiagnosticsResponse.Alerts',
-      '10': 'alerts'
-    },
-    {
-      '1': 'disablement_code',
-      '3': 6,
-      '4': 1,
-      '5': 14,
-      '6': '.SpaceX.API.Device.DishGetDiagnosticsResponse.DisablementCode',
-      '10': 'disablementCode'
-    },
-    {
-      '1': 'location',
-      '3': 8,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishGetDiagnosticsResponse.Location',
-      '10': 'location'
-    },
-    {
-      '1': 'alignment_stats',
-      '3': 9,
-      '4': 1,
-      '5': 11,
-      '6': '.SpaceX.API.Device.DishGetDiagnosticsResponse.AlignmentStats',
-      '10': 'alignmentStats'
-    },
+    {'1': 'hardware_self_test', '3': 7, '4': 1, '5': 14, '6': '.SpaceX.API.Device.DishGetDiagnosticsResponse.TestResult', '10': 'hardwareSelfTest'},
+    {'1': 'hardware_self_test_codes', '3': 11, '4': 3, '5': 14, '6': '.SpaceX.API.Device.DishGetDiagnosticsResponse.TestResultCode', '10': 'hardwareSelfTestCodes'},
+    {'1': 'alerts', '3': 5, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishGetDiagnosticsResponse.Alerts', '10': 'alerts'},
+    {'1': 'disablement_code', '3': 6, '4': 1, '5': 14, '6': '.SpaceX.API.Device.DishGetDiagnosticsResponse.DisablementCode', '10': 'disablementCode'},
+    {'1': 'location', '3': 8, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishGetDiagnosticsResponse.Location', '10': 'location'},
+    {'1': 'alignment_stats', '3': 9, '4': 1, '5': 11, '6': '.SpaceX.API.Device.DishGetDiagnosticsResponse.AlignmentStats', '10': 'alignmentStats'},
     {'1': 'stowed', '3': 10, '4': 1, '5': 8, '10': 'stowed'},
-    {
-      '1': 'overage_rate_limited',
-      '3': 14,
-      '4': 1,
-      '5': 8,
-      '10': 'overageRateLimited'
-    },
+    {'1': 'overage_rate_limited', '3': 14, '4': 1, '5': 8, '10': 'overageRateLimited'},
   ],
-  '3': [
-    DishGetDiagnosticsResponse_Alerts$json,
-    DishGetDiagnosticsResponse_Location$json,
-    DishGetDiagnosticsResponse_AlignmentStats$json
-  ],
-  '4': [
-    DishGetDiagnosticsResponse_TestResult$json,
-    DishGetDiagnosticsResponse_TestResultCode$json,
-    DishGetDiagnosticsResponse_DisablementCode$json
-  ],
+  '3': [DishGetDiagnosticsResponse_Alerts$json, DishGetDiagnosticsResponse_Location$json, DishGetDiagnosticsResponse_AlignmentStats$json],
+  '4': [DishGetDiagnosticsResponse_TestResult$json, DishGetDiagnosticsResponse_TestResultCode$json, DishGetDiagnosticsResponse_DisablementCode$json],
   '9': [
     {'1': 12, '2': 13},
     {'1': 13, '2': 14},
@@ -3899,49 +1820,13 @@ const DishGetDiagnosticsResponse_Alerts$json = {
   '1': 'Alerts',
   '2': [
     {'1': 'dish_is_heating', '3': 1, '4': 1, '5': 8, '10': 'dishIsHeating'},
-    {
-      '1': 'dish_thermal_throttle',
-      '3': 2,
-      '4': 1,
-      '5': 8,
-      '10': 'dishThermalThrottle'
-    },
-    {
-      '1': 'dish_thermal_shutdown',
-      '3': 3,
-      '4': 1,
-      '5': 8,
-      '10': 'dishThermalShutdown'
-    },
-    {
-      '1': 'power_supply_thermal_throttle',
-      '3': 4,
-      '4': 1,
-      '5': 8,
-      '10': 'powerSupplyThermalThrottle'
-    },
+    {'1': 'dish_thermal_throttle', '3': 2, '4': 1, '5': 8, '10': 'dishThermalThrottle'},
+    {'1': 'dish_thermal_shutdown', '3': 3, '4': 1, '5': 8, '10': 'dishThermalShutdown'},
+    {'1': 'power_supply_thermal_throttle', '3': 4, '4': 1, '5': 8, '10': 'powerSupplyThermalThrottle'},
     {'1': 'motors_stuck', '3': 5, '4': 1, '5': 8, '10': 'motorsStuck'},
-    {
-      '1': 'mast_not_near_vertical',
-      '3': 6,
-      '4': 1,
-      '5': 8,
-      '10': 'mastNotNearVertical'
-    },
-    {
-      '1': 'slow_ethernet_speeds',
-      '3': 7,
-      '4': 1,
-      '5': 8,
-      '10': 'slowEthernetSpeeds'
-    },
-    {
-      '1': 'software_install_pending',
-      '3': 8,
-      '4': 1,
-      '5': 8,
-      '10': 'softwareInstallPending'
-    },
+    {'1': 'mast_not_near_vertical', '3': 6, '4': 1, '5': 8, '10': 'mastNotNearVertical'},
+    {'1': 'slow_ethernet_speeds', '3': 7, '4': 1, '5': 8, '10': 'slowEthernetSpeeds'},
+    {'1': 'software_install_pending', '3': 8, '4': 1, '5': 8, '10': 'softwareInstallPending'},
     {'1': 'obstructed', '3': 10, '4': 1, '5': 8, '10': 'obstructed'},
   ],
   '9': [
@@ -3958,20 +1843,8 @@ const DishGetDiagnosticsResponse_Location$json = {
     {'1': 'latitude', '3': 2, '4': 1, '5': 1, '10': 'latitude'},
     {'1': 'longitude', '3': 3, '4': 1, '5': 1, '10': 'longitude'},
     {'1': 'altitude_meters', '3': 4, '4': 1, '5': 1, '10': 'altitudeMeters'},
-    {
-      '1': 'uncertainty_meters_valid',
-      '3': 5,
-      '4': 1,
-      '5': 8,
-      '10': 'uncertaintyMetersValid'
-    },
-    {
-      '1': 'uncertainty_meters',
-      '3': 6,
-      '4': 1,
-      '5': 1,
-      '10': 'uncertaintyMeters'
-    },
+    {'1': 'uncertainty_meters_valid', '3': 5, '4': 1, '5': 8, '10': 'uncertaintyMetersValid'},
+    {'1': 'uncertainty_meters', '3': 6, '4': 1, '5': 1, '10': 'uncertaintyMeters'},
     {'1': 'gps_time_s', '3': 7, '4': 1, '5': 1, '10': 'gpsTimeS'},
   ],
 };
@@ -3980,34 +1853,10 @@ const DishGetDiagnosticsResponse_Location$json = {
 const DishGetDiagnosticsResponse_AlignmentStats$json = {
   '1': 'AlignmentStats',
   '2': [
-    {
-      '1': 'boresight_azimuth_deg',
-      '3': 1,
-      '4': 1,
-      '5': 2,
-      '10': 'boresightAzimuthDeg'
-    },
-    {
-      '1': 'boresight_elevation_deg',
-      '3': 2,
-      '4': 1,
-      '5': 2,
-      '10': 'boresightElevationDeg'
-    },
-    {
-      '1': 'desired_boresight_azimuth_deg',
-      '3': 3,
-      '4': 1,
-      '5': 2,
-      '10': 'desiredBoresightAzimuthDeg'
-    },
-    {
-      '1': 'desired_boresight_elevation_deg',
-      '3': 4,
-      '4': 1,
-      '5': 2,
-      '10': 'desiredBoresightElevationDeg'
-    },
+    {'1': 'boresight_azimuth_deg', '3': 1, '4': 1, '5': 2, '10': 'boresightAzimuthDeg'},
+    {'1': 'boresight_elevation_deg', '3': 2, '4': 1, '5': 2, '10': 'boresightElevationDeg'},
+    {'1': 'desired_boresight_azimuth_deg', '3': 3, '4': 1, '5': 2, '10': 'desiredBoresightAzimuthDeg'},
+    {'1': 'desired_boresight_elevation_deg', '3': 4, '4': 1, '5': 2, '10': 'desiredBoresightElevationDeg'},
   ],
 };
 
@@ -4132,10 +1981,9 @@ const TcpConnectivityTestRequest$json = {
 };
 
 /// Descriptor for `TcpConnectivityTestRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List tcpConnectivityTestRequestDescriptor =
-    $convert.base64Decode(
-        'ChpUY3BDb25uZWN0aXZpdHlUZXN0UmVxdWVzdBIWCgZ0YXJnZXQYASABKAlSBnRhcmdldBISCg'
-        'Rwb3J0GAIgASgNUgRwb3J0');
+final $typed_data.Uint8List tcpConnectivityTestRequestDescriptor = $convert.base64Decode(
+    'ChpUY3BDb25uZWN0aXZpdHlUZXN0UmVxdWVzdBIWCgZ0YXJnZXQYASABKAlSBnRhcmdldBISCg'
+    'Rwb3J0GAIgASgNUgRwb3J0');
 
 @$core.Deprecated('Use udpConnectivityTestRequestDescriptor instead')
 const UdpConnectivityTestRequest$json = {
@@ -4143,14 +1991,7 @@ const UdpConnectivityTestRequest$json = {
   '2': [
     {'1': 'target', '3': 1, '4': 1, '5': 9, '10': 'target'},
     {'1': 'port', '3': 2, '4': 1, '5': 13, '10': 'port'},
-    {
-      '1': 'probe_data',
-      '3': 3,
-      '4': 1,
-      '5': 14,
-      '6': '.SpaceX.API.Device.UdpConnectivityTestRequest.UDPProbeDataType',
-      '10': 'probeData'
-    },
+    {'1': 'probe_data', '3': 3, '4': 1, '5': 14, '6': '.SpaceX.API.Device.UdpConnectivityTestRequest.UDPProbeDataType', '10': 'probeData'},
   ],
   '4': [UdpConnectivityTestRequest_UDPProbeDataType$json],
 };
@@ -4204,8 +2045,8 @@ const GetGoroutineStackTracesRequest$json = {
 };
 
 /// Descriptor for `GetGoroutineStackTracesRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getGoroutineStackTracesRequestDescriptor =
-    $convert.base64Decode('Ch5HZXRHb3JvdXRpbmVTdGFja1RyYWNlc1JlcXVlc3Q=');
+final $typed_data.Uint8List getGoroutineStackTracesRequestDescriptor = $convert.base64Decode(
+    'Ch5HZXRHb3JvdXRpbmVTdGFja1RyYWNlc1JlcXVlc3Q=');
 
 @$core.Deprecated('Use getGoroutineStackTracesResponseDescriptor instead')
 const GetGoroutineStackTracesResponse$json = {
@@ -4216,7 +2057,7 @@ const GetGoroutineStackTracesResponse$json = {
 };
 
 /// Descriptor for `GetGoroutineStackTracesResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List getGoroutineStackTracesResponseDescriptor =
-    $convert.base64Decode(
-        'Ch9HZXRHb3JvdXRpbmVTdGFja1RyYWNlc1Jlc3BvbnNlEiEKDHN0YWNrX3RyYWNlcxgBIAEoCV'
-        'ILc3RhY2tUcmFjZXM=');
+final $typed_data.Uint8List getGoroutineStackTracesResponseDescriptor = $convert.base64Decode(
+    'Ch9HZXRHb3JvdXRpbmVTdGFja1RyYWNlc1Jlc3BvbnNlEiEKDHN0YWNrX3RyYWNlcxgBIAEoCV'
+    'ILc3RhY2tUcmFjZXM=');
+

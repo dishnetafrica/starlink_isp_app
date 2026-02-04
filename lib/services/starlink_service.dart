@@ -1,52 +1,68 @@
 import 'package:grpc/grpc.dart';
-import 'package:fixnum/fixnum.dart';
-import 'generated/device.pbgrpc.dart';
-import 'generated/device.pb.dart';
+// Relative paths to reach the generated folder from lib/services/
+import '../generated/spacex_api/device/device.pbgrpc.dart';
+import '../generated/spacex_api/device/device.pb.dart';
 
 class StarlinkService {
-  // The standard local IP for Starlink hardware
   static const String _dishIp = '192.168.100.1';
   static const int _port = 9201;
 
-  late ClientChannel _channel;
-  late DeviceClient _client;
+  ClientChannel? _channel;
+  DeviceClient? _client;
 
-  StarlinkService() {
-    _channel = ClientChannel(
+  /// Private method to ensure the channel is ready only when we need it.
+  void _ensureInitialized() {
+    _channel ??= ClientChannel(
       _dishIp,
       port: _port,
       options: const ChannelOptions(
         credentials: ChannelCredentials.insecure(),
-        connectTimeout: Duration(seconds: 5),
+        connectTimeout: Duration(seconds: 2),
       ),
     );
-    _client = DeviceClient(_channel);
+    _client ??= DeviceClient(_channel!);
   }
 
-  /// Fetches real-time health and status from the dish
-  Future<Map<String, dynamic>> getDishHealth() async {
+  /// Fetches real-time status from the Dishy hardware.
+  Future<Map<String, dynamic>> getStatus() async {
+    _ensureInitialized();
     try {
-      // Initialize the Request object from your generated code
       final request = Request()..getStatus = GetStatusRequest();
 
-      // Send the request
-      final response = await _client.handle(request);
-      final status = response.dishGetStatus;
+      final response = await _client!.handle(request).timeout(
+        const Duration(seconds: 3),
+        onTimeout: () => throw 'Connection Timed Out',
+      );
+
+      final dishStatus = response.dishGetStatus;
+
+      //
 
       return {
-        'deviceId': status.deviceInfo.id,
-        'hardwareVersion': status.deviceInfo.hardwareVersion,
-        'uptime': status.uptimeSeconds.toInt(),
-        'state': status.state.toString(),
-        'isObstructed': status.obstructionStats.fractionObstructed > 0.05,
-        'snr': status.isSnrBelowThreshold,
+        'connected': true,
+        'id': dishStatus.deviceInfo.id,
+        'hardware': dishStatus.deviceInfo.hardwareVersion,
+        'state': dishStatus.deviceState.toString(),
+        // FINAL FIX: Using the 'getField' method is the bulletproof way to get
+        // the value if the compiler is confused about which object owns the getter.
+        // We look for tag 7 (Standard for uptime_seconds in Starlink Protos).
+        'uptime': dishStatus.hasField(7)
+            ? dishStatus.getField(7).toInt()
+            : (dishStatus.deviceInfo.hasField(1) ? dishStatus.deviceInfo.getField(1).toInt() : 0),
+        'isObstructed': dishStatus.obstructionStats.fractionObstructed > 0.1,
       };
     } catch (e) {
-      return {'error': 'Could not connect to Dishy. Ensure you are on Starlink WiFi.'};
+      return {
+        'connected': false,
+        'error': e.toString(),
+        'message': 'Dish unreachable. Ensure you are connected to the Starlink WiFi.',
+      };
     }
   }
 
-  void dispose() {
-    _channel.shutdown();
+  Future<void> close() async {
+    await _channel?.shutdown();
+    _channel = null;
+    _client = null;
   }
 }

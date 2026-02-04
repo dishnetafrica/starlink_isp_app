@@ -1,27 +1,35 @@
-import 'dart:io';
-import 'starlink_service.dart';
+import 'package:flutter/material.dart';
+// Corrected path to the service
+import 'services/starlink_service.dart';
 
-enum ConnectionStatus { checking, connected, remoteMode }
+class ConnectionManager extends ChangeNotifier {
+  final StarlinkService _starlinkService = StarlinkService();
+  bool _isLocalMode = false;
+  Map<String, dynamic> _currentStatus = {};
 
-class ConnectionManager {
-  final StarlinkService _service = StarlinkService();
+  bool get isLocalMode => _isLocalMode;
+  Map<String, dynamic> get currentStatus => _currentStatus;
 
-  /// Checks if we can actually reach the Dishy IP
-  Future<ConnectionStatus> checkConnectivity() async {
-    try {
-      // Try to ping the dish IP with a very short timeout
-      final result = await InternetAddress.lookup('192.168.100.1')
-          .timeout(const Duration(seconds: 2));
+  /// Attempts to connect to the local Dishy hardware
+  Future<void> checkConnection() async {
+    final status = await _starlinkService.getStatus();
 
-      if (result.isNotEmpty) {
-        // Double check by trying a light gRPC call
-        final status = await _service.getStatus();
-        if (status.containsKey('error')) return ConnectionStatus.remoteMode;
-        return ConnectionStatus.connected;
-      }
-    } catch (_) {
-      return ConnectionStatus.remoteMode;
+    if (status['connected'] == true) {
+      _isLocalMode = true;
+      _currentStatus = status;
+    } else {
+      _isLocalMode = false;
+      _currentStatus = {
+        'state': 'Remote Mode',
+        'message': 'Connected via Starlink Cloud',
+      };
     }
-    return ConnectionStatus.remoteMode;
+    notifyListeners();
+  }
+
+  @override
+  void dispose() {
+    _starlinkService.close();
+    super.dispose();
   }
 }

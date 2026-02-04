@@ -1,14 +1,13 @@
-// This is a generated file - do not edit.
 //
-// Generated from spacex_api/device/wifi_util.proto.
-
-// @dart = 3.3
+//  Generated code. Do not modify.
+//  source: spacex_api/device/wifi_util.proto
+//
+// @dart = 2.12
 
 // ignore_for_file: annotate_overrides, camel_case_types, comment_references
-// ignore_for_file: constant_identifier_names
-// ignore_for_file: curly_braces_in_flow_control_structures
-// ignore_for_file: deprecated_member_use_from_same_package, library_prefixes
-// ignore_for_file: non_constant_identifier_names, prefer_relative_imports
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -16,8 +15,6 @@ import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'wifi_util.pbenum.dart';
-
-export 'package:protobuf/protobuf.dart' show GeneratedMessageGenericExtensions;
 
 export 'wifi_util.pbenum.dart';
 
@@ -32,134 +29,141 @@ class InflatedBasicServiceSet extends $pb.GeneratedMessage {
     $core.int? preference,
     $core.String? domain,
   }) {
-    final result = create();
-    if (bssid != null) result.bssid = bssid;
-    if (ssid != null) result.ssid = ssid;
-    if (macLan != null) result.macLan = macLan;
-    if (ifaceName != null) result.ifaceName = ifaceName;
-    if (ifaceType != null) result.ifaceType = ifaceType;
-    if (channel != null) result.channel = channel;
-    if (preference != null) result.preference = preference;
-    if (domain != null) result.domain = domain;
-    return result;
+    final $result = create();
+    if (bssid != null) {
+      $result.bssid = bssid;
+    }
+    if (ssid != null) {
+      $result.ssid = ssid;
+    }
+    if (macLan != null) {
+      $result.macLan = macLan;
+    }
+    if (ifaceName != null) {
+      $result.ifaceName = ifaceName;
+    }
+    if (ifaceType != null) {
+      $result.ifaceType = ifaceType;
+    }
+    if (channel != null) {
+      $result.channel = channel;
+    }
+    if (preference != null) {
+      $result.preference = preference;
+    }
+    if (domain != null) {
+      $result.domain = domain;
+    }
+    return $result;
   }
+  InflatedBasicServiceSet._() : super();
+  factory InflatedBasicServiceSet.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory InflatedBasicServiceSet.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  InflatedBasicServiceSet._();
-
-  factory InflatedBasicServiceSet.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory InflatedBasicServiceSet.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'InflatedBasicServiceSet',
-      package:
-          const $pb.PackageName(_omitMessageNames ? '' : 'SpaceX.API.Device'),
-      createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'InflatedBasicServiceSet', package: const $pb.PackageName(_omitMessageNames ? '' : 'SpaceX.API.Device'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'bssid')
     ..aOS(2, _omitFieldNames ? '' : 'ssid')
     ..aOS(3, _omitFieldNames ? '' : 'macLan')
     ..aOS(4, _omitFieldNames ? '' : 'ifaceName')
-    ..aE<IfaceType>(5, _omitFieldNames ? '' : 'ifaceType',
-        enumValues: IfaceType.values)
-    ..aI(6, _omitFieldNames ? '' : 'channel', fieldType: $pb.PbFieldType.OU3)
-    ..aI(7, _omitFieldNames ? '' : 'preference', fieldType: $pb.PbFieldType.OU3)
+    ..e<IfaceType>(5, _omitFieldNames ? '' : 'ifaceType', $pb.PbFieldType.OE, defaultOrMaker: IfaceType.IFACE_TYPE_UNKNOWN, valueOf: IfaceType.valueOf, enumValues: IfaceType.values)
+    ..a<$core.int>(6, _omitFieldNames ? '' : 'channel', $pb.PbFieldType.OU3)
+    ..a<$core.int>(7, _omitFieldNames ? '' : 'preference', $pb.PbFieldType.OU3)
     ..aOS(8, _omitFieldNames ? '' : 'domain')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  InflatedBasicServiceSet clone() => deepCopy();
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  InflatedBasicServiceSet copyWith(
-          void Function(InflatedBasicServiceSet) updates) =>
-      super.copyWith((message) => updates(message as InflatedBasicServiceSet))
-          as InflatedBasicServiceSet;
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  InflatedBasicServiceSet clone() => InflatedBasicServiceSet()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  InflatedBasicServiceSet copyWith(void Function(InflatedBasicServiceSet) updates) => super.copyWith((message) => updates(message as InflatedBasicServiceSet)) as InflatedBasicServiceSet;
 
-  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static InflatedBasicServiceSet create() => InflatedBasicServiceSet._();
-  @$core.override
   InflatedBasicServiceSet createEmptyInstance() => create();
+  static $pb.PbList<InflatedBasicServiceSet> createRepeated() => $pb.PbList<InflatedBasicServiceSet>();
   @$core.pragma('dart2js:noInline')
-  static InflatedBasicServiceSet getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<InflatedBasicServiceSet>(create);
+  static InflatedBasicServiceSet getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<InflatedBasicServiceSet>(create);
   static InflatedBasicServiceSet? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get bssid => $_getSZ(0);
   @$pb.TagNumber(1)
-  set bssid($core.String value) => $_setString(0, value);
+  set bssid($core.String v) { $_setString(0, v); }
   @$pb.TagNumber(1)
   $core.bool hasBssid() => $_has(0);
   @$pb.TagNumber(1)
-  void clearBssid() => $_clearField(1);
+  void clearBssid() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.String get ssid => $_getSZ(1);
   @$pb.TagNumber(2)
-  set ssid($core.String value) => $_setString(1, value);
+  set ssid($core.String v) { $_setString(1, v); }
   @$pb.TagNumber(2)
   $core.bool hasSsid() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSsid() => $_clearField(2);
+  void clearSsid() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.String get macLan => $_getSZ(2);
   @$pb.TagNumber(3)
-  set macLan($core.String value) => $_setString(2, value);
+  set macLan($core.String v) { $_setString(2, v); }
   @$pb.TagNumber(3)
   $core.bool hasMacLan() => $_has(2);
   @$pb.TagNumber(3)
-  void clearMacLan() => $_clearField(3);
+  void clearMacLan() => clearField(3);
 
   @$pb.TagNumber(4)
   $core.String get ifaceName => $_getSZ(3);
   @$pb.TagNumber(4)
-  set ifaceName($core.String value) => $_setString(3, value);
+  set ifaceName($core.String v) { $_setString(3, v); }
   @$pb.TagNumber(4)
   $core.bool hasIfaceName() => $_has(3);
   @$pb.TagNumber(4)
-  void clearIfaceName() => $_clearField(4);
+  void clearIfaceName() => clearField(4);
 
   @$pb.TagNumber(5)
   IfaceType get ifaceType => $_getN(4);
   @$pb.TagNumber(5)
-  set ifaceType(IfaceType value) => $_setField(5, value);
+  set ifaceType(IfaceType v) { setField(5, v); }
   @$pb.TagNumber(5)
   $core.bool hasIfaceType() => $_has(4);
   @$pb.TagNumber(5)
-  void clearIfaceType() => $_clearField(5);
+  void clearIfaceType() => clearField(5);
 
   @$pb.TagNumber(6)
   $core.int get channel => $_getIZ(5);
   @$pb.TagNumber(6)
-  set channel($core.int value) => $_setUnsignedInt32(5, value);
+  set channel($core.int v) { $_setUnsignedInt32(5, v); }
   @$pb.TagNumber(6)
   $core.bool hasChannel() => $_has(5);
   @$pb.TagNumber(6)
-  void clearChannel() => $_clearField(6);
+  void clearChannel() => clearField(6);
 
   @$pb.TagNumber(7)
   $core.int get preference => $_getIZ(6);
   @$pb.TagNumber(7)
-  set preference($core.int value) => $_setUnsignedInt32(6, value);
+  set preference($core.int v) { $_setUnsignedInt32(6, v); }
   @$pb.TagNumber(7)
   $core.bool hasPreference() => $_has(6);
   @$pb.TagNumber(7)
-  void clearPreference() => $_clearField(7);
+  void clearPreference() => clearField(7);
 
   @$pb.TagNumber(8)
   $core.String get domain => $_getSZ(7);
   @$pb.TagNumber(8)
-  set domain($core.String value) => $_setString(7, value);
+  set domain($core.String v) { $_setString(7, v); }
   @$pb.TagNumber(8)
   $core.bool hasDomain() => $_has(7);
   @$pb.TagNumber(8)
-  void clearDomain() => $_clearField(8);
+  void clearDomain() => clearField(8);
 }
 
 class DhcpLease extends $pb.GeneratedMessage {
@@ -171,109 +175,115 @@ class DhcpLease extends $pb.GeneratedMessage {
     $core.bool? active,
     $core.int? clientId,
   }) {
-    final result = create();
-    if (ipAddress != null) result.ipAddress = ipAddress;
-    if (macAddress != null) result.macAddress = macAddress;
-    if (hostname != null) result.hostname = hostname;
-    if (expiresTime != null) result.expiresTime = expiresTime;
-    if (active != null) result.active = active;
-    if (clientId != null) result.clientId = clientId;
-    return result;
+    final $result = create();
+    if (ipAddress != null) {
+      $result.ipAddress = ipAddress;
+    }
+    if (macAddress != null) {
+      $result.macAddress = macAddress;
+    }
+    if (hostname != null) {
+      $result.hostname = hostname;
+    }
+    if (expiresTime != null) {
+      $result.expiresTime = expiresTime;
+    }
+    if (active != null) {
+      $result.active = active;
+    }
+    if (clientId != null) {
+      $result.clientId = clientId;
+    }
+    return $result;
   }
+  DhcpLease._() : super();
+  factory DhcpLease.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory DhcpLease.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  DhcpLease._();
-
-  factory DhcpLease.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory DhcpLease.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'DhcpLease',
-      package:
-          const $pb.PackageName(_omitMessageNames ? '' : 'SpaceX.API.Device'),
-      createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'DhcpLease', package: const $pb.PackageName(_omitMessageNames ? '' : 'SpaceX.API.Device'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'ipAddress')
     ..aOS(2, _omitFieldNames ? '' : 'macAddress')
     ..aOS(3, _omitFieldNames ? '' : 'hostname')
     ..aOS(4, _omitFieldNames ? '' : 'expiresTime')
     ..aOB(5, _omitFieldNames ? '' : 'active')
-    ..aI(6, _omitFieldNames ? '' : 'clientId', fieldType: $pb.PbFieldType.OU3)
-    ..hasRequiredFields = false;
+    ..a<$core.int>(6, _omitFieldNames ? '' : 'clientId', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false
+  ;
 
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  DhcpLease clone() => deepCopy();
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  DhcpLease copyWith(void Function(DhcpLease) updates) =>
-      super.copyWith((message) => updates(message as DhcpLease)) as DhcpLease;
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  DhcpLease clone() => DhcpLease()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  DhcpLease copyWith(void Function(DhcpLease) updates) => super.copyWith((message) => updates(message as DhcpLease)) as DhcpLease;
 
-  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DhcpLease create() => DhcpLease._();
-  @$core.override
   DhcpLease createEmptyInstance() => create();
+  static $pb.PbList<DhcpLease> createRepeated() => $pb.PbList<DhcpLease>();
   @$core.pragma('dart2js:noInline')
-  static DhcpLease getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DhcpLease>(create);
+  static DhcpLease getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DhcpLease>(create);
   static DhcpLease? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get ipAddress => $_getSZ(0);
   @$pb.TagNumber(1)
-  set ipAddress($core.String value) => $_setString(0, value);
+  set ipAddress($core.String v) { $_setString(0, v); }
   @$pb.TagNumber(1)
   $core.bool hasIpAddress() => $_has(0);
   @$pb.TagNumber(1)
-  void clearIpAddress() => $_clearField(1);
+  void clearIpAddress() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.String get macAddress => $_getSZ(1);
   @$pb.TagNumber(2)
-  set macAddress($core.String value) => $_setString(1, value);
+  set macAddress($core.String v) { $_setString(1, v); }
   @$pb.TagNumber(2)
   $core.bool hasMacAddress() => $_has(1);
   @$pb.TagNumber(2)
-  void clearMacAddress() => $_clearField(2);
+  void clearMacAddress() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.String get hostname => $_getSZ(2);
   @$pb.TagNumber(3)
-  set hostname($core.String value) => $_setString(2, value);
+  set hostname($core.String v) { $_setString(2, v); }
   @$pb.TagNumber(3)
   $core.bool hasHostname() => $_has(2);
   @$pb.TagNumber(3)
-  void clearHostname() => $_clearField(3);
+  void clearHostname() => clearField(3);
 
   @$pb.TagNumber(4)
   $core.String get expiresTime => $_getSZ(3);
   @$pb.TagNumber(4)
-  set expiresTime($core.String value) => $_setString(3, value);
+  set expiresTime($core.String v) { $_setString(3, v); }
   @$pb.TagNumber(4)
   $core.bool hasExpiresTime() => $_has(3);
   @$pb.TagNumber(4)
-  void clearExpiresTime() => $_clearField(4);
+  void clearExpiresTime() => clearField(4);
 
   @$pb.TagNumber(5)
   $core.bool get active => $_getBF(4);
   @$pb.TagNumber(5)
-  set active($core.bool value) => $_setBool(4, value);
+  set active($core.bool v) { $_setBool(4, v); }
   @$pb.TagNumber(5)
   $core.bool hasActive() => $_has(4);
   @$pb.TagNumber(5)
-  void clearActive() => $_clearField(5);
+  void clearActive() => clearField(5);
 
   @$pb.TagNumber(6)
   $core.int get clientId => $_getIZ(5);
   @$pb.TagNumber(6)
-  set clientId($core.int value) => $_setUnsignedInt32(5, value);
+  set clientId($core.int v) { $_setUnsignedInt32(5, v); }
   @$pb.TagNumber(6)
   $core.bool hasClientId() => $_has(5);
   @$pb.TagNumber(6)
-  void clearClientId() => $_clearField(6);
+  void clearClientId() => clearField(6);
 }
 
 class DhcpServer extends $pb.GeneratedMessage {
@@ -283,82 +293,83 @@ class DhcpServer extends $pb.GeneratedMessage {
     $core.Iterable<DhcpLease>? leases,
     $core.bool? ipExhausted,
   }) {
-    final result = create();
-    if (domain != null) result.domain = domain;
-    if (subnet != null) result.subnet = subnet;
-    if (leases != null) result.leases.addAll(leases);
-    if (ipExhausted != null) result.ipExhausted = ipExhausted;
-    return result;
+    final $result = create();
+    if (domain != null) {
+      $result.domain = domain;
+    }
+    if (subnet != null) {
+      $result.subnet = subnet;
+    }
+    if (leases != null) {
+      $result.leases.addAll(leases);
+    }
+    if (ipExhausted != null) {
+      $result.ipExhausted = ipExhausted;
+    }
+    return $result;
   }
+  DhcpServer._() : super();
+  factory DhcpServer.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory DhcpServer.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  DhcpServer._();
-
-  factory DhcpServer.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory DhcpServer.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'DhcpServer',
-      package:
-          const $pb.PackageName(_omitMessageNames ? '' : 'SpaceX.API.Device'),
-      createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'DhcpServer', package: const $pb.PackageName(_omitMessageNames ? '' : 'SpaceX.API.Device'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'domain')
     ..aOS(2, _omitFieldNames ? '' : 'subnet')
-    ..pPM<DhcpLease>(3, _omitFieldNames ? '' : 'leases',
-        subBuilder: DhcpLease.create)
+    ..pc<DhcpLease>(3, _omitFieldNames ? '' : 'leases', $pb.PbFieldType.PM, subBuilder: DhcpLease.create)
     ..aOB(4, _omitFieldNames ? '' : 'ipExhausted')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  DhcpServer clone() => deepCopy();
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  DhcpServer copyWith(void Function(DhcpServer) updates) =>
-      super.copyWith((message) => updates(message as DhcpServer)) as DhcpServer;
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  DhcpServer clone() => DhcpServer()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  DhcpServer copyWith(void Function(DhcpServer) updates) => super.copyWith((message) => updates(message as DhcpServer)) as DhcpServer;
 
-  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static DhcpServer create() => DhcpServer._();
-  @$core.override
   DhcpServer createEmptyInstance() => create();
+  static $pb.PbList<DhcpServer> createRepeated() => $pb.PbList<DhcpServer>();
   @$core.pragma('dart2js:noInline')
-  static DhcpServer getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<DhcpServer>(create);
+  static DhcpServer getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DhcpServer>(create);
   static DhcpServer? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get domain => $_getSZ(0);
   @$pb.TagNumber(1)
-  set domain($core.String value) => $_setString(0, value);
+  set domain($core.String v) { $_setString(0, v); }
   @$pb.TagNumber(1)
   $core.bool hasDomain() => $_has(0);
   @$pb.TagNumber(1)
-  void clearDomain() => $_clearField(1);
+  void clearDomain() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.String get subnet => $_getSZ(1);
   @$pb.TagNumber(2)
-  set subnet($core.String value) => $_setString(1, value);
+  set subnet($core.String v) { $_setString(1, v); }
   @$pb.TagNumber(2)
   $core.bool hasSubnet() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSubnet() => $_clearField(2);
+  void clearSubnet() => clearField(2);
 
   @$pb.TagNumber(3)
-  $pb.PbList<DhcpLease> get leases => $_getList(2);
+  $core.List<DhcpLease> get leases => $_getList(2);
 
   @$pb.TagNumber(4)
   $core.bool get ipExhausted => $_getBF(3);
   @$pb.TagNumber(4)
-  set ipExhausted($core.bool value) => $_setBool(3, value);
+  set ipExhausted($core.bool v) { $_setBool(3, v); }
   @$pb.TagNumber(4)
   $core.bool hasIpExhausted() => $_has(3);
   @$pb.TagNumber(4)
-  void clearIpExhausted() => $_clearField(4);
+  void clearIpExhausted() => clearField(4);
 }
 
 class RadiusStatsMap_RadiusStats extends $pb.GeneratedMessage {
@@ -372,145 +383,141 @@ class RadiusStatsMap_RadiusStats extends $pb.GeneratedMessage {
     $core.int? accountingRequestCount,
     $core.int? accountingResponseCount,
   }) {
-    final result = create();
-    if (ifaceName != null) result.ifaceName = ifaceName;
-    if (timeoutCount != null) result.timeoutCount = timeoutCount;
-    if (accessRequestCount != null)
-      result.accessRequestCount = accessRequestCount;
-    if (accessAcceptCount != null) result.accessAcceptCount = accessAcceptCount;
-    if (accessRejectCount != null) result.accessRejectCount = accessRejectCount;
-    if (accessChallengeCount != null)
-      result.accessChallengeCount = accessChallengeCount;
-    if (accountingRequestCount != null)
-      result.accountingRequestCount = accountingRequestCount;
-    if (accountingResponseCount != null)
-      result.accountingResponseCount = accountingResponseCount;
-    return result;
+    final $result = create();
+    if (ifaceName != null) {
+      $result.ifaceName = ifaceName;
+    }
+    if (timeoutCount != null) {
+      $result.timeoutCount = timeoutCount;
+    }
+    if (accessRequestCount != null) {
+      $result.accessRequestCount = accessRequestCount;
+    }
+    if (accessAcceptCount != null) {
+      $result.accessAcceptCount = accessAcceptCount;
+    }
+    if (accessRejectCount != null) {
+      $result.accessRejectCount = accessRejectCount;
+    }
+    if (accessChallengeCount != null) {
+      $result.accessChallengeCount = accessChallengeCount;
+    }
+    if (accountingRequestCount != null) {
+      $result.accountingRequestCount = accountingRequestCount;
+    }
+    if (accountingResponseCount != null) {
+      $result.accountingResponseCount = accountingResponseCount;
+    }
+    return $result;
   }
+  RadiusStatsMap_RadiusStats._() : super();
+  factory RadiusStatsMap_RadiusStats.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory RadiusStatsMap_RadiusStats.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  RadiusStatsMap_RadiusStats._();
-
-  factory RadiusStatsMap_RadiusStats.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory RadiusStatsMap_RadiusStats.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'RadiusStatsMap.RadiusStats',
-      package:
-          const $pb.PackageName(_omitMessageNames ? '' : 'SpaceX.API.Device'),
-      createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'RadiusStatsMap.RadiusStats', package: const $pb.PackageName(_omitMessageNames ? '' : 'SpaceX.API.Device'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'ifaceName')
-    ..aI(2, _omitFieldNames ? '' : 'timeoutCount',
-        fieldType: $pb.PbFieldType.OU3)
-    ..aI(3, _omitFieldNames ? '' : 'accessRequestCount',
-        fieldType: $pb.PbFieldType.OU3)
-    ..aI(4, _omitFieldNames ? '' : 'accessAcceptCount',
-        fieldType: $pb.PbFieldType.OU3)
-    ..aI(5, _omitFieldNames ? '' : 'accessRejectCount',
-        fieldType: $pb.PbFieldType.OU3)
-    ..aI(6, _omitFieldNames ? '' : 'accessChallengeCount',
-        fieldType: $pb.PbFieldType.OU3)
-    ..aI(7, _omitFieldNames ? '' : 'accountingRequestCount',
-        fieldType: $pb.PbFieldType.OU3)
-    ..aI(8, _omitFieldNames ? '' : 'accountingResponseCount',
-        fieldType: $pb.PbFieldType.OU3)
-    ..hasRequiredFields = false;
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'timeoutCount', $pb.PbFieldType.OU3)
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'accessRequestCount', $pb.PbFieldType.OU3)
+    ..a<$core.int>(4, _omitFieldNames ? '' : 'accessAcceptCount', $pb.PbFieldType.OU3)
+    ..a<$core.int>(5, _omitFieldNames ? '' : 'accessRejectCount', $pb.PbFieldType.OU3)
+    ..a<$core.int>(6, _omitFieldNames ? '' : 'accessChallengeCount', $pb.PbFieldType.OU3)
+    ..a<$core.int>(7, _omitFieldNames ? '' : 'accountingRequestCount', $pb.PbFieldType.OU3)
+    ..a<$core.int>(8, _omitFieldNames ? '' : 'accountingResponseCount', $pb.PbFieldType.OU3)
+    ..hasRequiredFields = false
+  ;
 
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RadiusStatsMap_RadiusStats clone() => deepCopy();
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RadiusStatsMap_RadiusStats copyWith(
-          void Function(RadiusStatsMap_RadiusStats) updates) =>
-      super.copyWith(
-              (message) => updates(message as RadiusStatsMap_RadiusStats))
-          as RadiusStatsMap_RadiusStats;
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  RadiusStatsMap_RadiusStats clone() => RadiusStatsMap_RadiusStats()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  RadiusStatsMap_RadiusStats copyWith(void Function(RadiusStatsMap_RadiusStats) updates) => super.copyWith((message) => updates(message as RadiusStatsMap_RadiusStats)) as RadiusStatsMap_RadiusStats;
 
-  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static RadiusStatsMap_RadiusStats create() => RadiusStatsMap_RadiusStats._();
-  @$core.override
   RadiusStatsMap_RadiusStats createEmptyInstance() => create();
+  static $pb.PbList<RadiusStatsMap_RadiusStats> createRepeated() => $pb.PbList<RadiusStatsMap_RadiusStats>();
   @$core.pragma('dart2js:noInline')
-  static RadiusStatsMap_RadiusStats getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<RadiusStatsMap_RadiusStats>(create);
+  static RadiusStatsMap_RadiusStats getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<RadiusStatsMap_RadiusStats>(create);
   static RadiusStatsMap_RadiusStats? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get ifaceName => $_getSZ(0);
   @$pb.TagNumber(1)
-  set ifaceName($core.String value) => $_setString(0, value);
+  set ifaceName($core.String v) { $_setString(0, v); }
   @$pb.TagNumber(1)
   $core.bool hasIfaceName() => $_has(0);
   @$pb.TagNumber(1)
-  void clearIfaceName() => $_clearField(1);
+  void clearIfaceName() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.int get timeoutCount => $_getIZ(1);
   @$pb.TagNumber(2)
-  set timeoutCount($core.int value) => $_setUnsignedInt32(1, value);
+  set timeoutCount($core.int v) { $_setUnsignedInt32(1, v); }
   @$pb.TagNumber(2)
   $core.bool hasTimeoutCount() => $_has(1);
   @$pb.TagNumber(2)
-  void clearTimeoutCount() => $_clearField(2);
+  void clearTimeoutCount() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.int get accessRequestCount => $_getIZ(2);
   @$pb.TagNumber(3)
-  set accessRequestCount($core.int value) => $_setUnsignedInt32(2, value);
+  set accessRequestCount($core.int v) { $_setUnsignedInt32(2, v); }
   @$pb.TagNumber(3)
   $core.bool hasAccessRequestCount() => $_has(2);
   @$pb.TagNumber(3)
-  void clearAccessRequestCount() => $_clearField(3);
+  void clearAccessRequestCount() => clearField(3);
 
   @$pb.TagNumber(4)
   $core.int get accessAcceptCount => $_getIZ(3);
   @$pb.TagNumber(4)
-  set accessAcceptCount($core.int value) => $_setUnsignedInt32(3, value);
+  set accessAcceptCount($core.int v) { $_setUnsignedInt32(3, v); }
   @$pb.TagNumber(4)
   $core.bool hasAccessAcceptCount() => $_has(3);
   @$pb.TagNumber(4)
-  void clearAccessAcceptCount() => $_clearField(4);
+  void clearAccessAcceptCount() => clearField(4);
 
   @$pb.TagNumber(5)
   $core.int get accessRejectCount => $_getIZ(4);
   @$pb.TagNumber(5)
-  set accessRejectCount($core.int value) => $_setUnsignedInt32(4, value);
+  set accessRejectCount($core.int v) { $_setUnsignedInt32(4, v); }
   @$pb.TagNumber(5)
   $core.bool hasAccessRejectCount() => $_has(4);
   @$pb.TagNumber(5)
-  void clearAccessRejectCount() => $_clearField(5);
+  void clearAccessRejectCount() => clearField(5);
 
   @$pb.TagNumber(6)
   $core.int get accessChallengeCount => $_getIZ(5);
   @$pb.TagNumber(6)
-  set accessChallengeCount($core.int value) => $_setUnsignedInt32(5, value);
+  set accessChallengeCount($core.int v) { $_setUnsignedInt32(5, v); }
   @$pb.TagNumber(6)
   $core.bool hasAccessChallengeCount() => $_has(5);
   @$pb.TagNumber(6)
-  void clearAccessChallengeCount() => $_clearField(6);
+  void clearAccessChallengeCount() => clearField(6);
 
   @$pb.TagNumber(7)
   $core.int get accountingRequestCount => $_getIZ(6);
   @$pb.TagNumber(7)
-  set accountingRequestCount($core.int value) => $_setUnsignedInt32(6, value);
+  set accountingRequestCount($core.int v) { $_setUnsignedInt32(6, v); }
   @$pb.TagNumber(7)
   $core.bool hasAccountingRequestCount() => $_has(6);
   @$pb.TagNumber(7)
-  void clearAccountingRequestCount() => $_clearField(7);
+  void clearAccountingRequestCount() => clearField(7);
 
   @$pb.TagNumber(8)
   $core.int get accountingResponseCount => $_getIZ(7);
   @$pb.TagNumber(8)
-  set accountingResponseCount($core.int value) => $_setUnsignedInt32(7, value);
+  set accountingResponseCount($core.int v) { $_setUnsignedInt32(7, v); }
   @$pb.TagNumber(8)
   $core.bool hasAccountingResponseCount() => $_has(7);
   @$pb.TagNumber(8)
-  void clearAccountingResponseCount() => $_clearField(8);
+  void clearAccountingResponseCount() => clearField(8);
 }
 
 class RadiusStatsMap_RadiusStatsEntry extends $pb.GeneratedMessage {
@@ -518,71 +525,63 @@ class RadiusStatsMap_RadiusStatsEntry extends $pb.GeneratedMessage {
     $core.String? key,
     RadiusStatsMap_RadiusStats? value,
   }) {
-    final result = create();
-    if (key != null) result.key = key;
-    if (value != null) result.value = value;
-    return result;
+    final $result = create();
+    if (key != null) {
+      $result.key = key;
+    }
+    if (value != null) {
+      $result.value = value;
+    }
+    return $result;
   }
+  RadiusStatsMap_RadiusStatsEntry._() : super();
+  factory RadiusStatsMap_RadiusStatsEntry.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory RadiusStatsMap_RadiusStatsEntry.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  RadiusStatsMap_RadiusStatsEntry._();
-
-  factory RadiusStatsMap_RadiusStatsEntry.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory RadiusStatsMap_RadiusStatsEntry.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'RadiusStatsMap.RadiusStatsEntry',
-      package:
-          const $pb.PackageName(_omitMessageNames ? '' : 'SpaceX.API.Device'),
-      createEmptyInstance: create)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'RadiusStatsMap.RadiusStatsEntry', package: const $pb.PackageName(_omitMessageNames ? '' : 'SpaceX.API.Device'), createEmptyInstance: create)
     ..aOS(1, _omitFieldNames ? '' : 'key')
-    ..aOM<RadiusStatsMap_RadiusStats>(2, _omitFieldNames ? '' : 'value',
-        subBuilder: RadiusStatsMap_RadiusStats.create)
-    ..hasRequiredFields = false;
+    ..aOM<RadiusStatsMap_RadiusStats>(2, _omitFieldNames ? '' : 'value', subBuilder: RadiusStatsMap_RadiusStats.create)
+    ..hasRequiredFields = false
+  ;
 
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RadiusStatsMap_RadiusStatsEntry clone() => deepCopy();
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RadiusStatsMap_RadiusStatsEntry copyWith(
-          void Function(RadiusStatsMap_RadiusStatsEntry) updates) =>
-      super.copyWith(
-              (message) => updates(message as RadiusStatsMap_RadiusStatsEntry))
-          as RadiusStatsMap_RadiusStatsEntry;
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  RadiusStatsMap_RadiusStatsEntry clone() => RadiusStatsMap_RadiusStatsEntry()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  RadiusStatsMap_RadiusStatsEntry copyWith(void Function(RadiusStatsMap_RadiusStatsEntry) updates) => super.copyWith((message) => updates(message as RadiusStatsMap_RadiusStatsEntry)) as RadiusStatsMap_RadiusStatsEntry;
 
-  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
-  static RadiusStatsMap_RadiusStatsEntry create() =>
-      RadiusStatsMap_RadiusStatsEntry._();
-  @$core.override
+  static RadiusStatsMap_RadiusStatsEntry create() => RadiusStatsMap_RadiusStatsEntry._();
   RadiusStatsMap_RadiusStatsEntry createEmptyInstance() => create();
+  static $pb.PbList<RadiusStatsMap_RadiusStatsEntry> createRepeated() => $pb.PbList<RadiusStatsMap_RadiusStatsEntry>();
   @$core.pragma('dart2js:noInline')
-  static RadiusStatsMap_RadiusStatsEntry getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<RadiusStatsMap_RadiusStatsEntry>(
-          create);
+  static RadiusStatsMap_RadiusStatsEntry getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<RadiusStatsMap_RadiusStatsEntry>(create);
   static RadiusStatsMap_RadiusStatsEntry? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get key => $_getSZ(0);
   @$pb.TagNumber(1)
-  set key($core.String value) => $_setString(0, value);
+  set key($core.String v) { $_setString(0, v); }
   @$pb.TagNumber(1)
   $core.bool hasKey() => $_has(0);
   @$pb.TagNumber(1)
-  void clearKey() => $_clearField(1);
+  void clearKey() => clearField(1);
 
   @$pb.TagNumber(2)
   RadiusStatsMap_RadiusStats get value => $_getN(1);
   @$pb.TagNumber(2)
-  set value(RadiusStatsMap_RadiusStats value) => $_setField(2, value);
+  set value(RadiusStatsMap_RadiusStats v) { setField(2, v); }
   @$pb.TagNumber(2)
   $core.bool hasValue() => $_has(1);
   @$pb.TagNumber(2)
-  void clearValue() => $_clearField(2);
+  void clearValue() => clearField(2);
   @$pb.TagNumber(2)
   RadiusStatsMap_RadiusStats ensureValue() => $_ensure(1);
 }
@@ -591,51 +590,44 @@ class RadiusStatsMap extends $pb.GeneratedMessage {
   factory RadiusStatsMap({
     $core.Iterable<RadiusStatsMap_RadiusStatsEntry>? radiusStats,
   }) {
-    final result = create();
-    if (radiusStats != null) result.radiusStats.addAll(radiusStats);
-    return result;
+    final $result = create();
+    if (radiusStats != null) {
+      $result.radiusStats.addAll(radiusStats);
+    }
+    return $result;
   }
+  RadiusStatsMap._() : super();
+  factory RadiusStatsMap.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory RadiusStatsMap.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  RadiusStatsMap._();
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'RadiusStatsMap', package: const $pb.PackageName(_omitMessageNames ? '' : 'SpaceX.API.Device'), createEmptyInstance: create)
+    ..pc<RadiusStatsMap_RadiusStatsEntry>(1, _omitFieldNames ? '' : 'radiusStats', $pb.PbFieldType.PM, subBuilder: RadiusStatsMap_RadiusStatsEntry.create)
+    ..hasRequiredFields = false
+  ;
 
-  factory RadiusStatsMap.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory RadiusStatsMap.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  RadiusStatsMap clone() => RadiusStatsMap()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  RadiusStatsMap copyWith(void Function(RadiusStatsMap) updates) => super.copyWith((message) => updates(message as RadiusStatsMap)) as RadiusStatsMap;
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'RadiusStatsMap',
-      package:
-          const $pb.PackageName(_omitMessageNames ? '' : 'SpaceX.API.Device'),
-      createEmptyInstance: create)
-    ..pPM<RadiusStatsMap_RadiusStatsEntry>(
-        1, _omitFieldNames ? '' : 'radiusStats',
-        subBuilder: RadiusStatsMap_RadiusStatsEntry.create)
-    ..hasRequiredFields = false;
-
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RadiusStatsMap clone() => deepCopy();
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  RadiusStatsMap copyWith(void Function(RadiusStatsMap) updates) =>
-      super.copyWith((message) => updates(message as RadiusStatsMap))
-          as RadiusStatsMap;
-
-  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static RadiusStatsMap create() => RadiusStatsMap._();
-  @$core.override
   RadiusStatsMap createEmptyInstance() => create();
+  static $pb.PbList<RadiusStatsMap> createRepeated() => $pb.PbList<RadiusStatsMap>();
   @$core.pragma('dart2js:noInline')
-  static RadiusStatsMap getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<RadiusStatsMap>(create);
+  static RadiusStatsMap getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<RadiusStatsMap>(create);
   static RadiusStatsMap? _defaultInstance;
 
   @$pb.TagNumber(1)
-  $pb.PbList<RadiusStatsMap_RadiusStatsEntry> get radiusStats => $_getList(0);
+  $core.List<RadiusStatsMap_RadiusStatsEntry> get radiusStats => $_getList(0);
 }
 
 class PoeStats extends $pb.GeneratedMessage {
@@ -648,129 +640,128 @@ class PoeStats extends $pb.GeneratedMessage {
     $core.int? poeFaultsUndervoltage,
     $core.double? vsnsVin,
   }) {
-    final result = create();
-    if (poeState != null) result.poeState = poeState;
-    if (poePower != null) result.poePower = poePower;
-    if (poeFaultsFastOvercurrent != null)
-      result.poeFaultsFastOvercurrent = poeFaultsFastOvercurrent;
-    if (poeFaultsSlowOvercurrent != null)
-      result.poeFaultsSlowOvercurrent = poeFaultsSlowOvercurrent;
-    if (poeFaultsOvervoltage != null)
-      result.poeFaultsOvervoltage = poeFaultsOvervoltage;
-    if (poeFaultsUndervoltage != null)
-      result.poeFaultsUndervoltage = poeFaultsUndervoltage;
-    if (vsnsVin != null) result.vsnsVin = vsnsVin;
-    return result;
+    final $result = create();
+    if (poeState != null) {
+      $result.poeState = poeState;
+    }
+    if (poePower != null) {
+      $result.poePower = poePower;
+    }
+    if (poeFaultsFastOvercurrent != null) {
+      $result.poeFaultsFastOvercurrent = poeFaultsFastOvercurrent;
+    }
+    if (poeFaultsSlowOvercurrent != null) {
+      $result.poeFaultsSlowOvercurrent = poeFaultsSlowOvercurrent;
+    }
+    if (poeFaultsOvervoltage != null) {
+      $result.poeFaultsOvervoltage = poeFaultsOvervoltage;
+    }
+    if (poeFaultsUndervoltage != null) {
+      $result.poeFaultsUndervoltage = poeFaultsUndervoltage;
+    }
+    if (vsnsVin != null) {
+      $result.vsnsVin = vsnsVin;
+    }
+    return $result;
   }
+  PoeStats._() : super();
+  factory PoeStats.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory PoeStats.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  PoeStats._();
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'PoeStats', package: const $pb.PackageName(_omitMessageNames ? '' : 'SpaceX.API.Device'), createEmptyInstance: create)
+    ..e<PoeState>(1, _omitFieldNames ? '' : 'poeState', $pb.PbFieldType.OE, defaultOrMaker: PoeState.POE_STATE_DISABLED, valueOf: PoeState.valueOf, enumValues: PoeState.values)
+    ..a<$core.double>(2, _omitFieldNames ? '' : 'poePower', $pb.PbFieldType.OF)
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'poeFaultsFastOvercurrent', $pb.PbFieldType.OU3)
+    ..a<$core.int>(4, _omitFieldNames ? '' : 'poeFaultsSlowOvercurrent', $pb.PbFieldType.OU3)
+    ..a<$core.int>(5, _omitFieldNames ? '' : 'poeFaultsOvervoltage', $pb.PbFieldType.OU3)
+    ..a<$core.int>(6, _omitFieldNames ? '' : 'poeFaultsUndervoltage', $pb.PbFieldType.OU3)
+    ..a<$core.double>(7, _omitFieldNames ? '' : 'vsnsVin', $pb.PbFieldType.OF)
+    ..hasRequiredFields = false
+  ;
 
-  factory PoeStats.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory PoeStats.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  PoeStats clone() => PoeStats()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  PoeStats copyWith(void Function(PoeStats) updates) => super.copyWith((message) => updates(message as PoeStats)) as PoeStats;
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'PoeStats',
-      package:
-          const $pb.PackageName(_omitMessageNames ? '' : 'SpaceX.API.Device'),
-      createEmptyInstance: create)
-    ..aE<PoeState>(1, _omitFieldNames ? '' : 'poeState',
-        enumValues: PoeState.values)
-    ..aD(2, _omitFieldNames ? '' : 'poePower', fieldType: $pb.PbFieldType.OF)
-    ..aI(3, _omitFieldNames ? '' : 'poeFaultsFastOvercurrent',
-        fieldType: $pb.PbFieldType.OU3)
-    ..aI(4, _omitFieldNames ? '' : 'poeFaultsSlowOvercurrent',
-        fieldType: $pb.PbFieldType.OU3)
-    ..aI(5, _omitFieldNames ? '' : 'poeFaultsOvervoltage',
-        fieldType: $pb.PbFieldType.OU3)
-    ..aI(6, _omitFieldNames ? '' : 'poeFaultsUndervoltage',
-        fieldType: $pb.PbFieldType.OU3)
-    ..aD(7, _omitFieldNames ? '' : 'vsnsVin', fieldType: $pb.PbFieldType.OF)
-    ..hasRequiredFields = false;
-
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  PoeStats clone() => deepCopy();
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  PoeStats copyWith(void Function(PoeStats) updates) =>
-      super.copyWith((message) => updates(message as PoeStats)) as PoeStats;
-
-  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static PoeStats create() => PoeStats._();
-  @$core.override
   PoeStats createEmptyInstance() => create();
+  static $pb.PbList<PoeStats> createRepeated() => $pb.PbList<PoeStats>();
   @$core.pragma('dart2js:noInline')
-  static PoeStats getDefault() =>
-      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PoeStats>(create);
+  static PoeStats getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<PoeStats>(create);
   static PoeStats? _defaultInstance;
 
   @$pb.TagNumber(1)
   PoeState get poeState => $_getN(0);
   @$pb.TagNumber(1)
-  set poeState(PoeState value) => $_setField(1, value);
+  set poeState(PoeState v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasPoeState() => $_has(0);
   @$pb.TagNumber(1)
-  void clearPoeState() => $_clearField(1);
+  void clearPoeState() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.double get poePower => $_getN(1);
   @$pb.TagNumber(2)
-  set poePower($core.double value) => $_setFloat(1, value);
+  set poePower($core.double v) { $_setFloat(1, v); }
   @$pb.TagNumber(2)
   $core.bool hasPoePower() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPoePower() => $_clearField(2);
+  void clearPoePower() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.int get poeFaultsFastOvercurrent => $_getIZ(2);
   @$pb.TagNumber(3)
-  set poeFaultsFastOvercurrent($core.int value) => $_setUnsignedInt32(2, value);
+  set poeFaultsFastOvercurrent($core.int v) { $_setUnsignedInt32(2, v); }
   @$pb.TagNumber(3)
   $core.bool hasPoeFaultsFastOvercurrent() => $_has(2);
   @$pb.TagNumber(3)
-  void clearPoeFaultsFastOvercurrent() => $_clearField(3);
+  void clearPoeFaultsFastOvercurrent() => clearField(3);
 
   @$pb.TagNumber(4)
   $core.int get poeFaultsSlowOvercurrent => $_getIZ(3);
   @$pb.TagNumber(4)
-  set poeFaultsSlowOvercurrent($core.int value) => $_setUnsignedInt32(3, value);
+  set poeFaultsSlowOvercurrent($core.int v) { $_setUnsignedInt32(3, v); }
   @$pb.TagNumber(4)
   $core.bool hasPoeFaultsSlowOvercurrent() => $_has(3);
   @$pb.TagNumber(4)
-  void clearPoeFaultsSlowOvercurrent() => $_clearField(4);
+  void clearPoeFaultsSlowOvercurrent() => clearField(4);
 
   @$pb.TagNumber(5)
   $core.int get poeFaultsOvervoltage => $_getIZ(4);
   @$pb.TagNumber(5)
-  set poeFaultsOvervoltage($core.int value) => $_setUnsignedInt32(4, value);
+  set poeFaultsOvervoltage($core.int v) { $_setUnsignedInt32(4, v); }
   @$pb.TagNumber(5)
   $core.bool hasPoeFaultsOvervoltage() => $_has(4);
   @$pb.TagNumber(5)
-  void clearPoeFaultsOvervoltage() => $_clearField(5);
+  void clearPoeFaultsOvervoltage() => clearField(5);
 
   @$pb.TagNumber(6)
   $core.int get poeFaultsUndervoltage => $_getIZ(5);
   @$pb.TagNumber(6)
-  set poeFaultsUndervoltage($core.int value) => $_setUnsignedInt32(5, value);
+  set poeFaultsUndervoltage($core.int v) { $_setUnsignedInt32(5, v); }
   @$pb.TagNumber(6)
   $core.bool hasPoeFaultsUndervoltage() => $_has(5);
   @$pb.TagNumber(6)
-  void clearPoeFaultsUndervoltage() => $_clearField(6);
+  void clearPoeFaultsUndervoltage() => clearField(6);
 
   @$pb.TagNumber(7)
   $core.double get vsnsVin => $_getN(6);
   @$pb.TagNumber(7)
-  set vsnsVin($core.double value) => $_setFloat(6, value);
+  set vsnsVin($core.double v) { $_setFloat(6, v); }
   @$pb.TagNumber(7)
   $core.bool hasVsnsVin() => $_has(6);
   @$pb.TagNumber(7)
-  void clearVsnsVin() => $_clearField(7);
+  void clearVsnsVin() => clearField(7);
 }
 
 class WifiSoftwareUpdateStats extends $pb.GeneratedMessage {
@@ -781,105 +772,102 @@ class WifiSoftwareUpdateStats extends $pb.GeneratedMessage {
     $core.String? runningVersion,
     $core.String? versionInProgress,
   }) {
-    final result = create();
-    if (state != null) result.state = state;
-    if (softwareDownloadProgress != null)
-      result.softwareDownloadProgress = softwareDownloadProgress;
-    if (secondsSinceGetTargetVersions != null)
-      result.secondsSinceGetTargetVersions = secondsSinceGetTargetVersions;
-    if (runningVersion != null) result.runningVersion = runningVersion;
-    if (versionInProgress != null) result.versionInProgress = versionInProgress;
-    return result;
+    final $result = create();
+    if (state != null) {
+      $result.state = state;
+    }
+    if (softwareDownloadProgress != null) {
+      $result.softwareDownloadProgress = softwareDownloadProgress;
+    }
+    if (secondsSinceGetTargetVersions != null) {
+      $result.secondsSinceGetTargetVersions = secondsSinceGetTargetVersions;
+    }
+    if (runningVersion != null) {
+      $result.runningVersion = runningVersion;
+    }
+    if (versionInProgress != null) {
+      $result.versionInProgress = versionInProgress;
+    }
+    return $result;
   }
+  WifiSoftwareUpdateStats._() : super();
+  factory WifiSoftwareUpdateStats.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory WifiSoftwareUpdateStats.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  WifiSoftwareUpdateStats._();
-
-  factory WifiSoftwareUpdateStats.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory WifiSoftwareUpdateStats.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
-
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'WifiSoftwareUpdateStats',
-      package:
-          const $pb.PackageName(_omitMessageNames ? '' : 'SpaceX.API.Device'),
-      createEmptyInstance: create)
-    ..aE<WifiSoftwareUpdateState>(1, _omitFieldNames ? '' : 'state',
-        enumValues: WifiSoftwareUpdateState.values)
-    ..aD(2, _omitFieldNames ? '' : 'softwareDownloadProgress',
-        fieldType: $pb.PbFieldType.OF)
-    ..aD(3, _omitFieldNames ? '' : 'secondsSinceGetTargetVersions',
-        fieldType: $pb.PbFieldType.OF)
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'WifiSoftwareUpdateStats', package: const $pb.PackageName(_omitMessageNames ? '' : 'SpaceX.API.Device'), createEmptyInstance: create)
+    ..e<WifiSoftwareUpdateState>(1, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE, defaultOrMaker: WifiSoftwareUpdateState.NOT_RUN, valueOf: WifiSoftwareUpdateState.valueOf, enumValues: WifiSoftwareUpdateState.values)
+    ..a<$core.double>(2, _omitFieldNames ? '' : 'softwareDownloadProgress', $pb.PbFieldType.OF)
+    ..a<$core.double>(3, _omitFieldNames ? '' : 'secondsSinceGetTargetVersions', $pb.PbFieldType.OF)
     ..aOS(4, _omitFieldNames ? '' : 'runningVersion')
     ..aOS(5, _omitFieldNames ? '' : 'versionInProgress')
-    ..hasRequiredFields = false;
+    ..hasRequiredFields = false
+  ;
 
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  WifiSoftwareUpdateStats clone() => deepCopy();
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  WifiSoftwareUpdateStats copyWith(
-          void Function(WifiSoftwareUpdateStats) updates) =>
-      super.copyWith((message) => updates(message as WifiSoftwareUpdateStats))
-          as WifiSoftwareUpdateStats;
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  WifiSoftwareUpdateStats clone() => WifiSoftwareUpdateStats()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  WifiSoftwareUpdateStats copyWith(void Function(WifiSoftwareUpdateStats) updates) => super.copyWith((message) => updates(message as WifiSoftwareUpdateStats)) as WifiSoftwareUpdateStats;
 
-  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static WifiSoftwareUpdateStats create() => WifiSoftwareUpdateStats._();
-  @$core.override
   WifiSoftwareUpdateStats createEmptyInstance() => create();
+  static $pb.PbList<WifiSoftwareUpdateStats> createRepeated() => $pb.PbList<WifiSoftwareUpdateStats>();
   @$core.pragma('dart2js:noInline')
-  static WifiSoftwareUpdateStats getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<WifiSoftwareUpdateStats>(create);
+  static WifiSoftwareUpdateStats getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<WifiSoftwareUpdateStats>(create);
   static WifiSoftwareUpdateStats? _defaultInstance;
 
   @$pb.TagNumber(1)
   WifiSoftwareUpdateState get state => $_getN(0);
   @$pb.TagNumber(1)
-  set state(WifiSoftwareUpdateState value) => $_setField(1, value);
+  set state(WifiSoftwareUpdateState v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasState() => $_has(0);
   @$pb.TagNumber(1)
-  void clearState() => $_clearField(1);
+  void clearState() => clearField(1);
 
   @$pb.TagNumber(2)
   $core.double get softwareDownloadProgress => $_getN(1);
   @$pb.TagNumber(2)
-  set softwareDownloadProgress($core.double value) => $_setFloat(1, value);
+  set softwareDownloadProgress($core.double v) { $_setFloat(1, v); }
   @$pb.TagNumber(2)
   $core.bool hasSoftwareDownloadProgress() => $_has(1);
   @$pb.TagNumber(2)
-  void clearSoftwareDownloadProgress() => $_clearField(2);
+  void clearSoftwareDownloadProgress() => clearField(2);
 
   @$pb.TagNumber(3)
   $core.double get secondsSinceGetTargetVersions => $_getN(2);
   @$pb.TagNumber(3)
-  set secondsSinceGetTargetVersions($core.double value) => $_setFloat(2, value);
+  set secondsSinceGetTargetVersions($core.double v) { $_setFloat(2, v); }
   @$pb.TagNumber(3)
   $core.bool hasSecondsSinceGetTargetVersions() => $_has(2);
   @$pb.TagNumber(3)
-  void clearSecondsSinceGetTargetVersions() => $_clearField(3);
+  void clearSecondsSinceGetTargetVersions() => clearField(3);
 
   @$pb.TagNumber(4)
   $core.String get runningVersion => $_getSZ(3);
   @$pb.TagNumber(4)
-  set runningVersion($core.String value) => $_setString(3, value);
+  set runningVersion($core.String v) { $_setString(3, v); }
   @$pb.TagNumber(4)
   $core.bool hasRunningVersion() => $_has(3);
   @$pb.TagNumber(4)
-  void clearRunningVersion() => $_clearField(4);
+  void clearRunningVersion() => clearField(4);
 
   @$pb.TagNumber(5)
   $core.String get versionInProgress => $_getSZ(4);
   @$pb.TagNumber(5)
-  set versionInProgress($core.String value) => $_setString(4, value);
+  set versionInProgress($core.String v) { $_setString(4, v); }
   @$pb.TagNumber(5)
   $core.bool hasVersionInProgress() => $_has(4);
   @$pb.TagNumber(5)
-  void clearVersionInProgress() => $_clearField(5);
+  void clearVersionInProgress() => clearField(5);
 }
 
 class WifiSetupRequirement extends $pb.GeneratedMessage {
@@ -887,73 +875,65 @@ class WifiSetupRequirement extends $pb.GeneratedMessage {
     WifiSetupRequirementState? state,
     $fixnum.Int64? pauseCountdownSeconds,
   }) {
-    final result = create();
-    if (state != null) result.state = state;
-    if (pauseCountdownSeconds != null)
-      result.pauseCountdownSeconds = pauseCountdownSeconds;
-    return result;
+    final $result = create();
+    if (state != null) {
+      $result.state = state;
+    }
+    if (pauseCountdownSeconds != null) {
+      $result.pauseCountdownSeconds = pauseCountdownSeconds;
+    }
+    return $result;
   }
+  WifiSetupRequirement._() : super();
+  factory WifiSetupRequirement.fromBuffer($core.List<$core.int> i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromBuffer(i, r);
+  factory WifiSetupRequirement.fromJson($core.String i, [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) => create()..mergeFromJson(i, r);
 
-  WifiSetupRequirement._();
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(_omitMessageNames ? '' : 'WifiSetupRequirement', package: const $pb.PackageName(_omitMessageNames ? '' : 'SpaceX.API.Device'), createEmptyInstance: create)
+    ..e<WifiSetupRequirementState>(1, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE, defaultOrMaker: WifiSetupRequirementState.NOT_REQUIRED, valueOf: WifiSetupRequirementState.valueOf, enumValues: WifiSetupRequirementState.values)
+    ..a<$fixnum.Int64>(2, _omitFieldNames ? '' : 'pauseCountdownSeconds', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
+    ..hasRequiredFields = false
+  ;
 
-  factory WifiSetupRequirement.fromBuffer($core.List<$core.int> data,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(data, registry);
-  factory WifiSetupRequirement.fromJson($core.String json,
-          [$pb.ExtensionRegistry registry = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(json, registry);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+  'Will be removed in next major version')
+  WifiSetupRequirement clone() => WifiSetupRequirement()..mergeFromMessage(this);
+  @$core.Deprecated(
+  'Using this can add significant overhead to your binary. '
+  'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+  'Will be removed in next major version')
+  WifiSetupRequirement copyWith(void Function(WifiSetupRequirement) updates) => super.copyWith((message) => updates(message as WifiSetupRequirement)) as WifiSetupRequirement;
 
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      _omitMessageNames ? '' : 'WifiSetupRequirement',
-      package:
-          const $pb.PackageName(_omitMessageNames ? '' : 'SpaceX.API.Device'),
-      createEmptyInstance: create)
-    ..aE<WifiSetupRequirementState>(1, _omitFieldNames ? '' : 'state',
-        enumValues: WifiSetupRequirementState.values)
-    ..a<$fixnum.Int64>(
-        2, _omitFieldNames ? '' : 'pauseCountdownSeconds', $pb.PbFieldType.OU6,
-        defaultOrMaker: $fixnum.Int64.ZERO)
-    ..hasRequiredFields = false;
-
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  WifiSetupRequirement clone() => deepCopy();
-  @$core.Deprecated('See https://github.com/google/protobuf.dart/issues/998.')
-  WifiSetupRequirement copyWith(void Function(WifiSetupRequirement) updates) =>
-      super.copyWith((message) => updates(message as WifiSetupRequirement))
-          as WifiSetupRequirement;
-
-  @$core.override
   $pb.BuilderInfo get info_ => _i;
 
   @$core.pragma('dart2js:noInline')
   static WifiSetupRequirement create() => WifiSetupRequirement._();
-  @$core.override
   WifiSetupRequirement createEmptyInstance() => create();
+  static $pb.PbList<WifiSetupRequirement> createRepeated() => $pb.PbList<WifiSetupRequirement>();
   @$core.pragma('dart2js:noInline')
-  static WifiSetupRequirement getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<WifiSetupRequirement>(create);
+  static WifiSetupRequirement getDefault() => _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<WifiSetupRequirement>(create);
   static WifiSetupRequirement? _defaultInstance;
 
   @$pb.TagNumber(1)
   WifiSetupRequirementState get state => $_getN(0);
   @$pb.TagNumber(1)
-  set state(WifiSetupRequirementState value) => $_setField(1, value);
+  set state(WifiSetupRequirementState v) { setField(1, v); }
   @$pb.TagNumber(1)
   $core.bool hasState() => $_has(0);
   @$pb.TagNumber(1)
-  void clearState() => $_clearField(1);
+  void clearState() => clearField(1);
 
   @$pb.TagNumber(2)
   $fixnum.Int64 get pauseCountdownSeconds => $_getI64(1);
   @$pb.TagNumber(2)
-  set pauseCountdownSeconds($fixnum.Int64 value) => $_setInt64(1, value);
+  set pauseCountdownSeconds($fixnum.Int64 v) { $_setInt64(1, v); }
   @$pb.TagNumber(2)
   $core.bool hasPauseCountdownSeconds() => $_has(1);
   @$pb.TagNumber(2)
-  void clearPauseCountdownSeconds() => $_clearField(2);
+  void clearPauseCountdownSeconds() => clearField(2);
 }
 
-const $core.bool _omitFieldNames =
-    $core.bool.fromEnvironment('protobuf.omit_field_names');
-const $core.bool _omitMessageNames =
-    $core.bool.fromEnvironment('protobuf.omit_message_names');
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames = $core.bool.fromEnvironment('protobuf.omit_message_names');

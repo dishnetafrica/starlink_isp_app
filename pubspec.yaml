@@ -4,7 +4,7 @@ publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.3.0 <4.0.0' # Updated for Dart 3.x features like Patterns and Records
+  sdk: '>=3.3.0 <4.0.0'
 
 dependencies:
   flutter:
@@ -13,23 +13,24 @@ dependencies:
 
   # State Management & Logic
   provider: ^6.1.2
-  shared_preferences: ^2.3.2 # Upgraded for modern Async/Cache APIs
+  shared_preferences: ^2.3.2
 
-  # Networking & API
+  # Networking & API - ALIGNED FOR STARLINK COMPATIBILITY
+  # These versions ensure the generated '.aI()' and '.aD()' methods exist.
   http: ^1.2.1
-  grpc: ^5.0.0 # Standard for Starlink local dish communication
-  protobuf: ^5.0.0
+  grpc: ^3.2.4
+  protobuf: ^3.1.0
   fixnum: ^1.1.0
 
   # UI, Charts & Icons
   google_fonts: ^6.2.1
-  fl_chart: ^0.69.0 # Latest for those real-time speed graphs
+  fl_chart: ^0.69.0
   percent_indicator: ^4.2.3
-  font_awesome_flutter: ^10.7.0 # Better icons for technical hardware
-  lottie: ^3.1.2 # For high-quality satellite animations
+  font_awesome_flutter: ^10.7.0
+  lottie: ^3.1.2
 
   # Utilities
-  url_launcher: ^6.3.0 # To open Starlink support links or maps
+  url_launcher: ^6.3.0
 
 dev_dependencies:
   flutter_test:
@@ -39,7 +40,7 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
-  # If you plan to use Lottie animations, uncomment the assets section:
-  # assets:
-  #   - assets/animations/
-  #   - assets/images/
+  # Asset configuration
+  assets:
+    - assets/animations/
+    - assets/images/
