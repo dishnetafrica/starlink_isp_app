@@ -16,15 +16,14 @@ dependencies:
   shared_preferences: ^2.2.2
   flutter_secure_storage: ^9.0.0
   
-  grpc: ^3.2.4
+  # Try next major version
+  grpc: ^4.0.0
   protobuf: ^3.1.0
   fixnum: ^1.1.0
   
   http: ^1.1.0
   dio: ^5.4.0
   connectivity_plus: ^5.0.2
-  
-  # Add missing packages
   network_info_plus: ^5.0.0
   permission_handler: ^11.0.0
   
