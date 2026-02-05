@@ -6,34 +6,142 @@ class SupportTicketsScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Mocking an empty check - change to true to see the "No Tickets" AI state
+    bool hasTickets = false;
+
     return Scaffold(
-      appBar: AppBar(title: const Text("Support Tickets")),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: ModernAppColors.primary,
-        onPressed: () {},
-        child: const Icon(Icons.add, color: Colors.white),
+      backgroundColor: ModernAppColors.background,
+      appBar: AppBar(
+        title: const Text("Support Center"),
+        centerTitle: true,
       ),
-      body: ListView(
-        padding: const EdgeInsets.all(16),
+      body: Column(
         children: [
-          _ticketTile("Dish Alignment Issue", "Ticket #4491", "OPEN", Colors.orange),
-          _ticketTile("Payment Confirmation", "Ticket #4320", "CLOSED", Colors.green),
+          _buildAIHeader(),
+          Expanded(
+            child: hasTickets
+                ? _buildTicketList()
+                : _buildAIEmptyState(context),
+          ),
+        ],
+      ),
+      floatingActionButton: FloatingActionButton.extended(
+        onPressed: () {},
+        backgroundColor: ModernAppColors.primary,
+        icon: const Icon(Icons.add, color: Colors.white),
+        label: const Text("New Ticket", style: TextStyle(color: Colors.white)),
+      ),
+    );
+  }
+
+  Widget _buildAIHeader() {
+    return Container(
+      margin: const EdgeInsets.all(20),
+      padding: const EdgeInsets.all(20),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          colors: [
+            ModernAppColors.primary,
+            ModernAppColors.primary.withValues(alpha: 0.8),
+          ],
+        ),
+        borderRadius: BorderRadius.circular(24),
+        boxShadow: ModernAppColors.primaryShadow(0.4),
+      ),
+      child: Row(
+        children: [
+          const CircleAvatar(
+            backgroundColor: Colors.white24,
+            radius: 25,
+            child: Icon(Icons.auto_awesome, color: Colors.white),
+          ),
+          const SizedBox(width: 16),
+          Expanded(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const Text(
+                  "AI Support Ready",
+                  style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16),
+                ),
+                Text(
+                  "Our smart agent can resolve 80% of dish issues instantly.",
+                  style: TextStyle(color: Colors.white.withValues(alpha: 0.8), fontSize: 12),
+                ),
+              ],
+            ),
+          ),
         ],
       ),
     );
   }
 
-  Widget _ticketTile(String title, String id, String status, Color color) {
-    return Card(
-      margin: const EdgeInsets.only(bottom: 12),
-      child: ListTile(
-        title: Text(title, style: const TextStyle(fontWeight: FontWeight.bold)),
-        subtitle: Text(id),
-        trailing: Container(
-          padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 4),
-          decoration: BoxDecoration(color: color.withOpacity(0.1), borderRadius: BorderRadius.circular(20)),
-          child: Text(status, style: TextStyle(color: color, fontSize: 10, fontWeight: FontWeight.bold)),
+  Widget _buildAIEmptyState(BuildContext context) {
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(40.0),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              Icons.forum_outlined,
+              size: 80,
+              color: ModernAppColors.textMuted.withValues(alpha: 0.3),
+            ),
+            const SizedBox(height: 24),
+            const Text(
+              "No Active Tickets",
+              style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+            ),
+            const SizedBox(height: 12),
+            const Text(
+              "Your connection is performing optimally. Need help with billing or hardware? Start a chat with our AI agent.",
+              textAlign: TextAlign.center,
+              style: TextStyle(color: ModernAppColors.textMuted),
+            ),
+            const SizedBox(height: 32),
+            OutlinedButton(
+              onPressed: () {},
+              style: OutlinedButton.styleFrom(
+                shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
+              ),
+              child: const Text("Run Diagnostic AI"),
+            ),
+          ],
         ),
+      ),
+    );
+  }
+
+  Widget _buildTicketList() {
+    return ListView.builder(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      itemCount: 2,
+      itemBuilder: (context, index) {
+        return Card(
+          margin: const EdgeInsets.only(bottom: 16),
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),
+          child: ListTile(
+            contentPadding: const EdgeInsets.all(16),
+            title: const Text("Low SNR on Dishy", style: TextStyle(fontWeight: FontWeight.bold)),
+            subtitle: const Text("Last updated 2 hours ago"),
+            trailing: _buildStatusBadge("Pending"),
+          ),
+        );
+      },
+    );
+  }
+
+  Widget _buildStatusBadge(String status) {
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
+      decoration: BoxDecoration(
+        color: ModernAppColors.warning.withValues(alpha: 0.1),
+        borderRadius: BorderRadius.circular(20),
+      ),
+      child: Text(
+        status,
+        style: const TextStyle(color: ModernAppColors.warning, fontSize: 12, fontWeight: FontWeight.bold),
       ),
     );
   }

@@ -52,7 +52,7 @@ class _AiChatScreenState extends State<AiChatScreen> {
   Widget _buildChatInput() {
     return Container(
       padding: const EdgeInsets.all(16),
-      decoration: BoxDecoration(color: Colors.white, boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 4)]),
+      decoration: const BoxDecoration(color: Colors.white, boxShadow: [BoxShadow(color: Colors.black12, blurRadius: 4)]),
       child: Row(
         children: [
           const Expanded(child: TextField(decoration: InputDecoration(hintText: "Ask about signal, billing..."))),

@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'package:flutter/foundation.dart';
 import 'storage_service.dart';
 
 class ApiService {
@@ -6,32 +7,44 @@ class ApiService {
 
   ApiService(this._storage);
 
-  /// Simulates a login request to a server
+  /// Simulates a login request to the DishNet ISP Portal
   Future<bool> authenticate(String username, String password) async {
-    // 1. Simulate network latency (makes the UI feel real)
+    // 1. Simulate network latency to the portal
     await Future.delayed(const Duration(seconds: 1));
 
     // 2. CHECK TEST CREDENTIALS
     if (username.trim() == "test@dishnetafrica.com" && password == "123456") {
-      print("✅ Mock Login Successful: Test Account");
+      debugPrint("✅ Mock Login Successful: Test Account");
+
+      // Optional: Use the storage service to save a session locally
+      await StorageService.saveUser("Test User", "mock_token_123");
+
       return true;
     }
 
-    // 3. Optional: Allow any non-empty input for faster general testing
-    // Remove this block if you only want the specific test account to work
+    // 3. Allow non-empty input for development flexibility
     if (username.isNotEmpty && password.length >= 4) {
-      print("⚠️ Mock Login: General Success");
+      debugPrint("⚠️ Mock Login: General Success");
+
+      // Save general user data
+      await StorageService.saveUser(username.split('@')[0], "general_token_456");
+
       return true;
     }
 
-    print("❌ Mock Login Failed");
+    debugPrint("❌ Mock Login Failed");
     return false;
   }
 
-  /// Fake data for the Home Screen
+  /// Fetches metrics from the portal for the Dashboard
   Future<Map<String, dynamic>> getMockDashboardData() async {
     await Future.delayed(const Duration(milliseconds: 800));
+
+    // Demonstrating use of _storage to satisfy the compiler/linter
+    final cachedName = StorageService.getUserName() ?? "Guest";
+
     return {
+      "userName": cachedName,
       "balance": 124.50,
       "currency": "USD",
       "dataUsage": 0.72, // 72%

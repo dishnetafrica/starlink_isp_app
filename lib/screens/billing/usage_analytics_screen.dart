@@ -32,8 +32,8 @@ class UsageAnalyticsScreen extends StatelessWidget {
             height: 200, width: 200,
             child: CircularProgressIndicator(value: 0.65, strokeWidth: 12, color: ModernAppColors.primary, backgroundColor: Colors.grey[200]),
           ),
-          Column(
-            children: const [
+          const Column(
+            children: [
               Text("645 GB", style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold)),
               Text("Used of 1 TB", style: TextStyle(color: Colors.grey)),
             ],

@@ -1,27 +1,44 @@
 import 'package:shared_preferences/shared_preferences.dart';
 
 class StorageService {
-  static const String _tokenKey = 'auth_token';
-  static const String _userNameKey = 'user_name';
+  static SharedPreferences? _prefs;
 
-  Future<void> saveUser(String name) async {
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.setString(_userNameKey, name);
-    await prefs.setString(_tokenKey, 'dummy_token');
+  /// Initializes the SharedPreferences instance.
+  /// Must be called and awaited in main.dart before runApp.
+  static Future<void> init() async {
+    _prefs = await SharedPreferences.getInstance();
   }
 
-  Future<String?> getToken() async {
-    final prefs = await SharedPreferences.getInstance();
-    return prefs.getString(_tokenKey);
+  // --- AuthService Requirements ---
+
+  static String? getToken() => _prefs?.getString('auth_token');
+
+  static String? getUserName() => _prefs?.getString('user_name');
+
+  static Future<void> saveUser(String name, String token) async {
+    await _prefs?.setString('user_name', name);
+    await _prefs?.setString('auth_token', token);
   }
 
-  Future<String?> getUserName() async {
-    final prefs = await SharedPreferences.getInstance();
-    return prefs.getString(_userNameKey);
+  /// Clears all local session data.
+  static Future<void> clear() async {
+    await _prefs?.clear();
   }
 
-  Future<void> clear() async {
-    final prefs = await SharedPreferences.getInstance();
-    await prefs.clear();
+  // --- General Helpers ---
+
+  static String? getString(String key) => _prefs?.getString(key);
+
+  static Future<void> setString(String key, String value) async {
+    await _prefs?.setString(key, value);
   }
+
+  static bool? getBool(String key) => _prefs?.getBool(key);
+
+  static Future<void> setBool(String key, bool value) async {
+    await _prefs?.setBool(key, value);
+  }
+
+  // Helper to check if the service is actually ready
+  static bool get isReady => _prefs != null;
 }

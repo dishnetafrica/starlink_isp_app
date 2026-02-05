@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'config/modern_app_theme.dart';
 
 // Screens
@@ -61,11 +60,11 @@ class _MainShellState extends State<MainShell> {
       child: ListView(
         padding: EdgeInsets.zero,
         children: [
-          UserAccountsDrawerHeader(
-            decoration: const BoxDecoration(color: ModernAppColors.primary),
-            accountName: const Text("DishNet User", style: TextStyle(fontWeight: FontWeight.bold)),
-            accountEmail: const Text("test@dishnetafrica.com"),
-            currentAccountPicture: const CircleAvatar(
+          const UserAccountsDrawerHeader(
+            decoration: BoxDecoration(color: ModernAppColors.primary),
+            accountName: Text("DishNet User", style: TextStyle(fontWeight: FontWeight.bold)),
+            accountEmail: Text("test@dishnetafrica.com"),
+            currentAccountPicture: CircleAvatar(
               backgroundColor: Colors.white,
               child: Icon(Icons.person, color: ModernAppColors.primary),
             ),

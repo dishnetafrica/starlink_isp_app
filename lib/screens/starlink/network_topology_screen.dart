@@ -7,61 +7,81 @@ class NetworkTopologyScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Network Map")),
-      body: Column(
-        children: [
-          const SizedBox(height: 40),
-          _buildNode(Icons.satellite_alt, "Starlink Dish", "Connected", true),
-          _buildConnector(),
-          _buildNode(Icons.router, "Starlink Router", "192.168.1.1", true),
-          _buildConnector(),
-          Expanded(
-            child: GridView.count(
-              padding: const EdgeInsets.all(24),
-              crossAxisCount: 2,
-              children: [
-                _buildDeviceNode(Icons.phone_android, "iPhone 15", "Active"),
-                _buildDeviceNode(Icons.laptop, "MacBook Pro", "Active"),
-                _buildDeviceNode(Icons.tv, "Samsung TV", "Idle"),
-                _buildDeviceNode(Icons.smart_toy, "Smart Plug", "Active"),
-              ],
-            ),
+      backgroundColor: ModernAppColors.background,
+      appBar: AppBar(
+        title: const Text("Network Topology"),
+        centerTitle: true,
+      ),
+      body: Center(
+        child: SingleChildScrollView(
+          padding: const EdgeInsets.all(24.0),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              _buildNode("Satellite", Icons.satellite_alt_rounded, ModernAppColors.primary),
+              _buildLine(),
+              _buildNode("Starlink Dish", Icons.settings_input_antenna_rounded, ModernAppColors.success),
+              _buildLine(),
+              _buildNode("DishNet Router", Icons.router_rounded, ModernAppColors.info),
+              _buildLine(),
+              _buildNode("Local Devices", Icons.devices_other_rounded, Colors.grey),
+            ],
           ),
-        ],
+        ),
       ),
     );
   }
 
-  Widget _buildNode(IconData icon, String title, String status, bool isActive) {
+  Widget _buildNode(String label, IconData icon, Color color) {
     return Column(
       children: [
-        CircleAvatar(
-          radius: 30,
-          backgroundColor: isActive ? ModernAppColors.success.withOpacity(0.2) : Colors.grey[200],
-          child: Icon(icon, color: isActive ? ModernAppColors.success : Colors.grey),
+        Container(
+          padding: const EdgeInsets.all(20),
+          decoration: BoxDecoration(
+            color: color.withValues(alpha: 0.1),
+            shape: BoxShape.circle,
+            border: Border.all(
+                color: color.withValues(alpha: 0.5),
+                width: 2
+            ),
+            boxShadow: [
+              BoxShadow(
+                color: color.withValues(alpha: 0.1),
+                blurRadius: 10,
+                spreadRadius: 2,
+              )
+            ],
+          ),
+          child: Icon(icon, color: color, size: 40),
         ),
-        Text(title, style: const TextStyle(fontWeight: FontWeight.bold)),
-        Text(status, style: TextStyle(fontSize: 12, color: Colors.grey[600])),
+        const SizedBox(height: 12),
+        Text(
+            label,
+            style: const TextStyle(
+                fontWeight: FontWeight.bold,
+                fontSize: 16,
+                color: ModernAppColors.textDark
+            )
+        ),
       ],
     );
   }
 
-  Widget _buildConnector() {
-    return Container(height: 40, width: 2, color: Colors.grey[300]);
-  }
-
-  Widget _buildDeviceNode(IconData icon, String name, String status) {
-    return Card(
-      elevation: 0,
-      shape: RoundedRectangleBorder(side: const BorderSide(color: ModernAppColors.border), borderRadius: BorderRadius.circular(16)),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Icon(icon, color: ModernAppColors.primary),
-          const SizedBox(height: 8),
-          Text(name, style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold)),
-          Text(status, style: const TextStyle(fontSize: 10, color: ModernAppColors.success)),
-        ],
+  Widget _buildLine() {
+    return Container(
+      width: 2,
+      height: 40,
+      margin: const EdgeInsets.symmetric(vertical: 4),
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+          end: Alignment.bottomCenter,
+          colors: [
+            ModernAppColors.border,
+            ModernAppColors.textMuted.withValues(alpha: 0.2),
+            ModernAppColors.border,
+          ],
+        ),
       ),
     );
   }

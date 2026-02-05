@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import '../../config/modern_app_theme.dart';
 
 class OrderHardwareScreen extends StatelessWidget {

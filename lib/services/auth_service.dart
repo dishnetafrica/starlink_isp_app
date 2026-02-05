@@ -1,62 +1,60 @@
-import 'package:flutter/material.dart';
-import 'api_service.dart';
+import 'package:flutter/foundation.dart';
 import 'storage_service.dart';
 
 class AuthService with ChangeNotifier {
-  final ApiService _api;
-  final StorageService _storage;
-
+  bool _isAuthenticated = false;
   bool _isLoading = false;
-  bool _isLoggedIn = false;
-  String _userName = "User";
-  String? _errorMessage;
+  String? _token;
+  String? _userName;
 
-  AuthService(this._api, this._storage);
-
+  bool get isAuthenticated => _isAuthenticated;
   bool get isLoading => _isLoading;
-  bool get isLoggedIn => _isLoggedIn;
-  String get userName => _userName;
-  String? get errorMessage => _errorMessage;
 
-  Future<void> checkAuth() async {
-    final token = await _storage.getToken();
-    if (token != null) {
-      _isLoggedIn = true;
-      _userName = await _storage.getUserName() ?? "User";
-    }
-    notifyListeners();
+  // FIX: Added the missing userName getter for ModernHomeScreen
+  String get userName => _userName ?? "Guest";
+
+  AuthService() {
+    _checkInitialAuth();
   }
 
-  Future<bool> login(String username, String password) async {
-    _isLoading = true;
-    _errorMessage = null;
-    notifyListeners();
+  Future<void> _checkInitialAuth() async {
+    final token = StorageService.getToken();
+    final name = StorageService.getUserName();
 
-    try {
-      final success = await _api.authenticate(username, password);
-      if (success) {
-        _isLoggedIn = true;
-        _userName = username;
-        await _storage.saveUser(username);
-      }
-      return success;
-    } catch (e) {
-      _errorMessage = e.toString();
-      return false;
-    } finally {
-      _isLoading = false;
+    if (token != null) {
+      _isAuthenticated = true;
+      _token = token;
+      _userName = name;
       notifyListeners();
     }
   }
 
-  void clearError() {
-    _errorMessage = null;
+  Future<void> login(String email, String password) async {
+    _isLoading = true;
+    notifyListeners();
+
+    // Simulate Network Latency
+    await Future.delayed(const Duration(seconds: 1));
+
+    if (email.isNotEmpty && password.length >= 4) {
+      _token = "mock_session_token_${DateTime.now().millisecondsSinceEpoch}";
+      _userName = email.split('@')[0]; // Use part of email as name
+
+      // Save to SharedPreferences via StorageService
+      await StorageService.saveUser(_userName!, _token!);
+
+      _isAuthenticated = true;
+    }
+
+    _isLoading = false;
     notifyListeners();
   }
 
   Future<void> logout() async {
-    await _storage.clear();
-    _isLoggedIn = false;
+    await StorageService.clear();
+    _isAuthenticated = false;
+    _token = null;
+    _userName = null;
     notifyListeners();
   }
 }

@@ -1,46 +1,54 @@
 name: starlink_isp_app
-description: A new Flutter project for Starlink ISP management.
+description: "Professional ISP management app for DishNet Africa."
 publish_to: 'none'
 version: 1.0.0+1
 
 environment:
-  sdk: '>=3.3.0 <4.0.0'
+  sdk: '>=3.2.0 <4.0.0'
 
 dependencies:
   flutter:
     sdk: flutter
-  cupertino_icons: ^1.0.8
 
-  # State Management & Logic
-  provider: ^6.1.2
-  shared_preferences: ^2.3.2
+  # State Management & DI
+  provider: ^6.1.1
 
-  # Networking & API - ALIGNED FOR STARLINK COMPATIBILITY
-  # These versions ensure the generated '.aI()' and '.aD()' methods exist.
-  http: ^1.2.1
-  grpc: ^3.2.4
+  # Local Storage
+  hive: ^2.2.3
+  hive_flutter: ^1.1.0
+  shared_preferences: ^2.2.2
+
+  # Networking & gRPC
+  grpc: ^4.0.0
   protobuf: ^3.1.0
-  fixnum: ^1.1.0
+  http: ^1.1.0
 
-  # UI, Charts & Icons
-  google_fonts: ^6.2.1
-  fl_chart: ^0.69.0
-  percent_indicator: ^4.2.3
-  font_awesome_flutter: ^10.7.0
-  lottie: ^3.1.2
-
-  # Utilities
-  url_launcher: ^6.3.0
+  # UI & Icons
+  google_fonts: ^6.1.0
+  font_awesome_flutter: ^10.6.0
+  animations: ^2.0.11
+  fl_chart: ^0.66.0
+  cupertino_icons: ^1.0.6
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
+
+  # Linting & Generation
   flutter_lints: ^3.0.0
+  hive_generator: ^2.0.1
+  build_runner: ^2.4.7
 
 flutter:
   uses-material-design: true
 
-  # Asset configuration
+  # Ensure your assets folder is created and registered here
   assets:
-    - assets/animations/
     - assets/images/
+    - assets/icons/
+
+  # Example of font registration if using custom brand fonts
+  # fonts:
+  #   - family: BrandFont
+  #     fonts:
+  #       - asset: assets/fonts/BrandFont-Regular.ttf
