@@ -1,78 +1,124 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:provider/provider.dart';
-import 'package:hive_flutter/hive_flutter.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-// Config & Theme
-import 'config/modern_app_theme.dart';
-
-// Providers & Services
-import 'services/auth_service.dart';
-import 'providers/dish_provider.dart';
+// Services
 import 'services/storage_service.dart';
+import 'services/api_service.dart';
+import 'services/sync_service.dart';
+
+// Providers
+import 'providers/auth_provider.dart';
+import 'providers/dish_provider.dart';
 
 // Screens
-import 'screens/home/modern_home_screen.dart';
-import 'screens/billing/billing_screen.dart';
-import 'screens/starlink/starlink_control_screen.dart';
-import 'screens/starlink/network_topology_screen.dart';
-import 'screens/starlink/diagnostic_tool_screen.dart';
-import 'screens/auth/modern_login_screen.dart';
-import 'screens/dashboard_screen.dart';
+import 'screens/splash_screen.dart';
+import 'screens/login_screen.dart';
+import 'screens/home/home_screen.dart';
 
 void main() async {
-  // 1. Initialize Flutter Bindings
   WidgetsFlutterBinding.ensureInitialized();
 
-  // 2. Initialize Storage Services
-  await Hive.initFlutter();
-  await StorageService.init();
-
-  // 3. Open All Hive Boxes (Must match Provider usage exactly)
-  await Future.wait([
-    Hive.openBox('settings'),
-    Hive.openBox('telemetry_cache'),
+  // Lock orientation to portrait
+  await SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp,
+    DeviceOrientation.portraitDown,
   ]);
 
-  runApp(
-    MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (_) => AuthService()),
-        ChangeNotifierProvider(create: (_) => DishProvider()),
-      ],
-      child: const StarlinkISPApp(),
-    ),
-  );
+  // Initialize storage
+  await StorageService.init();
+
+  // Initialize sync service
+  await SyncService().init();
+
+  runApp(const DishNetApp());
 }
 
-class StarlinkISPApp extends StatelessWidget {
-  const StarlinkISPApp({super.key});
+class DishNetApp extends StatelessWidget {
+  const DishNetApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'DishNet Africa',
-      debugShowCheckedModeBanner: false,
-
-      // Theme Configuration
-      theme: ModernAppTheme.lightTheme,
-      darkTheme: ModernAppTheme.darkTheme,
-      themeMode: ThemeMode.system,
-
-      // Navigation Logic
-      initialRoute: '/',
-      routes: {
-        '/': (context) => const ModernHomeScreen(),
-        '/login': (context) => const ModernLoginScreen(),
-        '/dashboard': (context) => const DashboardScreen(),
-        '/billing': (context) => const BillingScreen(),
-        '/starlink-control': (context) => const StarlinkControlScreen(),
-        '/topology': (context) => const NetworkTopologyScreen(),
-        '/diagnostics': (context) => const DiagnosticToolScreen(),
-      },
-
-      // Graceful error handling for missing routes
-      onUnknownRoute: (settings) => MaterialPageRoute(
-        builder: (context) => const ModernHomeScreen(),
+    return MultiProvider(
+      providers: [
+        // Auth Provider
+        ChangeNotifierProvider(
+          create: (_) => AuthProvider()..init(),
+        ),
+        
+        // Dish Provider (Starlink gRPC)
+        ChangeNotifierProvider(
+          create: (_) => DishProvider(),
+        ),
+        
+        // API Service (singleton)
+        Provider(
+          create: (_) => ApiService(StorageService()),
+        ),
+      ],
+      child: MaterialApp(
+        title: 'DishNet Starlink',
+        debugShowCheckedModeBanner: false,
+        
+        // Theme
+        theme: ThemeData(
+          useMaterial3: true,
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: const Color(0xFF0066CC), // DishNet Blue
+            brightness: Brightness.light,
+          ),
+          textTheme: GoogleFonts.interTextTheme(),
+          
+          // AppBar Theme
+          appBarTheme: const AppBarTheme(
+            centerTitle: true,
+            elevation: 0,
+            systemOverlayStyle: SystemUiOverlayStyle.dark,
+          ),
+          
+          // Card Theme
+          cardTheme: CardTheme(
+            elevation: 2,
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(16),
+            ),
+          ),
+          
+          // Button Theme
+          elevatedButtonTheme: ElevatedButtonThemeData(
+            style: ElevatedButton.styleFrom(
+              elevation: 0,
+              padding: const EdgeInsets.symmetric(
+                horizontal: 32,
+                vertical: 16,
+              ),
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(12),
+              ),
+            ),
+          ),
+        ),
+        
+        // Dark Theme
+        darkTheme: ThemeData(
+          useMaterial3: true,
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: const Color(0xFF0066CC),
+            brightness: Brightness.dark,
+          ),
+          textTheme: GoogleFonts.interTextTheme(ThemeData.dark().textTheme),
+        ),
+        
+        // Initial Route
+        home: const SplashScreen(),
+        
+        // Routes
+        routes: {
+          '/splash': (context) => const SplashScreen(),
+          '/login': (context) => const LoginScreen(),
+          '/home': (context) => const HomeScreen(),
+        },
       ),
     );
   }

@@ -1,5 +1,5 @@
 name: starlink_isp_app
-description: "Professional ISP management app for DishNet Africa."
+description: "Professional ISP management app for DishNet Africa - Starlink Reseller Portal"
 publish_to: 'none'
 version: 1.0.0+1
 
@@ -17,11 +17,20 @@ dependencies:
   hive: ^2.2.3
   hive_flutter: ^1.1.0
   shared_preferences: ^2.2.2
+  flutter_secure_storage: ^9.0.0  # NEW: Secure token storage
 
   # Networking & gRPC
   grpc: ^4.0.0
   protobuf: ^3.1.0
   http: ^1.1.0
+  dio: ^5.4.0  # NEW: Better REST API client
+  connectivity_plus: ^5.0.2  # NEW: Network connectivity detection
+
+  # Background Tasks
+  workmanager: ^0.5.2  # NEW: Background sync
+
+  # Security
+  encrypt: ^5.0.3  # NEW: Data encryption
 
   # UI & Icons
   google_fonts: ^6.1.0
@@ -29,6 +38,12 @@ dependencies:
   animations: ^2.0.11
   fl_chart: ^0.66.0
   cupertino_icons: ^1.0.6
+  percent_indicator: ^4.2.3  # NEW: Progress indicators
+  shimmer: ^3.0.0  # NEW: Loading skeleton screens
+
+  # Utilities
+  intl: ^0.18.1  # NEW: Date/time formatting
+  url_launcher: ^6.2.2  # NEW: Open external links
 
 dev_dependencies:
   flutter_test:
@@ -42,13 +57,15 @@ dev_dependencies:
 flutter:
   uses-material-design: true
 
-  # Ensure your assets folder is created and registered here
   assets:
     - assets/images/
     - assets/icons/
+    - assets/animations/  # Add if using Lottie animations
 
-  # Example of font registration if using custom brand fonts
+  # Example of custom fonts if needed
   # fonts:
-  #   - family: BrandFont
+  #   - family: DishNetBrand
   #     fonts:
-  #       - asset: assets/fonts/BrandFont-Regular.ttf
+  #       - asset: assets/fonts/DishNetBrand-Regular.ttf
+  #       - asset: assets/fonts/DishNetBrand-Bold.ttf
+  #         weight: 700
